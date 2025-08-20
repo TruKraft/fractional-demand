@@ -1,0 +1,61 @@
+{
+  "logos": [
+    "/assets/images/logo-r1-1.png",
+    "/assets/images/logo-r1-2.png",
+    "/assets/images/logo-r1-3.png",
+    "/assets/images/logo-r1-4.png",
+    "/assets/images/logo-r1-5.png",
+    "/assets/images/logo-r1-6.png",
+    "/assets/images/logo-r1-7.png",
+    "/assets/images/logo-r1-8.png",
+    "/assets/images/logo-r1-9.png",
+    "/assets/images/logo-r2-1.png",
+    "/assets/images/logo-r2-2.png",
+    "/assets/images/logo-r2-3.png",
+    "/assets/images/logo-r2-4.jpg",
+    "/assets/images/logo-r2-5.png",
+    "/assets/images/logo-r2-6.png",
+    "/assets/images/logo-r2-7.png",
+    "/assets/images/logo-r2-8.jpg",
+    "/assets/images/logo-r2-9.png"
+  ],
+  "bioImages": {
+    "Gavin Tanner": "/assets/images/Ta68ANJmz5Vkhv564uMB8d1DLOc.jpg",
+    "Jordan Barker": "/assets/images/arx7GaV0iLWkPJaYx7BNpo9R0.jpg",
+    "Cindy Westra": "/assets/images/LFB1oFVOboqvxGyzjCVXJwGizc.jpeg",
+    "Jacob Cullum": "/assets/images/k0p6uB9wXAWAeyIuP1O3XsgM4k.png",
+    "Walter Silveira": "/assets/images/9uyxoRyyapvsysLZBKEgvBgwd8.jpeg"
+  },
+  "logosRow1": [
+    "/assets/images/logo-r1-1.png",
+    "/assets/images/logo-r1-2.png",
+    "/assets/images/logo-r1-3.png",
+    "/assets/images/logo-r1-4.png",
+    "/assets/images/logo-r1-5.png",
+    "/assets/images/logo-r1-6.png",
+    "/assets/images/logo-r1-7.png",
+    "/assets/images/logo-r1-8.png",
+    "/assets/images/logo-r1-9.png"
+  ],
+  "logosRow2": [
+    "/assets/images/logo-r2-1.png",
+    "/assets/images/logo-r2-2.png",
+    "/assets/images/logo-r2-3.png",
+    "/assets/images/logo-r2-4.jpg",
+    "/assets/images/logo-r2-5.png",
+    "/assets/images/logo-r2-6.png",
+    "/assets/images/logo-r2-7.png",
+    "/assets/images/logo-r2-8.jpg",
+    "/assets/images/logo-r2-9.png"
+  ],
+  "wordmark": "/assets/images/logo-wordmark-white.png",
+  "servicesImage": "/assets/images/unsplash-laptop.jpg",
+  "servicesImages": {
+    "paid-search": "/assets/images/service-paid-search.jpg",
+    "linkedin-ads": "/assets/images/service-linkedin-ads.jpg",
+    "facebook-insta-ads": "/assets/images/service-facebook-insta-ads.jpg",
+    "abm-demand": "/assets/images/service-abm-demand.jpg",
+    "lead-follow-up-strategy": "/assets/images/service-lead-follow-up-strategy.jpg",
+    "email-marketing-nurture": "/assets/images/service-email-marketing-nurture.jpg"
+  }
+}
