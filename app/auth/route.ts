@@ -58,7 +58,8 @@ export async function POST(req: Request) {
   const password = String(form.get('password') || '');
   const next = new URL(req.url).searchParams.get('next') || '/';
   if (password === sitePassword) {
-    const res = NextResponse.redirect(new URL(next, req.url));
+    // Use 303 See Other to convert POST to GET on redirect target
+    const res = NextResponse.redirect(new URL(next, req.url), { status: 303 });
     res.cookies.set('site_protected', '1', { path: '/', httpOnly: true, sameSite: 'lax', secure: true, maxAge: 60 * 60 * 24 * 7 });
     return res;
   }
