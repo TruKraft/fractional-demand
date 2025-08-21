@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: { typedRoutes: true }
+  // Keep runtime strictly NodeJS; no edge unless explicitly opted-in
+  experimental: {},
+  reactStrictMode: true,
+  poweredByHeader: false,
+  output: 'standalone',
 };
 export default nextConfig;
 
