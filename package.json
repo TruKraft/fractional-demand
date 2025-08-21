@@ -10,8 +10,8 @@
     "snapshot": "node tools/snapshot.mjs --domain https://www.fractionaldemand.com",
     "extract": "node tools/extract.mjs --domain https://www.fractionaldemand.com",
     "extract:render": "node tools/render-extract.mjs --domain https://www.fractionaldemand.com",
-    "assets": "node tools/pull-assets.mjs --domain https://www.fractionaldemand.com"
-    ,"content": "node tools/extract-content.mjs"
+    "assets": "node tools/pull-assets.mjs --domain https://www.fractionaldemand.com",
+    "content": "node tools/extract-content.mjs"
   },
   "dependencies": {
     "next": "14.2.5",
@@ -19,8 +19,9 @@
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@types/node": "24.2.1",
-    "@types/react": "19.1.10",
+    "@types/node": "^20.19.11",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
     "autoprefixer": "^10.4.20",
     "cheerio": "^1.0.0-rc.12",
     "eslint": "^8.57.0",
@@ -31,5 +32,3 @@
     "typescript": "^5.5.4"
   }
 }
-
-
