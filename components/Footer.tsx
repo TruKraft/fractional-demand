@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import map from '@/public/assets/images/assets-map.json';
+import CareersTrigger from './CareersTrigger';
 
 type FooterProps = { minimal?: boolean };
 
@@ -56,7 +57,11 @@ export default function Footer({ minimal = false }: FooterProps) {
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="text-white/60 text-sm">© Fractional Demand. {new Date().getFullYear()}</p>
           {!minimal && (
-            <a href="/privacy-policy" className="text-white/60 hover:text-white hover:underline underline-offset-8 transition-colors text-sm">Privacy Policy</a>
+            <div className="flex items-center gap-4">
+              <CareersTrigger />
+              <a href="/privacy-policy" className="text-white/60 hover:text-white hover:underline underline-offset-8 transition-colors text-sm">Privacy Policy</a>
+              <a href="https://calendly.com/fractionaldemand/30min" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white hover:underline underline-offset-8 transition-colors text-sm">Contact</a>
+            </div>
           )}
         </div>
       </div>

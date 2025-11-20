@@ -66,12 +66,13 @@ const bios: Bio[] = merged.map((b) => ({
 
 export default function Bios() {
   return (
-    <section id="about-us" className="bg-black text-white">
+    <section id="about-us" className="bg-black text-white relative overflow-hidden bg-noise">
+      <div className="energy-line" />
       <div className="container mx-auto px-4 py-24 md:py-28">
-        <Reveal as="h2" className="text-center text-4xl md:text-5xl font-bold tracking-tight mb-8">About us</Reveal>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {bios.map((b) => (
-            <Reveal key={b.name} className="rounded-3xl border border-white/10 p-6 bg-white/5 hover:bg-white/10 transition-colors">
+            <Reveal key={b.name}>
+              <div className="energy-card rounded-3xl border border-white/10 p-6 bg-white/5 bg-noise hover:bg-white/10 transition-colors">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-center gap-4">
                   <div className="relative h-20 w-20 overflow-hidden rounded-full ring-1 ring-white/20">
@@ -125,10 +126,12 @@ export default function Bios() {
                       <p key={idx} className={`text-white/80 text-lg leading-relaxed ${idx === 0 ? 'mt-4' : 'mt-3'}`}>{paragraph}</p>
                     ))}
               {/* Removed bottom LinkedIn button to avoid duplication; icon in header links to profile */}
+              </div>
             </Reveal>
           ))}
         </div>
       </div>
+      <div className="energy-line energy-line--delayed" />
     </section>
   );
 }

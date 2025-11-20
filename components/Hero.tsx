@@ -3,7 +3,7 @@ import Tilt from './Tilt';
 
 export default function Hero() {
   return (
-    <section className="relative isolate w-full bg-black text-white overflow-hidden">
+    <section className="relative isolate w-full bg-black text-white overflow-hidden bg-grid-dots">
       {/* Geometric line background (subtle) */}
       <svg
         aria-hidden="true"
@@ -47,16 +47,15 @@ export default function Hero() {
         </g>
       </svg>
       <div className="relative z-10 container mx-auto px-4 py-24 md:py-32">
-        <Reveal as="h1" className="text-center font-bold leading-tight tracking-tight mx-auto max-w-5xl text-[2.75rem] md:text-6xl lg:text-7xl pt-6 md:pt-10">
-          We help B2B companies{' '}
-          <br className="hidden md:block" />
-          generate qualified pipeline
-        </Reveal>
-        <Reveal as="p" className="mt-6 text-center text-white/80 mx-auto max-w-3xl text-xl md:text-2xl leading-relaxed">
-          Fractional Demand is a B2B ad agency that helps companies generate high-quality leads that will
-          convert into opportunities, pipeline, and revenue.
-        </Reveal>
-        <div className="mt-10 flex justify-center">
+        <div className="text-center mb-10">
+          <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+            Get a GTM Team That Builds Pipeline Fast.
+          </Reveal>
+          <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
+            Fractional Demand is a Go-To-Market Partner that embeds senior operators across strategy, paid media, RevOps, and lifecycle to build and run a demand system that accelerates pipeline, without the overhead of a full team.
+          </Reveal>
+        </div>
+        <div className="flex justify-center">
           <Tilt>
             <a
               href="https://calendly.com/fractionaldemand/30min"
@@ -64,7 +63,7 @@ export default function Hero() {
               rel="noopener"
               className="btn btn-primary btn-md md:btn-lg btn-shine"
             >
-              Let's talk
+              Let&apos;s Talk
             </a>
           </Tilt>
         </div>
@@ -72,5 +71,3 @@ export default function Hero() {
     </section>
   );
 }
-
-

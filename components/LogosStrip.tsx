@@ -42,7 +42,7 @@ export default function LogosStrip() {
   return (
     <section className="bg-white text-black">
       <div className="container mx-auto px-4 py-16 md:py-20">
-        <h2 className="text-center text-4xl md:text-5xl font-semibold tracking-tight mb-8 pb-4">B2B brands we've helped grow</h2>
+        <h2 className="text-center text-4xl md:text-5xl font-semibold tracking-tight mb-8 pb-4">Trusted by B2B teams who can&apos;t afford to miss their number.</h2>
         <div className="space-y-8">
           {/* Row 1 (reverse direction) */}
           <div className="relative overflow-hidden motion-reduce:overflow-visible">
@@ -70,6 +70,7 @@ export default function LogosStrip() {
           </div>
         </div>
       </div>
+      <div className="energy-line energy-line--delayed" />
     </section>
   );
 }
