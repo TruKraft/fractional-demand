@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import Bios from '@/components/Bios';
-import EyebrowHeading from '@/components/EyebrowHeading';
+import Reveal from '@/components/Reveal';
 
 export const metadata: Metadata = {
   title: 'About Us',
