@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Reveal from './Reveal';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 
@@ -16,7 +17,7 @@ const services = [
       'Creative + messaging testing that constantly improves CTR → CPL → SQL',
       'Embedded collaboration to ensure clean attribution and real revenue impact',
     ],
-    image: '/assets/images/paid-media-preview.png',
+    image: '/assets/images/service-paid-media.svg',
   },
   {
     id: 'head-of-marketing',
@@ -29,7 +30,7 @@ const services = [
       'Execute hands-on to remove work from your plate',
       'Align marketing with sales and revenue goals',
     ],
-    image: '/assets/images/hom-preview.png',
+    image: '/assets/images/service-head-of-marketing.svg',
   },
   {
     id: 'revops',
@@ -42,7 +43,7 @@ const services = [
       'Lead scoring, enrichment, and intent → sales-ready leads',
       'Clean data and automated handoffs between teams',
     ],
-    image: '/assets/images/revops-preview.png',
+    image: '/assets/images/service-revops.svg',
   },
   {
     id: 'lifecycle',
@@ -55,7 +56,7 @@ const services = [
       'Campaign strategy, copy, and build out',
       'Automated triggers based on intent and behavior',
     ],
-    image: '/assets/images/lifecycle-preview.png',
+    image: '/assets/images/service-lifecycle.svg',
   },
 ];
 
@@ -100,8 +101,14 @@ export default function HomeSection5() {
             <div className="grid md:grid-cols-2 gap-0">
               {/* Image/Preview Side */}
               <div className="bg-gradient-to-br from-white/10 to-white/5 p-8 md:p-12 flex items-center justify-center min-h-[300px] md:min-h-[400px]">
-                <div className="w-full h-full rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center">
-                  <span className="text-white/30 text-lg">Preview</span>
+                <div className="w-full h-full rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center p-6">
+                  <Image 
+                    src={activeService.image} 
+                    alt={activeService.header}
+                    width={400}
+                    height={300}
+                    className="w-full h-auto max-h-[280px] object-contain"
+                  />
                 </div>
               </div>
 

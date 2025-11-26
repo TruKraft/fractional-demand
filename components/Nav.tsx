@@ -2,28 +2,8 @@
 
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
-import map from '@/public/assets/images/assets-map.json';
 import Tilt from './Tilt';
 import { LetsTalkButton } from './CalendlyPopup';
-
-// Inline SVG icons (Heroicons outline style)
-const UserGroupIcon = ({ className }: { className?: string }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-  </svg>
-);
-
-const SpeakerphoneIcon = ({ className }: { className?: string }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.14 5.106m-1.14 1.125a23.91 23.91 0 00-1.14-5.106m5.106 1.14a23.91 23.91 0 01-5.106 1.14m-5.106-1.14a23.91 23.91 0 015.106-1.14" />
-  </svg>
-);
-
-const BookOpenIcon = ({ className }: { className?: string }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-  </svg>
-);
 
 type NavProps = { minimal?: boolean };
 
@@ -111,8 +91,8 @@ export default function Nav({ minimal = false }: NavProps) {
     <header className="fixed inset-x-0 top-0 z-[2000] bg-black/60 supports-[backdrop-filter]:bg-black/40 backdrop-blur border-b border-white/10 text-white">
       <nav className="container mx-auto flex items-center justify-between px-4 py-2 md:py-3">
         <a href="/" aria-label="Home" className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-md">
-          <div className="relative h-[60px] w-[264px] md:h-[72px] md:w-[312px]">
-            <Image src={(map.wordmark as string) || '/assets/images/logo-wordmark-white.png'} alt="Fractional Demand" fill className="object-contain" />
+          <div className="relative h-[28px] w-[220px] md:h-[32px] md:w-[260px]">
+            <Image src="/Fractional Demand full logo_white text (1).svg" alt="Fractional Demand" fill className="object-contain object-left" />
           </div>
         </a>
 
@@ -172,42 +152,28 @@ export default function Nav({ minimal = false }: NavProps) {
                 <li className="border-b border-white/10 last:border-b-0">
                   <a
                     href="/services/fractional-head-of-marketing"
-                    className="block px-5 py-4 text-white hover:bg-white/5 transition-colors group"
+                    className="block px-5 py-3 text-white hover:bg-white/5 transition-colors group"
                     onClick={() => setServicesOpen(false)}
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="shrink-0 mt-0.5">
-                        <UserGroupIcon className="w-5 h-5 text-white/80 group-hover:text-white transition-colors" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="font-semibold text-white group-hover:text-white transition-colors mb-1">
-                          Fractional Head of Marketing
-                        </div>
-                        <div className="text-sm text-white/70 group-hover:text-white/80 transition-colors">
-                          Strategic leadership with hands-on execution
-                        </div>
-                      </div>
+                    <div className="font-medium text-white group-hover:text-white transition-colors">
+                      Fractional Head of Marketing
+                    </div>
+                    <div className="text-sm text-white/60 group-hover:text-white/70 transition-colors">
+                      Strategic leadership with hands-on execution
                     </div>
                   </a>
                 </li>
                 <li className="border-b border-white/10 last:border-b-0">
                   <a
                     href="/services/fractional-paid-media"
-                    className="block px-5 py-4 text-white hover:bg-white/5 transition-colors group"
+                    className="block px-5 py-3 text-white hover:bg-white/5 transition-colors group"
                     onClick={() => setServicesOpen(false)}
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="shrink-0 mt-0.5">
-                        <SpeakerphoneIcon className="w-5 h-5 text-white/80 group-hover:text-white transition-colors" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="font-semibold text-white group-hover:text-white transition-colors mb-1">
-                          Fractional Paid Media
-                        </div>
-                        <div className="text-sm text-white/70 group-hover:text-white/80 transition-colors">
-                          Senior performance marketers driving pipeline
-                        </div>
-                      </div>
+                    <div className="font-medium text-white group-hover:text-white transition-colors">
+                      Fractional Paid Media
+                    </div>
+                    <div className="text-sm text-white/60 group-hover:text-white/70 transition-colors">
+                      Senior performance marketers driving pipeline
                     </div>
                   </a>
                 </li>
@@ -266,21 +232,14 @@ export default function Nav({ minimal = false }: NavProps) {
                 <li>
                   <a
                     href="/resources/blog"
-                    className="block px-5 py-4 text-white hover:bg-white/5 transition-colors group"
+                    className="block px-5 py-3 text-white hover:bg-white/5 transition-colors group"
                     onClick={() => setResourcesOpen(false)}
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="shrink-0 mt-0.5">
-                        <BookOpenIcon className="w-5 h-5 text-white/80 group-hover:text-white transition-colors" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="font-semibold text-white group-hover:text-white transition-colors mb-1">
-                          Blog
-                        </div>
-                        <div className="text-sm text-white/70 group-hover:text-white/80 transition-colors">
-                          Insights on B2B demand generation & GTM strategy
-                        </div>
-                      </div>
+                    <div className="font-medium text-white group-hover:text-white transition-colors">
+                      Blog
+                    </div>
+                    <div className="text-sm text-white/60 group-hover:text-white/70 transition-colors">
+                      Insights on B2B demand generation & GTM strategy
                     </div>
                   </a>
                 </li>

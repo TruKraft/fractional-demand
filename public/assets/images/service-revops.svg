@@ -1,0 +1,62 @@
+<svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0f0f1a"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" rx="16" fill="url(#bgGrad3)"/>
+  
+  <!-- Input nodes -->
+  <circle cx="55" cy="70" r="24" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.2"/>
+  <circle cx="55" cy="150" r="24" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.2"/>
+  <circle cx="55" cy="230" r="24" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.2"/>
+  
+  <!-- Integration labels -->
+  <text x="41" y="75" fill="white" fill-opacity="0.8" font-family="Roboto, sans-serif" font-size="12" font-weight="600">HS</text>
+  <text x="37" y="155" fill="white" fill-opacity="0.8" font-family="Roboto, sans-serif" font-size="10" font-weight="600">Clay</text>
+  <text x="47" y="235" fill="white" fill-opacity="0.8" font-family="Roboto, sans-serif" font-size="11" font-weight="600">ZI</text>
+  
+  <!-- Flow lines to hub -->
+  <path d="M82 70 L130 110" stroke="#60a5fa" stroke-width="2"/>
+  <path d="M82 150 L130 150" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M82 230 L130 190" stroke="#60a5fa" stroke-width="2"/>
+  
+  <!-- Processing hub -->
+  <rect x="130" y="95" width="110" height="110" rx="16" fill="#3b82f6" fill-opacity="0.15" stroke="#60a5fa" stroke-width="2"/>
+  
+  <!-- Gear icons -->
+  <circle cx="162" cy="132" r="20" stroke="#60a5fa" stroke-width="2" fill="#3b82f6" fill-opacity="0.25"/>
+  <circle cx="162" cy="132" r="9" fill="#3b82f6"/>
+  <circle cx="205" cy="168" r="16" stroke="#60a5fa" stroke-width="2" fill="#3b82f6" fill-opacity="0.25"/>
+  <circle cx="205" cy="168" r="7" fill="#3b82f6"/>
+  
+  <!-- Output flow -->
+  <path d="M245 150 L275 150" stroke="#3b82f6" stroke-width="3"/>
+  <path d="M270 144 L282 150 L270 156" fill="#3b82f6"/>
+  
+  <!-- Output dashboard -->
+  <rect x="285" y="65" width="90" height="170" rx="12" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.15"/>
+  
+  <!-- Dashboard header -->
+  <rect x="298" y="80" width="64" height="10" rx="3" fill="#3b82f6"/>
+  
+  <!-- Dashboard metrics -->
+  <rect x="298" y="100" width="30" height="30" rx="6" fill="#60a5fa" fill-opacity="0.4"/>
+  <rect x="336" y="100" width="30" height="30" rx="6" fill="#3b82f6" fill-opacity="0.6"/>
+  
+  <!-- Dashboard lines -->
+  <rect x="298" y="142" width="64" height="5" rx="2" fill="white" fill-opacity="0.25"/>
+  <rect x="298" y="154" width="48" height="5" rx="2" fill="white" fill-opacity="0.25"/>
+  <rect x="298" y="166" width="56" height="5" rx="2" fill="white" fill-opacity="0.25"/>
+  
+  <!-- Score -->
+  <circle cx="330" cy="205" r="18" stroke="#3b82f6" stroke-width="3" fill="none"/>
+  <text x="318" y="211" fill="#60a5fa" font-family="Roboto, sans-serif" font-size="14" font-weight="bold">95</text>
+  
+  <!-- Labels -->
+  <text x="152" y="240" fill="white" fill-opacity="0.5" font-family="Roboto, sans-serif" font-size="11">Automation</text>
+  <text x="300" y="260" fill="white" fill-opacity="0.5" font-family="Roboto, sans-serif" font-size="11">Clean Data</text>
+</svg>

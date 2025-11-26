@@ -1,0 +1,51 @@
+<svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0f0f1a"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" rx="16" fill="url(#bgGrad2)"/>
+  
+  <!-- Central strategy hub -->
+  <circle cx="200" cy="140" r="45" fill="#3b82f6" fill-opacity="0.15" stroke="#60a5fa" stroke-width="2"/>
+  <circle cx="200" cy="140" r="28" fill="#3b82f6" fill-opacity="0.4"/>
+  
+  <!-- Strategy icon in center -->
+  <path d="M191 132 L200 122 L209 132 L209 150 L191 150 Z" fill="white" fill-opacity="0.9"/>
+  <rect x="196" y="146" width="8" height="6" fill="white" fill-opacity="0.7"/>
+  
+  <!-- Connection lines to corners -->
+  <path d="M160 140 L95 75" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M160 140 L95 205" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M240 140 L305 75" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M240 140 L305 205" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="6 4"/>
+  
+  <!-- Top left - Content -->
+  <rect x="45" y="35" width="70" height="60" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.15"/>
+  <rect x="58" y="50" width="44" height="5" rx="2" fill="#3b82f6"/>
+  <rect x="58" y="60" width="32" height="4" rx="2" fill="white" fill-opacity="0.3"/>
+  <rect x="58" y="68" width="38" height="4" rx="2" fill="white" fill-opacity="0.3"/>
+  <rect x="58" y="76" width="28" height="4" rx="2" fill="white" fill-opacity="0.3"/>
+  
+  <!-- Bottom left - Analytics -->
+  <rect x="45" y="175" width="70" height="60" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.15"/>
+  <rect x="58" y="205" width="12" height="22" rx="2" fill="#93c5fd"/>
+  <rect x="74" y="195" width="12" height="32" rx="2" fill="#60a5fa"/>
+  <rect x="90" y="183" width="12" height="44" rx="2" fill="#3b82f6"/>
+  
+  <!-- Top right - Campaigns -->
+  <rect x="285" y="35" width="70" height="60" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.15"/>
+  <circle cx="320" cy="65" r="18" stroke="#60a5fa" stroke-width="2" fill="none"/>
+  <path d="M311 65 L317 72 L331 58" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Bottom right - Revenue -->
+  <rect x="285" y="175" width="70" height="60" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.15"/>
+  <text x="305" y="212" fill="#60a5fa" font-family="Roboto, sans-serif" font-size="26" font-weight="bold">$</text>
+  <path d="M328 198 L340 186 L340 220 L352 208" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Label -->
+  <text x="155" y="270" fill="white" fill-opacity="0.5" font-family="Roboto, sans-serif" font-size="12">GTM Strategy</text>
+</svg>

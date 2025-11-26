@@ -1,7 +1,6 @@
 "use client";
 
 import Image from 'next/image';
-import map from '@/public/assets/images/assets-map.json';
 import CareersTrigger from './CareersTrigger';
 import { useCalendlyPopup } from './CalendlyPopup';
 
@@ -22,10 +21,10 @@ function ContactButton() {
 export default function Footer({ minimal = false }: FooterProps) {
   if (minimal) {
     return (
-      <footer className="bg-black text-white border-t border-white/10">
+      <footer className="bg-black text-white border-t border-white/10" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
         <div className="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
-          <div className="relative h-10 w-48 md:h-12 md:w-56 shrink-0">
-            <Image src={(map.wordmark as string) || '/assets/images/logo-wordmark-white.png'} alt="Fractional Demand" fill className="object-contain" />
+          <div className="relative h-[24px] w-[200px] md:h-[28px] md:w-[240px] shrink-0">
+            <Image src="/Fractional Demand full logo_white text (1).svg" alt="Fractional Demand" fill className="object-contain" />
           </div>
           <div className="flex items-center gap-4">
             <a href="/privacy-policy" className="text-white/60 hover:text-white hover:underline underline-offset-8 transition-colors text-sm">Privacy Policy</a>
@@ -36,10 +35,10 @@ export default function Footer({ minimal = false }: FooterProps) {
     );
   }
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-black text-white" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
       <div className="container mx-auto px-4 py-20 md:py-28 grid gap-5 md:gap-6 place-items-center">
-        <div className="relative h-[65px] w-[360px] md:h-[77px] md:w-[432px] shrink-0 mx-auto">
-          <Image src={(map.wordmark as string) || '/assets/images/logo-wordmark-white.png'} alt="Fractional Demand" fill className="object-contain" />
+        <div className="relative h-[36px] w-[300px] md:h-[44px] md:w-[380px] shrink-0 mx-auto">
+          <Image src="/Fractional Demand full logo_white text (1).svg" alt="Fractional Demand" fill className="object-contain" />
         </div>
         {!minimal && (
           <ul className="flex flex-row flex-wrap items-center justify-center gap-3 md:gap-4 lg:gap-6 text-sm md:text-sm lg:text-base text-white/90 font-medium">
