@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import map from '@/public/assets/images/assets-map.json';
 import Tilt from './Tilt';
+import { LetsTalkButton } from './CalendlyPopup';
 
 // Inline SVG icons (Heroicons outline style)
 const UserGroupIcon = ({ className }: { className?: string }) => (
@@ -117,7 +118,7 @@ export default function Nav({ minimal = false }: NavProps) {
 
         {/* Desktop nav */}
         {!minimal && (
-          <ul className="hidden lg:flex items-center gap-6 text-sm md:text-base text-white/80">
+          <ul className="hidden lg:flex items-center gap-6 text-sm md:text-base text-white/80" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
             <li><a href="/" className="hover:text-white hover:underline hover:underline-offset-8 hover:decoration-white/80 transition-colors">Home</a></li>
             
             {/* Services Dropdown */}
@@ -290,14 +291,9 @@ export default function Nav({ minimal = false }: NavProps) {
             
             <li>
               <Tilt>
-                <a
-                  href="https://calendly.com/fractionaldemand/30min"
-                  target="_blank"
-                  rel="noopener"
-                  className="btn btn-primary btn-sm md:btn-md btn-shine"
-                >
-                  Let's Talk
-                </a>
+                <LetsTalkButton className="btn btn-primary btn-sm md:btn-md btn-shine">
+                  Let&apos;s Talk
+                </LetsTalkButton>
               </Tilt>
             </li>
           </ul>
@@ -361,7 +357,7 @@ export default function Nav({ minimal = false }: NavProps) {
               </button>
             </div>
             <div className="px-4 py-4">
-              <ul className="space-y-1 text-base">
+              <ul className="space-y-1 text-base" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
                 <li>
                   <a 
                     href="/" 
@@ -490,15 +486,9 @@ export default function Nav({ minimal = false }: NavProps) {
                 </li>
                 
                 <li className="pt-4 border-t border-white/10">
-                  <a
-                    href="https://calendly.com/fractionaldemand/30min"
-                    target="_blank"
-                    rel="noopener"
-                    className="btn btn-primary btn-md w-full text-center"
-                    onClick={() => setOpen(false)}
-                  >
+                  <LetsTalkButton className="btn btn-primary btn-md w-full text-center">
                     Let&apos;s Talk
-                  </a>
+                  </LetsTalkButton>
                 </li>
               </ul>
             </div>

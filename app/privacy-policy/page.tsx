@@ -14,8 +14,9 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <Nav />
-      <section className="bg-black text-white">
-        <div className="container mx-auto px-4 py-24 md:py-28">
+      <main id="main">
+        <section className="bg-black text-white">
+          <div className="container mx-auto px-4 py-24 md:py-28">
           
 
           <div className="mx-auto max-w-2xl md:max-w-3xl space-y-6 text-white/80 text-lg md:text-xl leading-relaxed pt-10">
@@ -92,8 +93,9 @@ export default function PrivacyPolicyPage() {
             {' '}<a className="underline" href="mailto:gavinvt89@gmail.com">gavinvt89@gmail.com</a>.
           </p>
           </div>
-        </div>
-      </section>
+          </div>
+        </section>
+      </main>
       <Footer />
     </>
   );

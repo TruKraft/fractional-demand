@@ -46,7 +46,11 @@ export default function ProcessSteps({ steps, headline = "Our Process", classNam
                         <ul className="space-y-2 text-white/80 text-base">
                           {step.deliverables.map((deliverable, dIdx) => (
                             <li key={dIdx} className="flex items-start gap-2">
-                              <span className="text-white/60 mt-1.5 shrink-0">•</span>
+                              <span className="w-5 h-5 rounded-full bg-[#021da8] flex items-center justify-center mt-0.5 shrink-0">
+                                <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                              </span>
                               <span>{deliverable}</span>
                             </li>
                           ))}
@@ -59,7 +63,11 @@ export default function ProcessSteps({ steps, headline = "Our Process", classNam
                         <ul className="space-y-2 text-white/80 text-base">
                           {step.activities.map((activity, aIdx) => (
                             <li key={aIdx} className="flex items-start gap-2">
-                              <span className="text-white/60 mt-1.5 shrink-0">•</span>
+                              <span className="w-5 h-5 rounded-full bg-[#021da8] flex items-center justify-center mt-0.5 shrink-0">
+                                <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                              </span>
                               <span>{activity}</span>
                             </li>
                           ))}

@@ -18,17 +18,28 @@ export default function AboutPage() {
     <>
       <Nav />
       <main id="main">
-        <section className="bg-black text-white relative overflow-hidden bg-grid-dots">
-          <div className="energy-line" />
-          <div className="container mx-auto px-4 py-24 md:py-32">
-            <div className="text-center mb-16">
-              <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl  tracking-tight mb-6">
+        {/* Hero */}
+        <section className="relative overflow-hidden text-white" style={{ background: 'linear-gradient(135deg, #000000 0%, #0a1628 50%, #021da8 150%)' }}>
+          <div className="absolute inset-0 bg-grid-dots opacity-30" />
+          
+          <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
+            <div className="max-w-4xl">
+              <Reveal>
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm text-white/80 mb-6">
+                  <span className="w-2 h-2 rounded-full bg-[#021da8]" />
+                  About Us
+                </div>
+              </Reveal>
+              <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">
                 Meet the Team Behind Fractional Demand
+              </Reveal>
+              <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-2xl">
+                Senior operators with decades of combined experience building pipeline for B2B tech companies.
               </Reveal>
             </div>
           </div>
-          <div className="energy-line energy-line--delayed" />
         </section>
+        
         <Bios />
       </main>
       <Footer />

@@ -91,12 +91,12 @@ export default function FAQPage() {
   return (
     <>
       <Nav minimal={!SHOW_FULL_HEADER} />
-      <main className="bg-black text-white">
-        <section className="container mx-auto px-4 py-20 md:py-28">
+      <main id="main" className="bg-black text-white">
+        <section className="container mx-auto px-4 py-24 md:py-28">
           <div className="grid gap-10 lg:gap-12 lg:grid-cols-2 items-start">
             {/* Content column */}
             <div className="order-1">
-              <h1 className="text-5xl md:text-6xl font-black tracking-tight">Frequently asked questions</h1>
+              <h1 className="text-5xl md:text-6xl tracking-tight">Frequently asked questions</h1>
               <p className="mt-3 text-white/80 text-xl md:text-2xl leading-relaxed max-w-2xl">Quick answers about our services, process, and results.</p>
 
               {/* Mobile form under heading */}

@@ -8,6 +8,7 @@ import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import EyebrowHeading from '@/components/EyebrowHeading';
 import EnergyCard from '@/components/EnergyCard';
+import { LetsTalkButton } from '@/components/CalendlyPopup';
 
 export const metadata: Metadata = {
   title: 'Fractional Head of Marketing',
@@ -111,25 +112,33 @@ export default function FractionalHeadOfMarketingPage() {
         {/* Hero */}
         <section className="bg-black text-white relative overflow-hidden bg-grid-dots">
           <div className="container mx-auto px-4 py-24 md:py-32">
-            <div className="text-center mb-10">
-              <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl  tracking-tight mb-6">
-                Fractional Head of Marketing That Builds GTM Momentum Fast.
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Left: Content */}
+              <div>
+                <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">
+                  Fractional Head of Marketing That Builds GTM Momentum Fast.
+                </Reveal>
+                <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed mb-8">
+                  A senior marketing leader embedded directly into your team—someone who owns strategy, leads execution, and builds the systems that turn ideas into pipeline. Hands-on keyboard doer, not a slide-making strategist who hands you more homework.
+                </Reveal>
+                <Reveal>
+                  <Tilt>
+                    <LetsTalkButton className="btn btn-primary btn-md md:btn-lg btn-shine">
+                      Book a Strategy Session
+                    </LetsTalkButton>
+                  </Tilt>
+                </Reveal>
+              </div>
+              
+              {/* Right: Visual */}
+              <Reveal className="hidden lg:block">
+                <div className="energy-card rounded-3xl border border-white/10 bg-white/5 p-8 aspect-square flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-6xl mb-4">🎯</div>
+                    <p className="text-white/60 text-lg">GTM Leadership</p>
+                  </div>
+                </div>
               </Reveal>
-              <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
-                A senior marketing leader embedded directly into your team—someone who owns strategy, leads execution, and builds the systems that turn ideas into pipeline. Hands-on keyboard doer, not a slide-making strategist who hands you more homework.
-              </Reveal>
-            </div>
-            <div className="flex justify-center">
-              <Tilt>
-                <a
-                  href="https://calendly.com/fractionaldemand/30min"
-                  target="_blank"
-                  rel="noopener"
-                  className="btn btn-primary btn-md md:btn-lg btn-shine"
-                >
-                  Book a Strategy Session
-                </a>
-              </Tilt>
             </div>
           </div>
         </section>
@@ -138,42 +147,46 @@ export default function FractionalHeadOfMarketingPage() {
         <section className="bg-black text-white relative overflow-hidden bg-noise">
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28">
-            <div className="text-center mb-12">
-              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
-                Most marketing teams aren't missing effort—they're missing experienced leadership.
-              </Reveal>
-            </div>
-            <Reveal as="p" className="text-center text-white/80 text-xl mb-6">
-              You have channels, tools, and maybe even a marketer or two.
-            </Reveal>
-            <Reveal as="p" className="text-center text-white/80 text-xl mb-12">
-              But you're missing the person who can pull it all together — someone who can:
-            </Reveal>
-            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-              {[
-                'Build out positioning',
-                'Build out messaging',
-                'Develop the correct offer(s)',
-                'Set the GTM strategy',
-                'Prioritize the right campaigns',
-                'Build the offer → messaging → funnel',
-                'Work cross-functionally with sales',
-                'Lead execution, not just direct it',
-                'Create momentum instead of chaos',
-              ].map((item, idx) => (
-                <Reveal key={idx}>
-                  <div className="energy-card rounded-2xl border border-white/10 p-6 bg-white/5">
-                    <div className="flex items-start gap-3">
-                      <span className="text-white/60 mt-1.5 shrink-0">•</span>
-                      <p className="text-white/80 text-lg leading-relaxed">{item}</p>
-                    </div>
-                  </div>
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-6xl mx-auto">
+              {/* Left: Problem */}
+              <div className="lg:sticky lg:top-32">
+                <Reveal as="h2" className="text-4xl md:text-5xl tracking-tight mb-6">
+                  You're not missing effort. You're missing leadership.
                 </Reveal>
-              ))}
+                <Reveal as="p" className="text-white/80 text-xl leading-relaxed mb-6">
+                  You have channels, tools, and maybe even a marketer or two. But you're missing the person who can pull it all together.
+                </Reveal>
+                <Reveal as="p" className="text-white/60 text-lg leading-relaxed">
+                  A <strong className="text-white">Fractional Head of Marketing</strong> gives you senior leadership now—with hands-on execution built into the model.
+                </Reveal>
+              </div>
+              
+              {/* Right: Capabilities */}
+              <div>
+                <Reveal as="p" className="text-white/50 text-sm uppercase tracking-widest mb-6">What you get</Reveal>
+                <ul className="space-y-4">
+                  {[
+                    'Build out positioning & messaging',
+                    'Develop the correct offer(s)',
+                    'Set the GTM strategy',
+                    'Prioritize the right campaigns',
+                    'Build the offer → messaging → funnel',
+                    'Work cross-functionally with sales',
+                    'Lead execution, not just direct it',
+                    'Create momentum instead of chaos',
+                  ].map((item, idx) => (
+                    <Reveal key={idx}>
+                      <li className="flex items-center gap-4 text-white/90 text-lg py-3 border-b border-white/10">
+                        <span className="w-8 h-8 rounded-full bg-[#021da8] flex items-center justify-center text-sm text-white shrink-0">
+                          {idx + 1}
+                        </span>
+                        {item}
+                      </li>
+                    </Reveal>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <Reveal as="p" className="text-center text-white/80 text-xl mt-12">
-              A <strong>Fractional Head of Marketing</strong> gives you senior leadership now—with hands-on execution built into the model.
-            </Reveal>
           </div>
           <div className="energy-line energy-line--delayed" />
         </section>
@@ -182,96 +195,103 @@ export default function FractionalHeadOfMarketingPage() {
         <section className="bg-black text-white relative overflow-hidden">
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28">
-            <div className="text-center mb-16">
-              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
-                Strategic leadership. Hands-on execution. Full-funnel ownership.
+            <div className="max-w-6xl mx-auto">
+              <Reveal className="mb-16">
+                <p className="text-white/50 text-sm uppercase tracking-widest mb-4">What's included</p>
+                <h2 className="text-4xl md:text-5xl tracking-tight">
+                  Everything you need to run marketing like a system.
+                </h2>
               </Reveal>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
-              <Reveal>
-                <div className="energy-card rounded-3xl border border-white/10 p-8 bg-white/5 bg-noise h-full">
-                <h3 className="text-2xl md:text-3xl  mb-4">GTM Strategy & Leadership</h3>
-                <ul className="space-y-3 text-white/80 text-lg leading-relaxed">
-                  {[
-                    'Quarterly GTM plan',
-                    'Offer development + positioning alignment',
-                    'Messaging frameworks across the funnel',
-                    'Experiment roadmap + prioritization',
-                    'Marketing OKRs tied to revenue goals',
-                    'Align sales + marketing around SQL/SQO definitions',
-                    'Weekly leadership + cross-functional meetings',
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <span className="text-white/60 mt-1.5 shrink-0">•</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                </div>
-              </Reveal>
+              
+              <div className="space-y-6">
+                {/* GTM Strategy */}
+                <Reveal>
+                  <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
+                    <div className="flex flex-col md:flex-row md:items-start gap-6">
+                      <div className="w-12 h-12 rounded-xl bg-[#021da8] flex items-center justify-center shrink-0">
+                        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl md:text-2xl mb-3">GTM Strategy & Leadership</h3>
+                        <p className="text-white/60 text-lg mb-4">Quarterly plans, OKRs, and cross-functional alignment tied to revenue.</p>
+                        <div className="flex flex-wrap gap-2">
+                          {['GTM planning', 'Positioning', 'Messaging', 'OKRs', 'Sales alignment'].map((tag) => (
+                            <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Reveal>
 
-              <Reveal>
-                <div className="energy-card rounded-3xl border border-white/10 p-8 bg-white/5 bg-noise h-full">
-                  <h3 className="text-2xl md:text-3xl  mb-4">Campaigns & Execution (Hands-on keyboard)</h3>
-                <ul className="space-y-3 text-white/80 text-lg leading-relaxed">
-                  {[
-                    'Plan → build → launch campaigns',
-                    'Manage email programs, webinars, events, content, and paid media partners',
-                    'Support and guide internal junior marketers',
-                    'Own timelines, launches, and workflows',
-                    'Manager vendor relationships',
-                    'Design test plans and build learning loops',
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <span className="text-white/60 mt-1.5 shrink-0">•</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                </div>
-              </Reveal>
+                {/* Campaigns & Execution */}
+                <Reveal>
+                  <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
+                    <div className="flex flex-col md:flex-row md:items-start gap-6">
+                      <div className="w-12 h-12 rounded-xl bg-[#021da8] flex items-center justify-center shrink-0">
+                        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl md:text-2xl mb-3">Campaigns & Execution</h3>
+                        <p className="text-white/60 text-lg mb-4">Hands-on keyboard work—we plan, build, launch, and optimize.</p>
+                        <div className="flex flex-wrap gap-2">
+                          {['Campaign builds', 'Email programs', 'Webinars', 'Vendor management', 'Test plans'].map((tag) => (
+                            <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Reveal>
 
-              <Reveal>
-                <div className="energy-card rounded-3xl border border-white/10 p-8 bg-white/5 bg-noise h-full">
-                  <h3 className="text-2xl md:text-3xl  mb-4">Funnel, Analytics & Measurement</h3>
-                <ul className="space-y-3 text-white/80 text-lg leading-relaxed">
-                  {[
-                    'Pipeline modeling',
-                    'Full campaign build out',
-                    'Measurement & attribution (simple, usable frameworks)',
-                    'KPI dashboards',
-                    'Funnel analysis: MQL → SQL → Opportunity → Closed Won',
-                    'Lead scoring + intent framework',
-                    'Weekly reporting with insights, not vanity metrics',
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <span className="text-white/60 mt-1.5 shrink-0">•</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                </div>
-              </Reveal>
+                {/* Analytics & Measurement */}
+                <Reveal>
+                  <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
+                    <div className="flex flex-col md:flex-row md:items-start gap-6">
+                      <div className="w-12 h-12 rounded-xl bg-[#021da8] flex items-center justify-center shrink-0">
+                        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl md:text-2xl mb-3">Funnel & Measurement</h3>
+                        <p className="text-white/60 text-lg mb-4">Pipeline modeling, attribution, and reporting that drives decisions.</p>
+                        <div className="flex flex-wrap gap-2">
+                          {['Pipeline modeling', 'Attribution', 'Dashboards', 'Lead scoring', 'Funnel analysis'].map((tag) => (
+                            <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Reveal>
 
-              <Reveal>
-                <div className="energy-card rounded-3xl border border-white/10 p-8 bg-white/5 bg-noise h-full">
-                  <h3 className="text-2xl md:text-3xl  mb-4">Embedded Partnership</h3>
-                <ul className="space-y-3 text-white/80 text-lg leading-relaxed">
-                  {[
-                    'We join your Slack',
-                    'Attend GTM standups',
-                    'Partner with founders, CS, product, and sales',
-                    'No junior account managers—just a senior operator',
-                    'Feels like an in-house leader, not a vendor',
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <span className="text-white/60 mt-1.5 shrink-0">•</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                </div>
-              </Reveal>
+                {/* Embedded Partnership */}
+                <Reveal>
+                  <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
+                    <div className="flex flex-col md:flex-row md:items-start gap-6">
+                      <div className="w-12 h-12 rounded-xl bg-[#021da8] flex items-center justify-center shrink-0">
+                        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl md:text-2xl mb-3">Embedded Partnership</h3>
+                        <p className="text-white/60 text-lg mb-4">We join your Slack, attend standups, and work like an in-house leader.</p>
+                        <div className="flex flex-wrap gap-2">
+                          {['Slack access', 'GTM standups', 'Cross-functional', 'Senior operators', 'No handoffs'].map((tag) => (
+                            <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Reveal>
+              </div>
             </div>
           </div>
           <div className="energy-line energy-line--delayed" />
@@ -296,27 +316,31 @@ export default function FractionalHeadOfMarketingPage() {
 
         {/* Section 4 - Sample Plays */}
         <section className="bg-black text-white relative overflow-hidden">
-          <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28">
-            <div className="text-center mb-12">
-              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
-                Sample Plays We Run
+            <div className="max-w-5xl mx-auto">
+              <Reveal className="mb-12">
+                <p className="text-white/50 text-sm uppercase tracking-widest mb-4">What we do</p>
+                <h2 className="text-4xl md:text-5xl tracking-tight">
+                  Sample plays we run
+                </h2>
               </Reveal>
-            </div>
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-              {samplePlays.map((play, idx) => (
-                <Reveal key={idx}>
-                  <div className="energy-card rounded-2xl border border-white/10 p-6 bg-white/5">
-                    <div className="flex items-start gap-3">
-                      <span className="text-white/60 mt-1.5 shrink-0">•</span>
-                      <p className="text-white/80 text-lg leading-relaxed">{play}</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                {samplePlays.map((play, idx) => (
+                  <Reveal key={idx}>
+                    <div className="flex items-center gap-3 py-3 border-b border-white/10">
+                      <span className="w-5 h-5 rounded-full bg-[#021da8] flex items-center justify-center shrink-0">
+                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                      <p className="text-white/80 text-lg">{play}</p>
                     </div>
-                  </div>
-                </Reveal>
-              ))}
+                  </Reveal>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="energy-line energy-line--delayed" />
         </section>
 
         {/* Section 5 - Testimonials */}
@@ -338,14 +362,9 @@ export default function FractionalHeadOfMarketingPage() {
               </Reveal>
             </div>
             <Tilt>
-              <a
-                href="https://calendly.com/fractionaldemand/30min"
-                target="_blank"
-                rel="noopener"
-                className="btn btn-primary btn-md md:btn-lg btn-shine"
-              >
+              <LetsTalkButton className="btn btn-primary btn-md md:btn-lg btn-shine">
                 Book a Strategy Session
-              </a>
+              </LetsTalkButton>
             </Tilt>
           </div>
           <div className="energy-line energy-line--delayed" />

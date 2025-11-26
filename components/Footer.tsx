@@ -1,8 +1,23 @@
+"use client";
+
 import Image from 'next/image';
 import map from '@/public/assets/images/assets-map.json';
 import CareersTrigger from './CareersTrigger';
+import { useCalendlyPopup } from './CalendlyPopup';
 
 type FooterProps = { minimal?: boolean };
+
+function ContactButton() {
+  const { openPopup } = useCalendlyPopup();
+  return (
+    <button 
+      onClick={openPopup}
+      className="text-white/60 hover:text-white hover:underline underline-offset-8 transition-colors text-sm"
+    >
+      Contact
+    </button>
+  );
+}
 
 export default function Footer({ minimal = false }: FooterProps) {
   if (minimal) {
@@ -60,7 +75,7 @@ export default function Footer({ minimal = false }: FooterProps) {
             <div className="flex items-center gap-4">
               <CareersTrigger />
               <a href="/privacy-policy" className="text-white/60 hover:text-white hover:underline underline-offset-8 transition-colors text-sm">Privacy Policy</a>
-              <a href="https://calendly.com/fractionaldemand/30min" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white hover:underline underline-offset-8 transition-colors text-sm">Contact</a>
+              <ContactButton />
             </div>
           )}
         </div>

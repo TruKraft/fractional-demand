@@ -1,7 +1,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import Preconnects from './next-head';
-import { Libre_Franklin, Source_Serif_4 } from 'next/font/google';
+import { Libre_Franklin, Source_Serif_4, DM_Sans } from 'next/font/google';
+import { CalendlyPopupProvider } from '@/components/CalendlyPopup';
 
 const libreFranklin = Libre_Franklin({
   subsets: ['latin'],
@@ -14,6 +15,13 @@ const sourceSerif = Source_Serif_4({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-source-serif',
+  weight: ['400', '500', '600', '700'],
+});
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-dm-sans',
   weight: ['400', '500', '600', '700'],
 });
 
@@ -51,7 +59,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`bg-black ${libreFranklin.variable} ${sourceSerif.variable}`}>
+    <html lang="en" className={`bg-black ${libreFranklin.variable} ${sourceSerif.variable} ${dmSans.variable}`}>
       <head>
         <Preconnects />
         <script
@@ -100,8 +108,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen bg-black text-white antialiased font-body">
-        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[3000] focus:bg-black focus:text-white focus:px-3 focus:py-2 focus:rounded">Skip to content</a>
-        {children}
+        <CalendlyPopupProvider>
+          <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[3000] focus:bg-black focus:text-white focus:px-3 focus:py-2 focus:rounded">Skip to content</a>
+          {children}
+        </CalendlyPopupProvider>
       </body>
     </html>
   );

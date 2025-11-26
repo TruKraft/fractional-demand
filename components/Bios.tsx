@@ -66,72 +66,69 @@ const bios: Bio[] = merged.map((b) => ({
 
 export default function Bios() {
   return (
-    <section id="about-us" className="bg-black text-white relative overflow-hidden bg-noise">
-      <div className="energy-line" />
+    <section id="about-us" className="bg-black text-white relative overflow-hidden">
       <div className="container mx-auto px-4 py-24 md:py-28">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {bios.map((b) => (
-            <Reveal key={b.name}>
-              <div className="energy-card rounded-3xl border border-white/10 p-6 bg-white/5 bg-noise hover:bg-white/10 transition-colors">
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex items-center gap-4">
-                  <div className="relative h-20 w-20 overflow-hidden rounded-full ring-1 ring-white/20">
-                    <Image src={b.img || '/assets/images/placeholder-avatar.jpg'} alt={b.name} fill className="object-cover" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl md:text-3xl ">{b.name}</h3>
-                    <p className="text-white/70 text-lg">{b.title}</p>
+        <div className="max-w-6xl mx-auto">
+          <Reveal className="mb-12">
+            <p className="text-white/50 text-sm uppercase tracking-widest mb-4">Our team</p>
+            <h2 className="text-4xl md:text-5xl tracking-tight">
+              Senior operators, not junior account managers
+            </h2>
+          </Reveal>
+          
+          <div className="space-y-8">
+            {bios.map((b, idx) => (
+              <Reveal key={b.name}>
+                <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    {/* Photo */}
+                    <div className="shrink-0">
+                      <div className="relative h-24 w-24 md:h-32 md:w-32 overflow-hidden rounded-2xl ring-1 ring-white/10">
+                        <Image src={b.img || '/assets/images/placeholder-avatar.jpg'} alt={b.name} fill className="object-cover" />
+                      </div>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between gap-4 mb-4">
+                        <div>
+                          <h3 className="text-2xl md:text-3xl mb-1">{b.name}</h3>
+                          <p className="text-[#021da8] text-lg">{b.title}</p>
+                        </div>
+                        {b.linkedin && (
+                          <a
+                            href={b.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`LinkedIn profile for ${b.name}`}
+                            className="w-10 h-10 rounded-lg bg-[#0A66C2] flex items-center justify-center text-white hover:bg-[#0A66C2]/80 transition-colors shrink-0"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                          </a>
+                        )}
+                      </div>
+                      
+                      <div className="text-white/70 text-base leading-relaxed space-y-3">
+                        {Array.isArray(b.blurb)
+                          ? b.blurb.map((paragraph, pIdx) => (
+                              <p key={pIdx}>{paragraph}</p>
+                            ))
+                          : String(b.blurb)
+                              .split(/\n\s*\n/)
+                              .map((paragraph, pIdx) => (
+                                <p key={pIdx}>{paragraph}</p>
+                              ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="shrink-0">
-                  {b.linkedin ? (
-                    <a
-                      href={b.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`LinkedIn profile for ${b.name}`}
-                      className="group inline-flex items-center justify-center w-10 h-10 rounded-lg border border-transparent text-white/70 hover:text-white hover:border-white/10 hover:bg-white/10 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] shadow-none hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)] hover:-translate-y-1 hover:scale-[1.03] will-change-transform"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="h-5 w-5 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-120"
-                      >
-                        <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.2 2.3-2.46 4.73-2.46 5.06 0 5.99 3.33 5.99 7.66V24h-5v-7.5c0-1.79-.03-4.1-2.5-4.1-2.5 0-2.88 1.95-2.88 3.97V24H8z"/>
-                      </svg>
-                    </a>
-                  ) : (
-                    <span className="group inline-flex items-center justify-center w-10 h-10 rounded-lg border border-transparent text-white/30 hover:border-white/10 hover:bg-white/10 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] shadow-none hover:shadow-[0_10px_30px_rgba(0,0,0,0.35)] hover:-translate-y-1 hover:scale-[1.03] will-change-transform">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="h-5 w-5 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-120"
-                        aria-hidden="true"
-                      >
-                        <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.2 2.3-2.46 4.73-2.46 5.06 0 5.99 3.33 5.99 7.66V24h-5v-7.5c0-1.79-.03-4.1-2.5-4.1-2.5 0-2.88 1.95-2.88 3.97V24H8z"/>
-                      </svg>
-                    </span>
-                  )}
-                </div>
-              </div>
-              {Array.isArray(b.blurb)
-                ? b.blurb.map((paragraph, idx) => (
-                    <p key={idx} className={`text-white/80 text-lg leading-relaxed ${idx === 0 ? 'mt-4' : 'mt-3'}`}>{paragraph}</p>
-                  ))
-                : String(b.blurb)
-                    .split(/\n\s*\n/)
-                    .map((paragraph, idx) => (
-                      <p key={idx} className={`text-white/80 text-lg leading-relaxed ${idx === 0 ? 'mt-4' : 'mt-3'}`}>{paragraph}</p>
-                    ))}
-              {/* Removed bottom LinkedIn button to avoid duplication; icon in header links to profile */}
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
-      <div className="energy-line energy-line--delayed" />
     </section>
   );
 }

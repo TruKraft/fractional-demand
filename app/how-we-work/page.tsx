@@ -8,6 +8,7 @@ import IconGrid from '@/components/IconGrid';
 import ProcessSteps from '@/components/ProcessSteps';
 import EyebrowHeading from '@/components/EyebrowHeading';
 import EnergyCard from '@/components/EnergyCard';
+import { LetsTalkButton } from '@/components/CalendlyPopup';
 
 export const metadata: Metadata = {
   title: 'How We Work',
@@ -148,68 +149,101 @@ export default function HowWeWorkPage() {
       <Nav />
       <main id="main">
         {/* Hero */}
-        <section className="bg-black text-white relative overflow-hidden bg-grid-dots">
-          <div className="container mx-auto px-4 py-24 md:py-32">
-            <div className="text-center mb-10">
-              <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl  tracking-tight mb-6">
-                How We Work: The DemandOS System
+        <section className="relative overflow-hidden text-white" style={{ background: 'linear-gradient(135deg, #000000 0%, #0a1628 50%, #021da8 150%)' }}>
+          <div className="absolute inset-0 bg-grid-dots opacity-30" />
+          
+          <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Left: Content */}
+              <div>
+                <Reveal>
+                  <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm text-white/80 mb-6">
+                    <span className="w-2 h-2 rounded-full bg-[#021da8]" />
+                    Our Operating System
+                  </div>
+                </Reveal>
+                <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">
+                  The DemandOS System
+                </Reveal>
+                <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed mb-8">
+                  Our proven operating system for building, running, and scaling predictable pipeline. It connects positioning, messaging, paid media, RevOps, and lifecycle into one GTM engine.
+                </Reveal>
+                <Reveal>
+                  <Tilt>
+                    <LetsTalkButton className="btn btn-primary btn-md md:btn-lg btn-shine">
+                      Let&apos;s Talk
+                    </LetsTalkButton>
+                  </Tilt>
+                </Reveal>
+              </div>
+              
+              {/* Right: Visual - Build/Run/Scale */}
+              <Reveal className="hidden lg:block">
+                <div className="space-y-4">
+                  {[
+                    { phase: 'Build', desc: 'Positioning, messaging, offers, tracking, first campaigns' },
+                    { phase: 'Run', desc: 'Weekly execution, experiments, optimization, reporting' },
+                    { phase: 'Scale', desc: 'Expand channels, multiply wins, deepen lifecycle' },
+                  ].map((item, idx) => (
+                    <div key={item.phase} className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-5 hover:border-white/20 transition-colors">
+                      <div className="w-12 h-12 rounded-xl bg-[#021da8] flex items-center justify-center text-white text-xl shrink-0">
+                        {idx + 1}
+                      </div>
+                      <div>
+                        <h3 className="text-lg text-white mb-1">{item.phase}</h3>
+                        <p className="text-white/60 text-sm">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </Reveal>
-              <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
-                Fractional DemandOS is our proven operating system for building, running, and scaling predictable pipeline. It connects positioning, messaging, paid media, RevOps, and lifecycle into one GTM engine — operated by senior specialists embedded directly into your team.
-              </Reveal>
-            </div>
-            <div className="flex justify-center">
-              <Tilt>
-                <a
-                  href="https://calendly.com/fractionaldemand/30min"
-                  target="_blank"
-                  rel="noopener"
-                  className="btn btn-primary btn-md md:btn-lg btn-shine"
-                >
-                  Let&apos;s Talk
-                </a>
-              </Tilt>
             </div>
           </div>
         </section>
 
         {/* Section 1 - Why DemandOS Exists */}
-        <section className="bg-black text-white relative overflow-hidden bg-noise">
-          <div className="energy-line" />
+        <section className="bg-black text-white relative overflow-hidden">
           <div className="container mx-auto px-4 py-24 md:py-28">
-            <div className="text-center mb-12">
-              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
-                Strategy without execution breaks. Execution without strategy burns money. You need a GTM system that connects both strategy and execution.
-              </Reveal>
-            </div>
-            <Reveal as="p" className="text-center text-white/80 text-xl mb-12">
-              Most teams don&apos;t fail because of effort — they fail because nothing connects.
-            </Reveal>
-            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-              {[
-                'Positioning lives in a doc',
-                'Messaging is inconsistent',
-                'Paid media runs in isolation',
-                'RevOps is a backlog',
-                'Content lacks offers',
-                'Funnel stages are unclear',
-                'No single system ties it all together',
-              ].map((item, idx) => (
-                <Reveal key={idx}>
-                  <div className="energy-card rounded-2xl border border-white/10 p-6 bg-white/5">
-                    <div className="flex items-start gap-3">
-                      <span className="text-white/60 mt-1.5 shrink-0">•</span>
-                      <p className="text-white/80 text-lg leading-relaxed">{item}</p>
-                    </div>
-                  </div>
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-6xl mx-auto">
+              {/* Left: Problem */}
+              <div className="lg:sticky lg:top-32">
+                <Reveal as="h2" className="text-4xl md:text-5xl tracking-tight mb-6">
+                  Strategy without execution breaks. Execution without strategy burns money.
                 </Reveal>
-              ))}
+                <Reveal as="p" className="text-white/60 text-lg leading-relaxed mb-6">
+                  Most teams don&apos;t fail because of effort — they fail because nothing connects.
+                </Reveal>
+                <Reveal as="p" className="text-white/80 text-lg leading-relaxed">
+                  <strong className="text-white">DemandOS</strong> unifies your GTM function into one repeatable, scalable, measurable system — and then we run it with you.
+                </Reveal>
+              </div>
+              
+              {/* Right: Pain points */}
+              <div>
+                <Reveal as="p" className="text-white/50 text-sm uppercase tracking-widest mb-6">Sound familiar?</Reveal>
+                <ul className="space-y-4">
+                  {[
+                    'Positioning lives in a doc',
+                    'Messaging is inconsistent',
+                    'Paid media runs in isolation',
+                    'RevOps is a backlog',
+                    'Content lacks offers',
+                    'Funnel stages are unclear',
+                    'No single system ties it all together',
+                  ].map((item, idx) => (
+                    <Reveal key={idx}>
+                      <li className="flex items-center gap-4 text-white/90 text-lg py-3 border-b border-white/10">
+                        <span className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-sm text-white/60 shrink-0">
+                          ✕
+                        </span>
+                        {item}
+                      </li>
+                    </Reveal>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <Reveal as="p" className="text-center text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
-              DemandOS unifies your GTM function into one repeatable, scalable, measurable system — and then we run it with you.
-            </Reveal>
           </div>
-          <div className="energy-line energy-line--delayed" />
         </section>
 
         {/* Section 2 - The DemandOS Framework */}
@@ -230,62 +264,105 @@ export default function HowWeWorkPage() {
         </section>
 
         {/* Section 3 - What DemandOS Includes */}
-        <IconGrid
-          items={iconGridItems}
-          headline="What DemandOS Actually Covers"
-          subcopy="Your marketing, sales, and RevOps shouldn't operate as separate silos. DemandOS unifies them."
-        />
+        <section className="bg-black text-white relative overflow-hidden">
+          <div className="container mx-auto px-4 py-24 md:py-28">
+            <div className="max-w-6xl mx-auto">
+              <Reveal className="mb-16">
+                <p className="text-white/50 text-sm uppercase tracking-widest mb-4">What's covered</p>
+                <h2 className="text-4xl md:text-5xl tracking-tight mb-4">
+                  What DemandOS Actually Covers
+                </h2>
+                <p className="text-white/60 text-xl max-w-2xl">
+                  Your marketing, sales, and RevOps shouldn't operate as separate silos. DemandOS unifies them.
+                </p>
+              </Reveal>
+              
+              <div className="space-y-6">
+                {iconGridItems.map((item, idx) => (
+                  <Reveal key={idx}>
+                    <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
+                      <div className="flex flex-col md:flex-row md:items-start gap-6">
+                        <div className="w-12 h-12 rounded-xl bg-[#021da8] flex items-center justify-center shrink-0">
+                          <span className="text-white text-xl">{idx + 1}</span>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl md:text-2xl mb-3">{item.title}</h3>
+                          <div className="flex flex-wrap gap-2">
+                            {item.items.map((tag) => (
+                              <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Section 4 - The DemandOS Engagement Model */}
         <ProcessSteps steps={engagementSteps} headline="Here's What Working With Us Looks Like" />
 
         {/* Section 5 - Why DemandOS Works */}
-        <section className="bg-black text-white relative overflow-hidden bg-noise">
-          <div className="energy-line" />
+        <section className="bg-black text-white relative overflow-hidden">
           <div className="container mx-auto px-4 py-24 md:py-28">
-            <div className="text-center mb-16">
-              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
-                Why Teams Choose Fractional DemandOS
+            <div className="max-w-6xl mx-auto">
+              <Reveal className="mb-16">
+                <p className="text-white/50 text-sm uppercase tracking-widest mb-4">Why us</p>
+                <h2 className="text-4xl md:text-5xl tracking-tight">
+                  Why Teams Choose Fractional DemandOS
+                </h2>
               </Reveal>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-              {whyItWorks.map((item, idx) => (
-                <Reveal key={idx}>
-                  <div className="energy-card rounded-3xl border border-white/10 p-8 bg-white/5 bg-noise h-full">
-                    <div className="text-3xl  text-white/20 mb-3">{idx + 1}.</div>
-                    <h3 className="text-2xl md:text-3xl  mb-3">{item.title}</h3>
-                    <p className="text-white/80 text-lg leading-relaxed">{item.body}</p>
-                  </div>
-                </Reveal>
-              ))}
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                {whyItWorks.map((item, idx) => (
+                  <Reveal key={idx}>
+                    <div className="group">
+                      <div className="relative w-16 h-16 mb-5">
+                        <div className="absolute inset-0 rounded-2xl bg-[#021da8] rotate-3 group-hover:rotate-6 transition-transform" />
+                        <div className="absolute inset-0 rounded-2xl bg-[#021da8] flex items-center justify-center text-white text-2xl font-semibold">
+                          {idx + 1}
+                        </div>
+                      </div>
+                      <h3 className="text-xl md:text-2xl mb-2">{item.title}</h3>
+                      <p className="text-white/60 text-base leading-relaxed">{item.body}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="energy-line energy-line--delayed" />
         </section>
 
         {/* Section 6 - What Success Looks Like */}
         <section className="bg-black text-white relative overflow-hidden">
-          <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28">
-            <div className="text-center mb-12">
-              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
-                What Happens When Your GTM Works Like a System
+            <div className="max-w-5xl mx-auto">
+              <Reveal className="mb-12">
+                <p className="text-white/50 text-sm uppercase tracking-widest mb-4">The results</p>
+                <h2 className="text-4xl md:text-5xl tracking-tight">
+                  What Happens When Your GTM Works Like a System
+                </h2>
               </Reveal>
-            </div>
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-              {successItems.map((item, idx) => (
-                <Reveal key={idx}>
-                  <div className="energy-card rounded-2xl border border-white/10 p-6 bg-white/5">
-                    <div className="flex items-start gap-3">
-                      <span className="text-white/60 mt-1.5 shrink-0">•</span>
-                      <p className="text-white/80 text-lg leading-relaxed">{item}</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                {successItems.map((item, idx) => (
+                  <Reveal key={idx}>
+                    <div className="flex items-center gap-4 py-4 border-b border-white/10">
+                      <span className="w-6 h-6 rounded-full bg-[#021da8] flex items-center justify-center shrink-0">
+                        <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                      <p className="text-white/90 text-lg">{item}</p>
                     </div>
-                  </div>
-                </Reveal>
-              ))}
+                  </Reveal>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="energy-line energy-line--delayed" />
         </section>
 
         {/* Section 7 - Final CTA */}
@@ -301,14 +378,9 @@ export default function HowWeWorkPage() {
               </Reveal>
             </div>
             <Tilt>
-              <a
-                href="https://calendly.com/fractionaldemand/30min"
-                target="_blank"
-                rel="noopener"
-                className="btn btn-primary btn-md md:btn-lg btn-shine"
-              >
+              <LetsTalkButton className="btn btn-primary btn-md md:btn-lg btn-shine">
                 Book a DemandOS Session
-              </a>
+              </LetsTalkButton>
             </Tilt>
           </div>
           <div className="energy-line energy-line--delayed" />

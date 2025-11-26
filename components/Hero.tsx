@@ -1,5 +1,6 @@
 import Reveal from './Reveal';
 import Tilt from './Tilt';
+import { LetsTalkButton } from './CalendlyPopup';
 
 export default function Hero() {
   return (
@@ -70,14 +71,9 @@ export default function Hero() {
         </div>
         <div className="flex justify-center">
           <Tilt>
-            <a
-              href="https://calendly.com/fractionaldemand/30min"
-              target="_blank"
-              rel="noopener"
-              className="btn btn-primary btn-md md:btn-lg btn-shine"
-            >
+            <LetsTalkButton className="btn btn-primary btn-md md:btn-lg btn-shine">
               Let&apos;s Talk
-            </a>
+            </LetsTalkButton>
           </Tilt>
         </div>
       </div>

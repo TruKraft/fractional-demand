@@ -75,14 +75,14 @@ export default function LandingPage() {
     <>
       <Nav minimal={!SHOW_FULL_HEADER} />
 
-      <main className="bg-black text-white">
+      <main id="main" className="bg-black text-white">
         <section className="container mx-auto px-4 py-20 md:py-28">
           <div className={`grid gap-10 lg:gap-12 lg:grid-cols-2 items-start`}>
             {/* Content side (scrolls) */}
             <div className={`order-1 ${contentFirst ? '' : 'lg:order-2'}`}>
               {/* Eyebrow / kicker */}
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs md:text-sm text-white/70">Limited-time offer</div>
-              <h1 className="mt-4 text-5xl md:text-6xl font-black tracking-tight">Get 2 months free</h1>
+              <h1 className="mt-4 text-5xl md:text-6xl tracking-tight">Get 2 months free</h1>
               <p className="mt-3 text-2xl md:text-3xl text-white/85">On a 12-month plan. Cancel anytime after the trial period.</p>
               <p className="mt-5 text-white/80 text-[0.96rem] md:text-[1.1rem] leading-relaxed max-w-2xl">Generate qualified pipeline with senior ad buyers who live and breathe paid media. Predictable demand, clear reporting, no junior handoffs.</p>
 
