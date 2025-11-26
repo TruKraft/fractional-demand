@@ -10,7 +10,11 @@ const config: Config = {
         padding: '1rem',
         screens: { sm: '640px', md: '768px', lg: '1024px', xl: '1200px', '2xl': '1320px' },
       },
-      fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+      fontFamily: {
+        sans: ['var(--font-libre-franklin)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-libre-franklin)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        body: ['var(--font-source-serif)', 'Georgia', 'ui-serif', 'serif'],
+      },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0)' },

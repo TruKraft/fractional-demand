@@ -6,7 +6,7 @@ export default function LPPlanStrip({ inline, className }: Props) {
     <div className={`rounded-3xl border border-white/10 bg-white/5 p-6 md:p-7 ${className || ''}`}>
       <div className="flex flex-col gap-5">
         <div>
-          <h3 className="text-2xl md:text-3xl font-bold">Annual plan</h3>
+          <h3 className="text-2xl md:text-3xl ">Annual plan</h3>
           <p className="mt-1 text-white/70">Get 2 months free on a 12-month agreement</p>
         </div>
         <ul className="flex flex-wrap gap-2 text-white/85 text-sm md:text-base">

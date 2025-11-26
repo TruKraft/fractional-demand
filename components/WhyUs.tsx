@@ -27,11 +27,11 @@ export default function WhyUs() {
   return (
     <section className="bg-black text-white">
       <div className="container mx-auto px-4 py-24 md:py-28">
-        <Reveal as="h2" className="text-center text-4xl md:text-5xl font-bold tracking-tight mb-8">What makes us different?</Reveal>
+        <Reveal as="h2" className="text-center text-4xl md:text-5xl  tracking-tight mb-8">What makes us different?</Reveal>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
           {items.map((it) => (
             <Reveal key={it.title} className="relative rounded-3xl border border-white/10 p-8 md:p-10 bg-white/5 bg-noise overflow-hidden">
-              <h3 className="text-2xl md:text-3xl font-bold">{it.title}</h3>
+              <h3 className="text-2xl md:text-3xl ">{it.title}</h3>
               <p className="mt-3 text-white/80 text-lg leading-relaxed">{it.body}</p>
             </Reveal>
           ))}

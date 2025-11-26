@@ -79,7 +79,7 @@ export default function Bios() {
                     <Image src={b.img || '/assets/images/placeholder-avatar.jpg'} alt={b.name} fill className="object-cover" />
                   </div>
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-bold">{b.name}</h3>
+                    <h3 className="text-2xl md:text-3xl ">{b.name}</h3>
                     <p className="text-white/70 text-lg">{b.title}</p>
                   </div>
                 </div>

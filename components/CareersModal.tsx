@@ -44,7 +44,7 @@ export default function CareersModal({ isOpen, onClose }: CareersModalProps) {
           className="fixed left-1/2 top-1/2 z-[99991] w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 bg-black text-white border border-white/10 rounded-3xl shadow-xl max-h-[90vh] overflow-y-auto"
         >
           <div className="sticky top-0 bg-black border-b border-white/10 px-6 py-4 flex items-center justify-between">
-            <h2 id="careers-modal-title" className="text-2xl font-bold">
+            <h2 id="careers-modal-title" className="text-2xl ">
               Careers at Fractional Demand
             </h2>
             <button

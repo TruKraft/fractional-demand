@@ -151,7 +151,7 @@ export default function HowWeWorkPage() {
         <section className="bg-black text-white relative overflow-hidden bg-grid-dots">
           <div className="container mx-auto px-4 py-24 md:py-32">
             <div className="text-center mb-10">
-              <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+              <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl  tracking-tight mb-6">
                 How We Work: The DemandOS System
               </Reveal>
               <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
@@ -178,7 +178,7 @@ export default function HowWeWorkPage() {
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28">
             <div className="text-center mb-12">
-              <Reveal as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
                 Strategy without execution breaks. Execution without strategy burns money. You need a GTM system that connects both strategy and execution.
               </Reveal>
             </div>
@@ -217,7 +217,7 @@ export default function HowWeWorkPage() {
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28">
             <div className="text-center mb-16">
-              <Reveal as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
                 The DemandOS System
               </Reveal>
               <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
@@ -244,7 +244,7 @@ export default function HowWeWorkPage() {
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28">
             <div className="text-center mb-16">
-              <Reveal as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
                 Why Teams Choose Fractional DemandOS
               </Reveal>
             </div>
@@ -252,8 +252,8 @@ export default function HowWeWorkPage() {
               {whyItWorks.map((item, idx) => (
                 <Reveal key={idx}>
                   <div className="energy-card rounded-3xl border border-white/10 p-8 bg-white/5 bg-noise h-full">
-                    <div className="text-3xl font-bold text-white/20 mb-3">{idx + 1}.</div>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-3">{item.title}</h3>
+                    <div className="text-3xl  text-white/20 mb-3">{idx + 1}.</div>
+                    <h3 className="text-2xl md:text-3xl  mb-3">{item.title}</h3>
                     <p className="text-white/80 text-lg leading-relaxed">{item.body}</p>
                   </div>
                 </Reveal>
@@ -268,7 +268,7 @@ export default function HowWeWorkPage() {
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28">
             <div className="text-center mb-12">
-              <Reveal as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
                 What Happens When Your GTM Works Like a System
               </Reveal>
             </div>
@@ -293,7 +293,7 @@ export default function HowWeWorkPage() {
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28 text-center">
             <div className="mb-10">
-              <Reveal as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
                 Ready to Install Your DemandOS?
               </Reveal>
               <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">

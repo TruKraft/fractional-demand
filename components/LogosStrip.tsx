@@ -40,9 +40,9 @@ export default function LogosStrip() {
   const row1 = row1List.map((src, i) => ({ src, alt: `Logo ${i + 1}` }));
   const row2 = row2List.map((src, i) => ({ src, alt: `Logo ${i + 1 + row1List.length}` }));
   return (
-    <section className="bg-white text-black">
+    <section className="bg-[#0a0a0a] text-white">
       <div className="container mx-auto px-4 py-16 md:py-20">
-        <h2 className="text-center text-4xl md:text-5xl font-semibold tracking-tight mb-8 pb-4">Trusted by B2B teams who can&apos;t afford to miss their number.</h2>
+        <h2 className="text-center text-4xl md:text-3xl font-semibold tracking-tight mb-8 pb-8">Trusted by B2B teams who can&apos;t afford to miss their number.</h2>
         <div className="space-y-8">
           {/* Row 1 (reverse direction) */}
           <div className="relative overflow-hidden motion-reduce:overflow-visible">
@@ -50,7 +50,7 @@ export default function LogosStrip() {
               <div className="flex items-center gap-x-12 animate-marquee will-change-transform motion-reduce:animate-none" style={{ animationDirection: 'reverse' }}>
                 {[...row1, ...row1].map((l, idx) => (
                   <div key={`r1-${idx}`} className="relative h-6 w-24 md:h-8 md:w-32 shrink-0">
-                    <Image src={l.src} alt={l.alt} fill className="object-contain" />
+                    <Image src={l.src} alt={l.alt} fill className="object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
                   </div>
                 ))}
               </div>
@@ -62,7 +62,7 @@ export default function LogosStrip() {
               <div className="flex items-center gap-x-12 animate-marquee will-change-transform motion-reduce:animate-none">
                 {[...row2, ...row2].map((l, idx) => (
                   <div key={`r2-${idx}`} className="relative h-6 w-24 md:h-8 md:w-32 shrink-0">
-                    <Image src={l.src} alt={l.alt} fill className="object-contain" />
+                    <Image src={l.src} alt={l.alt} fill className="object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
                   </div>
                 ))}
               </div>

@@ -56,7 +56,7 @@ export default function BlogPage() {
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-32">
             <div className="text-center">
-              <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+              <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl  tracking-tight mb-6">
                 Blog
               </Reveal>
               <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
@@ -77,7 +77,7 @@ export default function BlogPage() {
                     <div className="inline-block px-3 py-1 rounded-full bg-white/10 border border-white/10 text-white/60 text-xs font-medium mb-4 w-fit">
                       {post.category}
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-bold mb-3 flex-grow">
+                    <h2 className="text-2xl md:text-3xl  mb-3 flex-grow">
                       <Link href={`/resources/blog/${post.slug}`} className="hover:text-white/80 transition-colors">
                         {post.title}
                       </Link>

@@ -33,7 +33,7 @@ export default function HomeFAQ() {
   return (
     <section id="faq" className="bg-black text-white">
       <div className="container mx-auto px-4 py-20 md:py-24">
-        <h2 className="text-center text-4xl md:text-5xl font-bold tracking-tight mb-8">Frequently asked questions</h2>
+        <h2 className="text-center text-4xl md:text-5xl  tracking-tight mb-8">Frequently asked questions</h2>
         <div className="mx-auto max-w-3xl divide-y divide-white/10 rounded-3xl border border-white/10 bg-white/5">
           {faqs.map((f) => (
             <div key={f.q}>

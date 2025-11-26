@@ -1,7 +1,21 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import Preconnects from './next-head';
-import { Inter } from 'next/font/google';
+import { Libre_Franklin, Source_Serif_4 } from 'next/font/google';
+
+const libreFranklin = Libre_Franklin({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-libre-franklin',
+  weight: ['400', '500', '600', '700', '800', '900'],
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-source-serif',
+  weight: ['400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
   title: {
@@ -35,11 +49,9 @@ export const metadata: Metadata = {
   }
 };
 
-const inter = Inter({ subsets: ['latin'], display: 'swap' });
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="bg-black">
+    <html lang="en" className={`bg-black ${libreFranklin.variable} ${sourceSerif.variable}`}>
       <head>
         <Preconnects />
         <script
@@ -87,7 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className={`min-h-screen bg-black text-white antialiased ${inter.className}`}>
+      <body className="min-h-screen bg-black text-white antialiased font-body">
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[3000] focus:bg-black focus:text-white focus:px-3 focus:py-2 focus:rounded">Skip to content</a>
         {children}
       </body>

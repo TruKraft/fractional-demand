@@ -3,7 +3,20 @@ import Tilt from './Tilt';
 
 export default function Hero() {
   return (
-    <section className="relative isolate w-full bg-black text-white overflow-hidden bg-grid-dots">
+    <section className="relative isolate w-full bg-black text-white overflow-hidden">
+      {/* Animated block gradient background */}
+      <div className="absolute inset-0 -z-20 hero-block-gradient" />
+      
+      {/* Animated grid blocks overlay */}
+      <div className="absolute inset-0 -z-15 hero-blocks">
+        <div className="hero-block hero-block-1" />
+        <div className="hero-block hero-block-2" />
+        <div className="hero-block hero-block-3" />
+        <div className="hero-block hero-block-4" />
+        <div className="hero-block hero-block-5" />
+        <div className="hero-block hero-block-6" />
+      </div>
+
       {/* Geometric line background (subtle) */}
       <svg
         aria-hidden="true"
@@ -46,12 +59,12 @@ export default function Hero() {
           </g>
         </g>
       </svg>
-      <div className="relative z-10 container mx-auto px-4 py-24 md:py-32">
+      <div className="relative z-10 container mx-auto px-4 pt-36 md:pt-48 md:pb-32">
         <div className="text-center mb-10">
-          <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            Get a GTM Team That Builds Pipeline Fast.
+          <Reveal as="h1" className="text-4xl md:text-8xl lg:text-8xl tracking-tight mb-6">
+            Get a GTM Team That<br />Builds Pipeline Fast.
           </Reveal>
-          <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
+          <Reveal as="p" className="text-white/80 text-xl md:text-1xl leading-relaxed max-w-3xl mx-auto">
             Fractional Demand is a Go-To-Market Partner that embeds senior operators across strategy, paid media, RevOps, and lifecycle to build and run a demand system that accelerates pipeline, without the overhead of a full team.
           </Reveal>
         </div>

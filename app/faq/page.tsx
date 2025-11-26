@@ -101,7 +101,7 @@ export default function FAQPage() {
 
               {/* Mobile form under heading */}
               <div className="lg:hidden mt-8">
-                <h3 className="text-2xl font-bold mb-3">Book your strategy session</h3>
+                <h3 className="text-2xl  mb-3">Book your strategy session</h3>
                 <div className="energy-card rounded-3xl bg-white/5 p-5">
                   <div id="form-mobile">
                     {USE_CALENDLY ? (
@@ -122,7 +122,7 @@ export default function FAQPage() {
 
             {/* Form column (sticky on desktop) */}
             <div className="hidden lg:block order-2 lg:sticky lg:top-24 self-start">
-              <h3 className="text-2xl font-bold mb-3">Book your strategy session</h3>
+              <h3 className="text-2xl  mb-3">Book your strategy session</h3>
               <div className="energy-card rounded-3xl bg-white/5 p-5 md:p-6">
                 <div id="form">
                   {USE_CALENDLY ? (

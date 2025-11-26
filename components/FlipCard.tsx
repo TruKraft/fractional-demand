@@ -28,7 +28,7 @@ export default function FlipCard({ frontHeader, frontSubcopy, backItems, classNa
       >
         {/* Front Side */}
         <div className="absolute inset-0 backface-hidden rounded-3xl border border-white/10 p-8 bg-white/5 hover:bg-white/10 transition-colors">
-          <h3 className="text-2xl md:text-3xl font-bold mb-3">{frontHeader}</h3>
+          <h3 className="text-2xl md:text-3xl  mb-3">{frontHeader}</h3>
           <p className="text-white/80 text-lg">{frontSubcopy}</p>
         </div>
 
@@ -37,7 +37,7 @@ export default function FlipCard({ frontHeader, frontSubcopy, backItems, classNa
           className="absolute inset-0 backface-hidden rounded-3xl border border-white/10 p-8 bg-white/5 rotate-y-180"
           style={{ transform: 'rotateY(180deg)' }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">{frontHeader}</h3>
+          <h3 className="text-2xl md:text-3xl  mb-4">{frontHeader}</h3>
           <ul className="space-y-3 text-white/80 text-lg leading-relaxed">
             {backItems.map((item, idx) => (
               <li key={idx} className="flex items-start gap-2">

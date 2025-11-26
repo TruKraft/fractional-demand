@@ -36,7 +36,7 @@ export default function FAQ({ items, headline = "Frequently Asked Questions", cl
       <div className="energy-line" />
       <div className="container mx-auto px-4 py-24 md:py-28">
         <div className="text-center mb-12">
-          <Reveal as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+          <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
             {headline}
           </Reveal>
         </div>

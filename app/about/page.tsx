@@ -22,7 +22,7 @@ export default function AboutPage() {
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-32">
             <div className="text-center mb-16">
-              <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+              <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl  tracking-tight mb-6">
                 Meet the Team Behind Fractional Demand
               </Reveal>
             </div>

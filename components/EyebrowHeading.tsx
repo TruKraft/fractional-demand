@@ -28,7 +28,7 @@ export default function EyebrowHeading({
           {eyebrow}
         </div>
       </Reveal>
-      <Reveal as={as} className={`text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 ${headingClassName}`}>
+      <Reveal as={as} className={`text-4xl md:text-5xl lg:text-6xl  tracking-tight mb-6 ${headingClassName}`}>
         {heading}
       </Reveal>
       {subheading && (

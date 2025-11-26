@@ -7,7 +7,7 @@ export default function CTA() {
       <div className="energy-line" />
       <div className="container mx-auto px-4 py-24 md:py-28 text-center">
         <div className="mb-10">
-          <Reveal as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+          <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
             Ready to Get Started?
           </Reveal>
           <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">

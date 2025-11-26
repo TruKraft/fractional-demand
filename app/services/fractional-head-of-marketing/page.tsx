@@ -112,7 +112,7 @@ export default function FractionalHeadOfMarketingPage() {
         <section className="bg-black text-white relative overflow-hidden bg-grid-dots">
           <div className="container mx-auto px-4 py-24 md:py-32">
             <div className="text-center mb-10">
-              <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+              <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl  tracking-tight mb-6">
                 Fractional Head of Marketing That Builds GTM Momentum Fast.
               </Reveal>
               <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
@@ -139,7 +139,7 @@ export default function FractionalHeadOfMarketingPage() {
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28">
             <div className="text-center mb-12">
-              <Reveal as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
                 Most marketing teams aren't missing effort—they're missing experienced leadership.
               </Reveal>
             </div>
@@ -183,14 +183,14 @@ export default function FractionalHeadOfMarketingPage() {
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28">
             <div className="text-center mb-16">
-              <Reveal as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
                 Strategic leadership. Hands-on execution. Full-funnel ownership.
               </Reveal>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
               <Reveal>
                 <div className="energy-card rounded-3xl border border-white/10 p-8 bg-white/5 bg-noise h-full">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">GTM Strategy & Leadership</h3>
+                <h3 className="text-2xl md:text-3xl  mb-4">GTM Strategy & Leadership</h3>
                 <ul className="space-y-3 text-white/80 text-lg leading-relaxed">
                   {[
                     'Quarterly GTM plan',
@@ -212,7 +212,7 @@ export default function FractionalHeadOfMarketingPage() {
 
               <Reveal>
                 <div className="energy-card rounded-3xl border border-white/10 p-8 bg-white/5 bg-noise h-full">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">Campaigns & Execution (Hands-on keyboard)</h3>
+                  <h3 className="text-2xl md:text-3xl  mb-4">Campaigns & Execution (Hands-on keyboard)</h3>
                 <ul className="space-y-3 text-white/80 text-lg leading-relaxed">
                   {[
                     'Plan → build → launch campaigns',
@@ -233,7 +233,7 @@ export default function FractionalHeadOfMarketingPage() {
 
               <Reveal>
                 <div className="energy-card rounded-3xl border border-white/10 p-8 bg-white/5 bg-noise h-full">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">Funnel, Analytics & Measurement</h3>
+                  <h3 className="text-2xl md:text-3xl  mb-4">Funnel, Analytics & Measurement</h3>
                 <ul className="space-y-3 text-white/80 text-lg leading-relaxed">
                   {[
                     'Pipeline modeling',
@@ -255,7 +255,7 @@ export default function FractionalHeadOfMarketingPage() {
 
               <Reveal>
                 <div className="energy-card rounded-3xl border border-white/10 p-8 bg-white/5 bg-noise h-full">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">Embedded Partnership</h3>
+                  <h3 className="text-2xl md:text-3xl  mb-4">Embedded Partnership</h3>
                 <ul className="space-y-3 text-white/80 text-lg leading-relaxed">
                   {[
                     'We join your Slack',
@@ -282,7 +282,7 @@ export default function FractionalHeadOfMarketingPage() {
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28">
             <div className="text-center mb-16">
-              <Reveal as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
                 Our DemandOS System
               </Reveal>
               <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
@@ -299,7 +299,7 @@ export default function FractionalHeadOfMarketingPage() {
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28">
             <div className="text-center mb-12">
-              <Reveal as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
                 Sample Plays We Run
               </Reveal>
             </div>
@@ -330,7 +330,7 @@ export default function FractionalHeadOfMarketingPage() {
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28 text-center">
             <div className="mb-10">
-              <Reveal as="h2" className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
                 Ready to Add Instant GTM Leadership?
               </Reveal>
               <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">

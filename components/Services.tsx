@@ -71,7 +71,7 @@ export default function Services() {
       <div className="container mx-auto grid gap-6 md:gap-12 px-4 py-16 md:py-28 md:grid-cols-2">
         {/* Left: vertical tabs */}
         <div>
-          <Reveal as="h2" className="text-2xl md:text-5xl font-bold tracking-tight mb-3 md:mb-8">Our services</Reveal>
+          <Reveal as="h2" className="text-2xl md:text-5xl  tracking-tight mb-3 md:mb-8">Our services</Reveal>
           <div role="tablist" aria-label="Services" className="grid grid-cols-2 md:grid-cols-1 gap-1 md:gap-2">
             {services.map((s, idx) => {
               const selected = idx === activeIndex;
@@ -132,7 +132,7 @@ export default function Services() {
             aria-labelledby={`tab-${active.key}`}
             className="scroll-mt-24"
           >
-            <h3 className="text-lg md:text-2xl font-bold mb-2">{active.title}</h3>
+            <h3 className="text-lg md:text-2xl  mb-2">{active.title}</h3>
             <p className="text-black/80 text-sm md:text-lg leading-relaxed clamp-3 md:clamp-4">{active.blurb}</p>
           </div>
 
