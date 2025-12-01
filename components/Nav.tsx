@@ -88,6 +88,7 @@ export default function Nav({ minimal = false }: NavProps) {
   }, []);
 
   return (
+    <>
     <header className="fixed inset-x-0 top-0 z-[2000] bg-black/60 supports-[backdrop-filter]:bg-black/40 backdrop-blur border-b border-white/10 text-white">
       <nav className="container mx-auto flex items-center justify-between px-4 py-2 md:py-3">
         <a href="/" aria-label="Home" className="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-md">
@@ -276,14 +277,15 @@ export default function Nav({ minimal = false }: NavProps) {
         )}
       </nav>
 
-      {/* Mobile drawer - In normal DOM flow for SEO */}
+    </header>
+
+      {/* Mobile drawer - Moved outside header to avoid stacking context issues */}
       {!minimal && (
         <>
           {/* Overlay */}
-          <button
+          <div
             aria-hidden={!open}
-            tabIndex={-1}
-            className={`lg:hidden fixed inset-0 z-[99990] bg-black/50 transition-opacity ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+            className={`lg:hidden fixed inset-0 z-[9999] bg-black/80 backdrop-blur-sm transition-opacity duration-300 ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
             onClick={() => {
               setOpen(false);
               setServicesOpen(false);
@@ -295,13 +297,14 @@ export default function Nav({ minimal = false }: NavProps) {
             ref={mobileMenuRef}
             id="mobile-menu"
             aria-label="Mobile navigation"
-            className={`lg:hidden fixed right-0 top-0 z-[99991] h-full w-80 max-w-full bg-black text-white border-l border-white/10 shadow-xl transform transition-transform duration-300 ${open ? 'translate-x-0' : 'translate-x-full'}`}
+            className={`lg:hidden fixed right-0 top-0 bottom-0 z-[10000] w-[85vw] max-w-[320px] bg-black text-white border-l border-white/10 shadow-2xl transform transition-transform duration-300 ease-out ${open ? 'translate-x-0' : 'translate-x-full'}`}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-end px-4 py-3 border-b border-white/10">
+            <div className="flex items-center justify-between px-4 py-4 border-b border-white/10 bg-black">
+              <span className="text-lg font-semibold">Menu</span>
               <button
                 type="button"
-                className="inline-flex items-center justify-center rounded-md p-2 text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 transition-colors"
                 aria-label="Close menu"
                 onClick={() => {
                   setOpen(false);
@@ -310,17 +313,18 @@ export default function Nav({ minimal = false }: NavProps) {
                 }}
               >
                 <span className="sr-only">Close menu</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
-                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.29 19.7 2.88 18.3 9.17 12 2.88 5.71 4.29 4.29l6.3 6.3 6.29-6.3z" />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
               </button>
             </div>
-            <div className="px-4 py-4">
-              <ul className="space-y-1 text-base" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+            <div className="px-4 py-6 overflow-y-auto bg-black" style={{ height: 'calc(100% - 64px)' }}>
+              <ul className="space-y-2 text-base" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
                 <li>
                   <a 
                     href="/" 
-                    className="block py-3 px-2 rounded-md hover:bg-white/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                    className="block py-3 px-3 rounded-lg text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
                     onClick={() => setOpen(false)}
                   >
                     Home
@@ -331,7 +335,7 @@ export default function Nav({ minimal = false }: NavProps) {
                   <button
                     type="button"
                     onClick={handleServicesToggle}
-                    className="w-full text-left py-3 px-2 rounded-md hover:bg-white/5 transition-colors flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 text-base"
+                    className="w-full text-left py-3 px-3 rounded-lg text-white hover:bg-white/10 transition-colors flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
                     aria-expanded={servicesOpen}
                     aria-controls="mobile-services-menu"
                   >
@@ -350,12 +354,12 @@ export default function Nav({ minimal = false }: NavProps) {
                       <path d="M6 9l6 6 6-6" />
                     </svg>
                   </button>
-                  {servicesOpen && (
-                    <ul id="mobile-services-menu" className="pl-4 mt-1 space-y-1" role="menu">
+                  <div className={`overflow-hidden transition-all duration-200 ${servicesOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <ul id="mobile-services-menu" className="pl-4 mt-2 space-y-1 border-l-2 border-white/20 ml-3" role="menu">
                       <li role="none">
                         <a 
                           href="/services/fractional-head-of-marketing" 
-                          className="block py-2.5 px-2 rounded-md hover:bg-white/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                          className="block py-2.5 px-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
                           role="menuitem"
                           onClick={() => { 
                             setOpen(false); 
@@ -368,7 +372,7 @@ export default function Nav({ minimal = false }: NavProps) {
                       <li role="none">
                         <a 
                           href="/services/fractional-paid-media" 
-                          className="block py-2.5 px-2 rounded-md hover:bg-white/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                          className="block py-2.5 px-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
                           role="menuitem"
                           onClick={() => { 
                             setOpen(false); 
@@ -379,13 +383,13 @@ export default function Nav({ minimal = false }: NavProps) {
                         </a>
                       </li>
                     </ul>
-                  )}
+                  </div>
                 </li>
 
                 <li>
                   <a 
                     href="/how-we-work" 
-                    className="block py-3 px-2 rounded-md hover:bg-white/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                    className="block py-3 px-3 rounded-lg text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
                     onClick={() => setOpen(false)}
                   >
                     How We Work
@@ -396,7 +400,7 @@ export default function Nav({ minimal = false }: NavProps) {
                   <button
                     type="button"
                     onClick={handleResourcesToggle}
-                    className="w-full text-left py-3 px-2 rounded-md hover:bg-white/5 transition-colors flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 text-base"
+                    className="w-full text-left py-3 px-3 rounded-lg text-white hover:bg-white/10 transition-colors flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
                     aria-expanded={resourcesOpen}
                     aria-controls="mobile-resources-menu"
                   >
@@ -415,12 +419,12 @@ export default function Nav({ minimal = false }: NavProps) {
                       <path d="M6 9l6 6 6-6" />
                     </svg>
                   </button>
-                  {resourcesOpen && (
-                    <ul id="mobile-resources-menu" className="pl-4 mt-1 space-y-1" role="menu">
+                  <div className={`overflow-hidden transition-all duration-200 ${resourcesOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <ul id="mobile-resources-menu" className="pl-4 mt-2 space-y-1 border-l-2 border-white/20 ml-3" role="menu">
                       <li role="none">
                         <a 
                           href="/resources/blog" 
-                          className="block py-2.5 px-2 rounded-md hover:bg-white/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                          className="block py-2.5 px-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
                           role="menuitem"
                           onClick={() => { 
                             setOpen(false); 
@@ -431,20 +435,20 @@ export default function Nav({ minimal = false }: NavProps) {
                         </a>
                       </li>
                     </ul>
-                  )}
+                  </div>
                 </li>
 
                 <li>
                   <a 
                     href="/about" 
-                    className="block py-3 px-2 rounded-md hover:bg-white/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                    className="block py-3 px-3 rounded-lg text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
                     onClick={() => setOpen(false)}
                   >
                     About
                   </a>
                 </li>
                 
-                <li className="pt-4 border-t border-white/10">
+                <li className="pt-6 mt-4 border-t border-white/10">
                   <LetsTalkButton className="btn btn-primary btn-md w-full text-center">
                     Let&apos;s Talk
                   </LetsTalkButton>
@@ -454,6 +458,6 @@ export default function Nav({ minimal = false }: NavProps) {
           </nav>
         </>
       )}
-    </header>
+    </>
   );
 }
