@@ -93,7 +93,7 @@ export default function Bios() {
                       <div className="flex items-start justify-between gap-4 mb-4">
                         <div>
                           <h3 className="text-2xl md:text-3xl mb-1">{b.name}</h3>
-                          <p className="text-[#021da8] text-lg">{b.title}</p>
+                          <p className="text-white/60 text-lg">{b.title}</p>
                         </div>
                         {b.linkedin && (
                           <a

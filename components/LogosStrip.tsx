@@ -12,9 +12,9 @@ export default function LogosStrip() {
     '/assets/images/logo-4.png',
     '/assets/images/logo-5.png',
     '/assets/images/logo-6.png',
-    '/assets/images/logo-7.png',
+    '/assets/images/logo-7-Photoroom.png',
     '/assets/images/logo-8.png',
-    '/assets/images/logo-9.png',
+    '/assets/images/logo-9-Photoroom.png',
     '/assets/images/logo-10.png',
     '/assets/images/logo-11.png',
     '/assets/images/logo-12.png',
@@ -27,7 +27,7 @@ export default function LogosStrip() {
   if ((row1List?.length ?? 0) === 0 && (row2List?.length ?? 0) === 0) {
     // Fallback to known local filenames if mapping was cleared by an assets run
     row1List = ['/assets/images/logo-1.png','/assets/images/logo-2.png','/assets/images/logo-3.png','/assets/images/logo-4.png','/assets/images/logo-5.png','/assets/images/logo-6.png'];
-    row2List = ['/assets/images/logo-7.png','/assets/images/logo-8.png','/assets/images/logo-9.png','/assets/images/logo-10.png','/assets/images/logo-11.png','/assets/images/logo-12.png'];
+    row2List = ['/assets/images/logo-7-Photoroom.png','/assets/images/logo-8.png','/assets/images/logo-9-Photoroom.png','/assets/images/logo-10.png','/assets/images/logo-11.png','/assets/images/logo-12.png'];
   }
   // Ensure rows contain unique sets; if any overlap, rebuild row2 from remaining defaults
   const overlap = new Set(row1List.filter((s) => row2List.includes(s)));
