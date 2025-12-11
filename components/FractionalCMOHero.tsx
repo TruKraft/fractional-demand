@@ -116,30 +116,11 @@ export default function FractionalCMOHero() {
         <div className="grid gap-10 lg:gap-12 lg:grid-cols-[60%_40%] items-center">
           {/* Left Content Column */}
           <div className="order-1 lg:order-1">
-            <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-4">
+            <Reveal as="h1" className="text-4xl md:text-5xl lg:text-5xl tracking-tight mb-4">
               A Fractional CMO That Builds GTM Momentum Fast.
             </Reveal>
             <Reveal as="p" className="text-white/80 text-lg md:text-xl leading-relaxed mb-8">
               Get a senior marketing leader embedded directly into your team. Someone who owns strategy, leads execution, and builds the systems that turn ideas into pipeline. Hands-on keyboard doer, not a slide-making strategist who hands you more homework.
-            </Reveal>
-
-            {/* Video Play Button Link */}
-            <Reveal className="mb-8">
-              <button
-                type="button"
-                onClick={() => setVideoOpen(true)}
-                className="inline-flex items-center gap-3 text-white/90 hover:text-white group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#072ef0] rounded-full"
-                aria-label="Play video preview"
-              >
-                <div className="w-14 h-14 rounded-full bg-[#072ef0] flex items-center justify-center group-hover:bg-[#072ef0]/80 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-[#072ef0]/30">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-white ml-0.5">
-                    <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-lg md:text-xl group-hover:underline underline-offset-4">
-                  Watch how we build GTM momentum
-                </span>
-              </button>
             </Reveal>
 
             {/* Book a Strategy Session */}
@@ -162,7 +143,7 @@ export default function FractionalCMOHero() {
 
           {/* Right Form Column - Sticky */}
           <div className="order-2 lg:order-2 lg:sticky lg:top-28 self-start">
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:px-8 md:py-16 ">
+            <div className="bg-[#072ef0]/10 border border-[#072ef0]/20 rounded-2xl p-6 md:px-8 md:py-16 backdrop-blur-sm">
               <h3 className="text-xl md:text-3xl font-semibold mb-6 text-center">Get Started Today</h3>
               
               {submitted ? (
@@ -255,6 +236,27 @@ export default function FractionalCMOHero() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Video Section */}
+      <div className="relative z-10 container mx-auto px-4 pb-16 md:pb-24">
+        <Reveal className="text-center">
+          <button
+            type="button"
+            onClick={() => setVideoOpen(true)}
+            className="inline-flex items-center gap-4 text-white hover:text-white group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#072ef0] rounded-full"
+            aria-label="Play video preview"
+          >
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#072ef0] flex items-center justify-center group-hover:bg-[#072ef0]/80 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-[#072ef0]/30">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-white ml-0.5">
+                <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <span className="text-2xl md:text-3xl lg:text-4xl font-semibold group-hover:underline underline-offset-8">
+              Watch how we build GTM momentum
+            </span>
+          </button>
+        </Reveal>
       </div>
 
       {/* Video Modal */}

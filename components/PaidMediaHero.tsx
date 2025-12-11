@@ -116,8 +116,8 @@ export default function PaidMediaHero() {
         <div className="grid gap-10 lg:gap-12 lg:grid-cols-[60%_40%] items-center">
           {/* Left Content Column */}
           <div className="order-1 lg:order-1">
-            <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-4">
-              Paid Media That Actually Drives Pipeline
+            <Reveal as="h1" className="text-4xl md:text-5xl lg:text-5xl tracking-tight mb-4">
+              Paid Media That Actually<br />Drives Pipeline
             </Reveal>
             <Reveal as="p" className="text-white/80 text-lg md:text-xl leading-relaxed mb-8">
               Get senior performance marketers embedded directly into your team to run LinkedIn, Meta, Google, X, and Reddit with a demand system built to generate qualified pipeline.
