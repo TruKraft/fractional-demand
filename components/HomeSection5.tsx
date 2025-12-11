@@ -17,7 +17,7 @@ const services = [
       'Creative + messaging testing that constantly improves CTR → CPL → SQL',
       'Embedded collaboration to ensure clean attribution and real revenue impact',
     ],
-    image: '/assets/images/service-paid-media.svg',
+    image: '/assets/images/paid-media.svg',
   },
   {
     id: 'head-of-marketing',
