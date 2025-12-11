@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Reveal from './Reveal';
 import Portal from './Portal';
 
@@ -240,22 +241,34 @@ export default function FractionalCMOHero() {
 
       {/* Video Section */}
       <div className="relative z-10 container mx-auto px-4 pb-16 md:pb-24">
-        <Reveal className="text-center">
-          <button
-            type="button"
-            onClick={() => setVideoOpen(true)}
-            className="inline-flex items-center gap-4 text-white hover:text-white group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#072ef0] rounded-full"
-            aria-label="Play video preview"
-          >
-            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#072ef0] flex items-center justify-center group-hover:bg-[#072ef0]/80 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-[#072ef0]/30">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10 text-white ml-0.5">
-                <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
-              </svg>
-            </div>
-            <span className="text-2xl md:text-3xl lg:text-4xl font-semibold group-hover:underline underline-offset-8">
+        <Reveal>
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white text-center mb-8">
               Watch how we build GTM momentum
-            </span>
-          </button>
+            </h2>
+            <div className="relative w-full aspect-video bg-black rounded-2xl border border-white/10 overflow-hidden group cursor-pointer hover:border-[#072ef0]/40 transition-all">
+              {/* Placeholder image */}
+              <Image 
+                src="/assets/images/image.png" 
+                alt="Video thumbnail"
+                fill
+                className="object-cover"
+              />
+              {/* Play button overlay */}
+              <button
+                type="button"
+                onClick={() => setVideoOpen(true)}
+                className="absolute inset-0 flex items-center justify-center z-10 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#072ef0] bg-black/20 hover:bg-black/10 transition-all"
+                aria-label="Play video"
+              >
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#072ef0] flex items-center justify-center group-hover:bg-[#072ef0]/90 group-hover:scale-110 transition-all duration-300 shadow-2xl shadow-[#072ef0]/50">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 md:w-12 md:h-12 text-white ml-1">
+                    <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
         </Reveal>
       </div>
 
