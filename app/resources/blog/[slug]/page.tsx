@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import Reveal from '@/components/Reveal';
+import CTA from '@/components/CTA';
 import { fetchBlogBySlug, fetchBlogs } from '@/lib/strapi';
 
 interface PageProps {
@@ -75,16 +76,22 @@ export default async function BlogPostPage({ params }: PageProps) {
               </Reveal>
 
               <Reveal>
+                <div className="inline-flex items-center gap-3 mb-6">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#021da8] opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#021da8]"></span>
+                  </span>
+                  <span className="text-sm font-medium tracking-widest uppercase text-white/60">Demand Decoded</span>
+                </div>
+              </Reveal>
+
+              <Reveal>
                 <div className="flex flex-wrap items-center gap-3 mb-6">
                   {tags.map((tag) => (
                     <span key={tag} className="px-3 py-1 rounded-full bg-[#021da8] text-white text-xs font-medium">
                       {tag}
                     </span>
                   ))}
-                  <span className="text-white/50 text-sm">
-                    {new Date(post.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-                  </span>
-                  <span className="text-white/50 text-sm">·</span>
                   <span className="text-white/50 text-sm">{post.readTime} min read</span>
                 </div>
               </Reveal>
@@ -135,22 +142,101 @@ export default async function BlogPostPage({ params }: PageProps) {
         {/* Content */}
         <section className="bg-black text-white">
           <div className="container mx-auto px-4 py-16 md:py-24">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <Reveal>
+                <style dangerouslySetInnerHTML={{ __html: `
+                  .blog-content h2 {
+                    font-size: 1.75rem;
+                    font-weight: 600;
+                    color: white;
+                    margin-top: 3rem;
+                    margin-bottom: 1.5rem;
+                    padding-bottom: 0.75rem;
+                    border-bottom: 1px solid rgba(255,255,255,0.1);
+                    line-height: 1.3;
+                  }
+                  @media (min-width: 768px) {
+                    .blog-content h2 {
+                      font-size: 2rem;
+                    }
+                  }
+                  .blog-content h2 strong {
+                    font-weight: 600;
+                  }
+                  .blog-content h3 {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: white;
+                    margin-top: 2.5rem;
+                    margin-bottom: 1rem;
+                    line-height: 1.3;
+                  }
+                  .blog-content p {
+                    font-size: 1.25rem;
+                    line-height: 1.8;
+                    color: rgba(255,255,255,0.8);
+                    margin-bottom: 1.5rem;
+                  }
+                  @media (min-width: 768px) {
+                    .blog-content p {
+                      font-size: 1.375rem;
+                    }
+                  }
+                  .blog-content strong {
+                    color: white;
+                    font-weight: 600;
+                  }
+                  .blog-content em {
+                    font-style: italic;
+                  }
+                  .blog-content a {
+                    color: #021da8;
+                    text-decoration: none;
+                    font-weight: 500;
+                  }
+                  .blog-content a:hover {
+                    text-decoration: underline;
+                  }
+                  .blog-content ul, .blog-content ol {
+                    font-size: 1.25rem;
+                    line-height: 1.8;
+                    color: rgba(255,255,255,0.8);
+                    margin: 1.5rem 0;
+                    padding-left: 1.5rem;
+                  }
+                  @media (min-width: 768px) {
+                    .blog-content ul, .blog-content ol {
+                      font-size: 1.375rem;
+                    }
+                  }
+                  .blog-content li {
+                    margin-bottom: 0.75rem;
+                    padding-left: 0.5rem;
+                  }
+                  .blog-content li::marker {
+                    color: #021da8;
+                    font-weight: 700;
+                  }
+                  .blog-content blockquote {
+                    border-left: 4px solid #021da8;
+                    background: rgba(255,255,255,0.05);
+                    padding: 1rem 1.5rem;
+                    margin: 2rem 0;
+                    border-radius: 0 0.5rem 0.5rem 0;
+                    font-style: italic;
+                    color: rgba(255,255,255,0.7);
+                  }
+                  .blog-content img {
+                    border-radius: 0.75rem;
+                    margin: 2rem 0;
+                  }
+                  .blog-content hr {
+                    border-color: rgba(255,255,255,0.1);
+                    margin: 3rem 0;
+                  }
+                `}} />
                 <div 
-                  className="prose prose-invert prose-lg max-w-none
-                    prose-headings:tracking-tight
-                    prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
-                    prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
-                    prose-p:text-white/80 prose-p:leading-relaxed
-                    prose-a:text-[#021da8] prose-a:no-underline hover:prose-a:underline
-                    prose-strong:text-white
-                    prose-ul:text-white/80 prose-ol:text-white/80
-                    prose-li:marker:text-[#021da8]
-                    prose-blockquote:border-l-[#021da8] prose-blockquote:text-white/70
-                    prose-code:text-[#021da8] prose-code:bg-white/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
-                    prose-pre:bg-white/5 prose-pre:border prose-pre:border-white/10
-                  "
+                  className="blog-content"
                   dangerouslySetInnerHTML={{ __html: post.content }}
                 />
               </Reveal>
@@ -158,30 +244,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="bg-black text-white border-t border-white/10">
-          <div className="container mx-auto px-4 py-16 md:py-24">
-            <div className="max-w-3xl mx-auto text-center">
-              <Reveal as="h2" className="text-2xl md:text-3xl tracking-tight mb-4">
-                Ready to accelerate your demand generation?
-              </Reveal>
-              <Reveal as="p" className="text-white/60 mb-8">
-                Let&apos;s discuss how we can help you build a scalable pipeline.
-              </Reveal>
-              <Reveal>
-                <Link
-                  href="/"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#021da8] text-white rounded-lg hover:bg-[#021da8]/80 transition-colors"
-                >
-                  Get in touch
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-              </Reveal>
-            </div>
-          </div>
-        </section>
+        <CTA />
       </main>
       <Footer />
     </>

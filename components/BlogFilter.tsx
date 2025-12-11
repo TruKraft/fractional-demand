@@ -33,9 +33,6 @@ function BlogCard({ post }: { post: BlogPost }) {
               <span className="px-3 py-1 rounded-full bg-[#021da8] text-white text-xs font-medium">
                 {category}
               </span>
-              <span className="text-white/50 text-sm">
-                {new Date(post.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
-              </span>
             </div>
             
             <h2 className="text-xl md:text-2xl mb-3 group-hover:text-white/80 transition-colors">
