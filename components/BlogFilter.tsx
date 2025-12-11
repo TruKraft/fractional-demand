@@ -30,7 +30,7 @@ function BlogCard({ post }: { post: BlogPost }) {
           )}
           <div className="p-6 md:p-8 flex flex-col flex-grow">
             <div className="flex items-center gap-3 mb-4">
-              <span className="px-3 py-1 rounded-full bg-[#021da8] text-white text-xs font-medium">
+              <span className="px-3 py-1 rounded-full bg-[#021da8] text-white text-xs font-medium font-heading">
                 {category}
               </span>
             </div>

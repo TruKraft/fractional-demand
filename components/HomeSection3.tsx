@@ -15,11 +15,16 @@ export default function HomeSection3() {
             Your real decision:<br />hire a full-time head of marketing and team, or plug in a fractional GTM team that&apos;s already built.
           </Reveal>
         </div>
-        {/* Placeholder for visual - will be replaced with actual visual later */}
         <Reveal className="max-w-5xl mx-auto">
-          <div className="energy-card rounded-3xl border border-white/10 bg-white/5 bg-noise p-8 md:p-12">
-            <div className="relative w-full aspect-video rounded-2xl border border-white/10 bg-black/50 flex items-center justify-center">
-              <p className="text-white/40 text-sm">Visual placeholder - Reference design from new-job-survival-kit</p>
+          <div className="energy-card rounded-3xl border border-white/10 bg-gradient-to-br from-gray-800 to-gray-900 p-8 md:p-12">
+            <div className="relative w-full flex items-center justify-center">
+              <Image
+                src="/assets/images/undraw_collaborative-writing.svg"
+                alt="Collaborative team working together"
+                width={799}
+                height={618}
+                className="w-full max-w-3xl h-auto"
+              />
             </div>
           </div>
         </Reveal>

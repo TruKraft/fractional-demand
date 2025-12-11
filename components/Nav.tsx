@@ -5,9 +5,9 @@ import Image from 'next/image';
 import Tilt from './Tilt';
 import { LetsTalkButton } from './CalendlyPopup';
 
-type NavProps = { minimal?: boolean };
+type NavProps = { minimal?: boolean; showCTA?: boolean };
 
-export default function Nav({ minimal = false }: NavProps) {
+export default function Nav({ minimal = false, showCTA = false }: NavProps) {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
@@ -257,6 +257,15 @@ export default function Nav({ minimal = false }: NavProps) {
               </Tilt>
             </li>
           </ul>
+        )}
+
+        {/* Minimal mode CTA button */}
+        {minimal && showCTA && (
+          <Tilt>
+            <LetsTalkButton className="btn btn-primary btn-sm md:btn-md btn-shine">
+              Let&apos;s Talk
+            </LetsTalkButton>
+          </Tilt>
         )}
 
         {/* Mobile hamburger */}

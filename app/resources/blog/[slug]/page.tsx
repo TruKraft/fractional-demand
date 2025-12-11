@@ -75,17 +75,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </Link>
               </Reveal>
 
-              <Reveal>
-                <div className="inline-flex items-center gap-3 mb-6">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#021da8] opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#021da8]"></span>
-                  </span>
-                  <span className="text-sm font-medium tracking-widest uppercase text-white/60">Demand Decoded</span>
-                </div>
-              </Reveal>
-
-              <Reveal>
+<Reveal>
                 <div className="flex flex-wrap items-center gap-3 mb-6">
                   {tags.map((tag) => (
                     <span key={tag} className="px-3 py-1 rounded-full bg-[#021da8] text-white text-xs font-medium">
@@ -190,12 +180,13 @@ export default async function BlogPostPage({ params }: PageProps) {
                     font-style: italic;
                   }
                   .blog-content a {
-                    color: #021da8;
+                    color: #5BA3F5;
                     text-decoration: none;
                     font-weight: 500;
                   }
                   .blog-content a:hover {
                     text-decoration: underline;
+                    color: #7BB8FF;
                   }
                   .blog-content ul, .blog-content ol {
                     font-size: 1.25rem;
