@@ -31,11 +31,65 @@ export default async function BlogPage() {
       <Nav />
       <main id="main">
         {/* Hero */}
-        <section className="relative overflow-hidden text-white" style={{ background: 'linear-gradient(135deg, #000000 0%, #0a1628 50%, #021da8 150%)' }}>
-          <div className="absolute inset-0 bg-grid-dots opacity-30" />
+        <section className="relative isolate overflow-hidden bg-black text-white">
+          {/* Animated block gradient background */}
+          <div className="absolute inset-0 -z-20 hero-block-gradient" />
+          
+          {/* Animated grid blocks overlay */}
+          <div className="absolute inset-0 -z-15 hero-blocks">
+            <div className="hero-block hero-block-1" />
+            <div className="hero-block hero-block-2" />
+            <div className="hero-block hero-block-3" />
+            <div className="hero-block hero-block-4" />
+            <div className="hero-block hero-block-5" />
+            <div className="hero-block hero-block-6" />
+          </div>
+
+          {/* Geometric line background (subtle) */}
+          <svg
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 h-full w-full -z-10"
+            viewBox="0 0 1200 700"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            <defs>
+              <radialGradient id="triFade" cx="50%" cy="40%" r="75%">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.18" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity="0.03" />
+              </radialGradient>
+            </defs>
+            {/* Symmetric triangle motif, centered */}
+            <g transform="translate(600,350)" fill="none" stroke="url(#triFade)" strokeWidth="1.1" className="hero-lines">
+              {/* Up-pointing triangles */}
+              <polygon vectorEffect="non-scaling-stroke" points="0,-340 295,170 -295,170" />
+              <polygon vectorEffect="non-scaling-stroke" points="0,-220 190,110 -190,110" />
+              <polygon vectorEffect="non-scaling-stroke" points="0,-100 86,50 -86,50" />
+
+              {/* Animated blip strokes */}
+              <polygon className="tri-blip" points="0,-340 295,170 -295,170" />
+              <polygon className="tri-blip" points="0,-220 190,110 -190,110" />
+              <polygon className="tri-blip" points="0,-100 86,50 -86,50" />
+
+              {/* Down-pointing triangles */}
+              <polygon vectorEffect="non-scaling-stroke" points="0,340 295,-170 -295,-170" />
+              <polygon vectorEffect="non-scaling-stroke" points="0,220 190,-110 -190,-110" />
+              <polygon vectorEffect="non-scaling-stroke" points="0,100 86,-50 -86,-50" />
+
+              {/* Animated blip strokes for downward triangles */}
+              <polygon className="tri-blip" points="0,340 295,-170 -295,-170" />
+              <polygon className="tri-blip" points="0,220 190,-110 -190,-110" />
+              <polygon className="tri-blip" points="0,100 86,-50 -86,-50" />
+
+              {/* Light crosshair for symmetry */}
+              <g opacity="0.3">
+                <line vectorEffect="non-scaling-stroke" x1="-360" y1="0" x2="360" y2="0" />
+                <line vectorEffect="non-scaling-stroke" x1="0" y1="-360" x2="0" y2="360" />
+              </g>
+            </g>
+          </svg>
           
           <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
-            <div className="max-w-4xl">
+            <div className="max-w-4xl mx-auto text-center">
               <Reveal>
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm text-white/80 mb-6">
                   <span className="w-2 h-2 rounded-full bg-[#021da8]" />
@@ -45,7 +99,7 @@ export default async function BlogPage() {
               <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">
                 Fractional Demand Blog
               </Reveal>
-              <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-2xl">
+              <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
                 Real insights from the trenches. No fluff, no theory. Just practical, proven strategies and tactics we use with clients and what we're learning along the way.
               </Reveal>
             </div>
@@ -54,11 +108,11 @@ export default async function BlogPage() {
 
         {/* Featured Posts */}
         {featuredBlogs.length > 0 && (
-          <section className="bg-black text-white relative overflow-hidden border-b border-white/10">
+          <section className="text-white relative overflow-hidden border-b border-white/10" style={{ background: 'linear-gradient(135deg, #000000 0%, #0a1628 50%, #021da8 150%)' }}>
             <div className="container mx-auto px-4 py-20 md:py-24">
-              <div className="max-w-6xl mx-auto">
+              <div className="max-w-7xl mx-auto">
                 <Reveal className="mb-10">
-                  <p className="text-[#021da8] text-sm uppercase tracking-widest mb-4 font-medium">Featured</p>
+                  <p className="text-white/60 text-sm uppercase tracking-widest mb-4 font-medium font-heading">Featured</p>
                   <h2 className="text-3xl md:text-4xl tracking-tight">
                     Must-read articles
                   </h2>
@@ -75,7 +129,7 @@ export default async function BlogPage() {
                         <Link href={`/resources/blog/${post.slug}`} className="group block h-full">
                           <article className={`relative border border-white/10 rounded-2xl overflow-hidden hover:border-[#021da8]/50 transition-all h-full ${isFirst && featuredBlogs.length > 1 ? 'lg:row-span-2' : ''}`}>
                             {post.coverImage && (
-                              <div className={`relative w-full overflow-hidden ${isFirst && featuredBlogs.length > 1 ? 'h-64 lg:h-80' : 'h-48'}`}>
+                              <div className="relative w-full overflow-hidden" style={{ height: '20rem' }}>
                                 <Image
                                   src={post.coverImage.url}
                                   alt={post.coverImage.alternativeText || post.title}
@@ -108,7 +162,7 @@ export default async function BlogPage() {
                                 {post.excerpt}
                               </p>
                               
-                              <div className="flex items-center gap-2 text-[#021da8] text-sm font-medium group-hover:gap-3 transition-all">
+                              <div className="flex items-center gap-2 text-white text-sm font-semibold font-heading group-hover:gap-3 transition-all">
                                 Read article
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -127,9 +181,9 @@ export default async function BlogPage() {
         )}
 
         {/* Blog Posts */}
-        <section className="bg-black text-white relative overflow-hidden">
+        <section className="text-white relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #000000 0%, #0a1628 50%, #021da8 150%)' }}>
           <div className="container mx-auto px-4 py-24 md:py-28">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <Reveal className="mb-12">
                 <p className="text-white/50 text-sm uppercase tracking-widest mb-4">Latest articles</p>
                 <h2 className="text-3xl md:text-4xl tracking-tight">

@@ -40,10 +40,12 @@ function BlogCard({ post }: { post: BlogPost }) {
             </h2>
             
             <p className="text-white/60 text-base leading-relaxed mb-4 flex-grow">
-              {post.excerpt}
+              {post.excerpt && post.excerpt.length > 160 
+                ? `${post.excerpt.slice(0, 100)}...` 
+                : post.excerpt}
             </p>
             
-            <div className="flex items-center gap-2 text-white text-sm font-medium group-hover:gap-3 transition-all">
+            <div className="flex items-center gap-2 text-white text-sm font-semibold font-heading group-hover:gap-3 transition-all">
               Read article
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -102,7 +104,7 @@ export default function BlogFilter({ blogs }: BlogFilterProps) {
       )}
 
       {/* Blog Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredBlogs.length > 0 ? (
           filteredBlogs.map((post) => (
             <BlogCard key={post.id} post={post} />
@@ -112,7 +114,7 @@ export default function BlogFilter({ blogs }: BlogFilterProps) {
             <p className="text-white/50">No articles found for &ldquo;{activeFilter}&rdquo;</p>
             <button
               onClick={() => setActiveFilter('All')}
-              className="mt-4 text-[#021da8] hover:underline"
+              className="mt-4 text-white font-heading font-semibold hover:underline"
             >
               View all articles
             </button>
