@@ -44,7 +44,7 @@ export default function CareersForm() {
         }
       }
 
-      const response = await fetch('https://forms.getaltira.com/api/f/fractional-demand-careers-d60c9a2d', {
+      const response = await fetch('https://forms.getaltira.com/api/f/careers-d42874f2', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(submissionData)

@@ -39,7 +39,7 @@ export default function FractionalCMOHero() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://forms.getaltira.com/api/f/fractional-demand-head-of-marketing-lp-19a5a38c', {
+      const response = await fetch('https://forms.getaltira.com/api/f/fractional-head-of-marketing-lp-3c8d9aa8', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

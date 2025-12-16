@@ -38,7 +38,7 @@ export default function PaidMediaHero() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://forms.getaltira.com/api/f/fractional-demand-paid-media-lp-6bf7c38c', {
+      const response = await fetch('https://forms.getaltira.com/api/f/paid-media-4f20c702', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
