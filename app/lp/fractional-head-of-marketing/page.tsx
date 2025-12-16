@@ -8,14 +8,23 @@ import HomeSection5 from '@/components/HomeSection5';
 import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
+import { getServiceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Fractional Head of Marketing | Fractional Demand',
   description: 'Get a senior marketing leader embedded directly into your team. Someone who owns strategy, leads execution, and builds the systems that turn ideas into pipeline.',
+  keywords: ['fractional CMO', 'fractional marketing leader', 'marketing strategy', 'GTM strategy', 'B2B marketing leadership', 'part-time CMO'],
   openGraph: {
     title: 'Fractional Head of Marketing | Fractional Demand',
     description: 'Get a senior marketing leader embedded directly into your team. Someone who owns strategy, leads execution, and builds the systems that turn ideas into pipeline.',
   },
+  alternates: {
+    canonical: 'https://www.fractionaldemand.com/lp/fractional-head-of-marketing'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 };
 
 const testimonials = [
@@ -40,8 +49,19 @@ const testimonials = [
 ];
 
 export default function FractionalHeadOfMarketingPage() {
+  const serviceSchema = getServiceSchema({
+    name: 'Fractional Head of Marketing Strategy Session',
+    description: 'Book a strategy session with a senior marketing leader. Build positioning, messaging, GTM strategy, and holistic marketing campaigns that drive pipeline.',
+    url: 'https://www.fractionaldemand.com/lp/fractional-head-of-marketing',
+    serviceType: 'Marketing Leadership, Strategic Consulting, GTM Strategy'
+  });
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Nav minimal showCTA />
       <main id="main">
         <FractionalCMOHero />

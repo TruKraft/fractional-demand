@@ -6,21 +6,19 @@ import Tilt from '@/components/Tilt';
 import ProcessSteps from '@/components/ProcessSteps';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
-import EyebrowHeading from '@/components/EyebrowHeading';
-import EnergyCard from '@/components/EnergyCard';
 import { LetsTalkButton } from '@/components/CalendlyPopup';
 import { getServiceSchema, getBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Fractional Head of Marketing',
-  description: 'A senior marketing leader embedded directly into your team—someone who owns strategy, leads execution, and builds the systems that turn ideas into pipeline.',
-  keywords: ['fractional CMO', 'fractional chief marketing officer', 'marketing leadership', 'fractional marketing director', 'B2B marketing strategy', 'GTM strategy', 'marketing executive', 'part-time CMO'],
+  title: 'Email & Lifecycle Marketing',
+  description: 'We design and build lifecycle and nurture campaigns across your entire funnel, from first touch to closed-won to expansion, built by senior lifecycle marketers who embed into your team and create campaigns that convert.',
+  keywords: ['email marketing', 'lifecycle marketing', 'nurture campaigns', 'email automation', 'B2B email marketing', 'customer lifecycle', 'email sequences', 'drip campaigns', 'marketing automation'],
   openGraph: {
-    title: 'Fractional Head of Marketing | Fractional Demand',
-    description: 'A senior marketing leader embedded directly into your team—someone who owns strategy, leads execution, and builds the systems that turn ideas into pipeline.',
+    title: 'Email & Lifecycle Marketing | Fractional Demand',
+    description: 'We design and build lifecycle and nurture campaigns across your entire funnel, from first touch to closed-won to expansion, built by senior lifecycle marketers who embed into your team and create campaigns that convert.',
   },
   alternates: {
-    canonical: 'https://www.fractionaldemand.com/services/fractional-head-of-marketing'
+    canonical: 'https://www.fractionaldemand.com/services/email-lifecycle-marketing'
   }
 };
 
@@ -47,28 +45,20 @@ const testimonials = [
 
 const faqItems = [
   {
-    question: 'How senior is the Fractional Head of Marketing?',
-    answer: 'Your fractional leader has 10+ years of full-funnel B2B experience, including in-house roles',
+    question: 'Do you only support HubSpot?',
+    answer: 'Primarily yes for quality and speed.',
   },
   {
-    question: 'How many hours do I get?',
-    answer: 'Most engagements provide the equivalent of 1–2 days per week of senior leadership + execution.',
+    question: 'Do you fix existing workflows?',
+    answer: 'Absolutely.',
   },
   {
-    question: 'Do you actually execute or just direct?',
-    answer: 'We are hands-on. We write, build, launch, and operate marketing programs.',
+    question: 'Can you tie lifecycle reporting to revenue?',
+    answer: 'Yes — we track lifecycle → SQL → revenue.',
   },
   {
-    question: 'Do you work with my existing team?',
-    answer: 'Yes — we lead your internal team, partners, and vendors as your acting marketing leader.',
-  },
-  {
-    question: 'How fast can you start?',
-    answer: 'Typically within 1–2 weeks.',
-  },
-  {
-    question: 'Is there a long-term commitment?',
-    answer: 'No — all services are month-to-month with a 30-day notice.',
+    question: 'How fast can we start?',
+    answer: 'Typically 1–2 weeks.',
   },
 ];
 
@@ -76,55 +66,57 @@ const processSteps = [
   {
     number: '1',
     title: 'Diagnose',
-    description: 'We assess your GTM strategy, funnel health, positioning, campaigns, ICP, and metrics.',
-    deliverables: ['GTM Audit', 'Funnel Analysis', 'Quick Wins', '60-Day Marketing Plan'],
+    description: 'Lifecycle audit, deliverability review, segmentation assessment.',
+    deliverables: ['Lifecycle Audit', 'List Health Report', 'Funnel Analysis', 'Offer + messaging gaps', 'Quick Wins', '60-Day Email/Lifecycle Plan'],
   },
   {
     number: '2',
     title: 'Build',
-    description: 'We build the marketing foundation: positioning, offers, messaging, tracking, funnel structure, and first wave of campaigns.',
+    description: 'Complete lifecycle architecture and nurture sequence buildout.',
+    deliverables: ['Lifecycle architecture', 'Nurture sequences', 'Behavior-triggered flows', 'Segmentation', 'Onboarding + retention journeys', 'Lifecycle dashboards'],
   },
   {
     number: '3',
     title: 'Run & Optimize',
-    description: 'We lead your marketing function — weekly rhythms, campaign launches, content strategy, experiments, and cross-functional alignment.',
+    description: 'Weekly optimization and ongoing performance improvements.',
+    deliverables: ['Weekly optimization', 'New sequences', 'Segmentation refresh', 'Deliverability improvements', 'A/B tests', 'Reporting + insights'],
   },
   {
     number: '4',
     title: 'Scale',
-    description: 'Once the system is running smoothly, we expand channels, multiply what works, refine offers, and set your team up for sustainable growth.',
+    description: 'Advanced personalization and expansion programs.',
+    deliverables: ['Advanced personalization', 'Expansion lifecycle programs', 'Extended funnel sequences', 'Sales + lifecycle alignment'],
   },
 ];
 
 const samplePlays = [
-  'Positioning + Messaging workshops',
-  'Customer interviews',
-  'Revamp ICP + messaging for fast alignment',
-  'Design and launch multi-channel GTM campaigns',
-  'Create webinar and event strategy',
-  'Build nurture sequence and lifecycle strategy',
-  'Launch content engines (testimonial)',
-  'Partner with sales to improve conversion rates',
-  'Define SQL/SQO load and improve funnel hygiene',
-  'Build reporting infrastructure tied to revenue',
+  'In-pipeline nurtures',
+  'Multi-step trial/demo sequences',
+  'Customer onboarding flows',
+  'Upsell/cross-sell campaigns',
+  'Re-engagement flows',
+  'Lead-nurture and lead-to-demo flows',
+  'Demo no-show automation',
+  'Behavior-based triggers in HubSpot',
+  'List hygiene & pruning',
 ];
 
-export default function FractionalHeadOfMarketingPage() {
+export default function EmailLifecycleMarketingPage() {
   const serviceSchema = getServiceSchema({
-    name: 'Fractional Head of Marketing (Fractional CMO)',
-    description: 'Senior marketing leadership embedded into your team. Hands-on strategy, execution, and GTM systems that turn ideas into pipeline. 10+ years B2B experience building demand systems.',
-    url: 'https://www.fractionaldemand.com/services/fractional-head-of-marketing',
-    serviceType: 'Marketing Leadership, Fractional CMO, GTM Strategy, Marketing Management',
+    name: 'Email & Lifecycle Marketing',
+    description: 'Full-funnel lifecycle and nurture campaigns from awareness to expansion. Senior email marketers design, build, and optimize behavior-triggered sequences that move pipeline.',
+    url: 'https://www.fractionaldemand.com/services/email-lifecycle-marketing',
+    serviceType: 'Email Marketing, Lifecycle Marketing, Marketing Automation, Nurture Campaigns',
     offers: {
-      name: 'Fractional CMO Service',
-      description: 'Includes GTM strategy, positioning, messaging, campaign execution, funnel optimization, team leadership, and revenue reporting'
+      name: 'Email & Lifecycle Marketing Service',
+      description: 'Includes lifecycle strategy, nurture sequence development, HubSpot automation, behavioral triggers, and performance optimization'
     }
   });
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: 'Home', url: 'https://www.fractionaldemand.com' },
-    { name: 'Services', url: 'https://www.fractionaldemand.com/services/fractional-head-of-marketing' },
-    { name: 'Fractional Head of Marketing', url: 'https://www.fractionaldemand.com/services/fractional-head-of-marketing' }
+    { name: 'Services', url: 'https://www.fractionaldemand.com/services/email-lifecycle-marketing' },
+    { name: 'Email & Lifecycle Marketing', url: 'https://www.fractionaldemand.com/services/email-lifecycle-marketing' }
   ]);
 
   return (
@@ -146,15 +138,15 @@ export default function FractionalHeadOfMarketingPage() {
               {/* Left: Content */}
               <div>
                 <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">
-                  Fractional Head of Marketing That Builds GTM Momentum Fast.
+                  Email & Lifecycle Marketing That Actually Moves Pipeline.
                 </Reveal>
                 <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed mb-8">
-                  A senior marketing leader embedded directly into your team—someone who owns strategy, leads execution, and builds the systems that turn ideas into pipeline. Hands-on keyboard doer, not a slide-making strategist who hands you more homework.
+                  We design and build lifecycle and nurture campaigns across your entire funnel, from first touch to closed-won to expansion, built by senior lifecycle marketers who embed into your team and create campaigns that convert.
                 </Reveal>
                 <Reveal>
                   <Tilt>
                     <LetsTalkButton className="btn btn-primary btn-md md:btn-lg btn-shine">
-                      Book a Strategy Session
+                      Book a Lifecycle Strategy Session
                     </LetsTalkButton>
                   </Tilt>
                 </Reveal>
@@ -163,11 +155,12 @@ export default function FractionalHeadOfMarketingPage() {
               {/* Right: Visual */}
               <Reveal className="hidden lg:block">
                 <div className="energy-card rounded-3xl border border-white/10 bg-white/5 p-8 aspect-square flex items-center justify-center">
-                  <img 
-                    src="/assets/images/gtm-momentum-hero.svg" 
-                    alt="GTM Leadership and Momentum" 
-                    className="w-full h-full object-contain"
-                  />
+                  <div className="text-center">
+                    <svg className="w-24 h-24 mx-auto mb-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <p className="text-white/60 text-lg">Email & Lifecycle</p>
+                  </div>
                 </div>
               </Reveal>
             </div>
@@ -182,29 +175,26 @@ export default function FractionalHeadOfMarketingPage() {
               {/* Left: Problem */}
               <div className="lg:sticky lg:top-32">
                 <Reveal as="h2" className="text-4xl md:text-5xl tracking-tight mb-6">
-                  You're not missing effort. You're missing leadership.
+                  Most teams don't need more emails, they need lifecycle systems that drive revenue.
                 </Reveal>
                 <Reveal as="p" className="text-white/80 text-xl leading-relaxed mb-6">
-                  You have channels, tools, and maybe even a marketer or two. But you're missing the person who can pull it all together.
+                  Most companies have a pile of disconnected nurture sequences, ad hoc blasts, and outdated automations.
                 </Reveal>
                 <Reveal as="p" className="text-white/60 text-lg leading-relaxed">
-                  A <strong className="text-white">Fractional Head of Marketing</strong> gives you senior leadership now—with hands-on execution built into the model.
+                  They don't need more emails. They need a lifecycle system.
                 </Reveal>
               </div>
               
               {/* Right: Capabilities */}
               <div>
-                <Reveal as="p" className="text-white/50 text-sm uppercase tracking-widest mb-6">What you get</Reveal>
+                <Reveal as="p" className="text-white/50 text-sm uppercase tracking-widest mb-6">A lifecycle system that</Reveal>
                 <ul className="space-y-4">
                   {[
-                    'Build out positioning & messaging',
-                    'Develop the correct offer(s)',
-                    'Set the GTM strategy',
-                    'Prioritize the right campaigns',
-                    'Build the offer → messaging → funnel',
-                    'Work cross-functionally with sales',
-                    'Lead execution, not just direct it',
-                    'Create momentum instead of chaos',
+                    'Moves buyers through the funnel',
+                    'Improves SQL → Opportunity → Revenue creation',
+                    'Aligns with paid media, RevOps, and sales',
+                    'Delivers the right message at the right time',
+                    'Creates predictable, reliable pipeline',
                   ].map((item, idx) => (
                     <Reveal key={idx}>
                       <li className="flex items-center gap-4 text-white/90 text-lg py-3 border-b border-white/10">
@@ -216,6 +206,11 @@ export default function FractionalHeadOfMarketingPage() {
                     </Reveal>
                   ))}
                 </ul>
+                <Reveal>
+                  <p className="text-white/60 text-lg leading-relaxed mt-8">
+                    A <strong className="text-white">Fractional Lifecycle Marketer</strong> gives you strategy + hands-on build + ongoing optimization so email becomes a growth engine, not just a channel.
+                  </p>
+                </Reveal>
               </div>
             </div>
           </div>
@@ -230,25 +225,25 @@ export default function FractionalHeadOfMarketingPage() {
               <Reveal className="mb-16">
                 <p className="text-white/50 text-sm uppercase tracking-widest mb-4">What's included</p>
                 <h2 className="text-4xl md:text-5xl tracking-tight">
-                  Everything you need to run marketing like a system.
+                  Full-funnel lifecycle strategy + hands-on execution.
                 </h2>
               </Reveal>
               
               <div className="space-y-6">
-                {/* GTM Strategy */}
+                {/* 1. Lifecycle Strategy */}
                 <Reveal>
                   <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
                     <div className="flex flex-col md:flex-row md:items-start gap-6">
                       <div className="w-12 h-12 rounded-xl bg-[#021da8] flex items-center justify-center shrink-0">
                         <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                         </svg>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl md:text-2xl mb-3">GTM Strategy & Leadership</h3>
-                        <p className="text-white/60 text-lg mb-4">Quarterly plans, OKRs, and cross-functional alignment tied to revenue.</p>
+                        <h3 className="text-xl md:text-2xl mb-3">Lifecycle Strategy & Architecture</h3>
+                        <p className="text-white/60 text-lg mb-4">Complete lifecycle journey design from awareness to expansion.</p>
                         <div className="flex flex-wrap gap-2">
-                          {['GTM planning', 'Positioning', 'Messaging', 'OKRs', 'Sales alignment'].map((tag) => (
+                          {['Full lifecycle mapping', 'Segment + offer strategy', 'Behavioral triggers', 'Product-led motions', 'Journey design', 'Lifecycle alignment', 'In-pipeline nurture', 'Re-engagement frameworks'].map((tag) => (
                             <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
                           ))}
                         </div>
@@ -257,7 +252,7 @@ export default function FractionalHeadOfMarketingPage() {
                   </div>
                 </Reveal>
 
-                {/* Campaigns & Execution */}
+                {/* 2. Email & Nurture Build */}
                 <Reveal>
                   <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
                     <div className="flex flex-col md:flex-row md:items-start gap-6">
@@ -267,10 +262,10 @@ export default function FractionalHeadOfMarketingPage() {
                         </svg>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl md:text-2xl mb-3">Campaigns & Execution</h3>
-                        <p className="text-white/60 text-lg mb-4">Hands-on keyboard work—we plan, build, launch, and optimize.</p>
+                        <h3 className="text-xl md:text-2xl mb-3">Email & Nurture Build (Hands-On)</h3>
+                        <p className="text-white/60 text-lg mb-4">Writing and building all nurture sequences, flows, and campaigns.</p>
                         <div className="flex flex-wrap gap-2">
-                          {['Campaign builds', 'Email programs', 'Webinars', 'Vendor management', 'Test plans'].map((tag) => (
+                          {['Nurture sequences', 'Drip flows', 'Trial nurture', 'Demo follow-up', 'In-pipeline sequences', 'Onboarding flows', 'Expansion programs', 'A/B testing', 'Copy development'].map((tag) => (
                             <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
                           ))}
                         </div>
@@ -279,20 +274,21 @@ export default function FractionalHeadOfMarketingPage() {
                   </div>
                 </Reveal>
 
-                {/* Analytics & Measurement */}
+                {/* 3. HubSpot Automation */}
                 <Reveal>
                   <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
                     <div className="flex flex-col md:flex-row md:items-start gap-6">
                       <div className="w-12 h-12 rounded-xl bg-[#021da8] flex items-center justify-center shrink-0">
                         <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl md:text-2xl mb-3">Funnel & Measurement</h3>
-                        <p className="text-white/60 text-lg mb-4">Pipeline modeling, attribution, and reporting that drives decisions.</p>
+                        <h3 className="text-xl md:text-2xl mb-3">HubSpot Automation</h3>
+                        <p className="text-white/60 text-lg mb-4">Behavior-based triggers and intelligent automation workflows.</p>
                         <div className="flex flex-wrap gap-2">
-                          {['Pipeline modeling', 'Attribution', 'Dashboards', 'Lead scoring', 'Funnel analysis'].map((tag) => (
+                          {['Behavioral triggers', 'Lead routing', 'List segmentation', 'Workflow automations', 'Lifecycle stage automation', 'Dynamic personalization', 'AI-assisted copy'].map((tag) => (
                             <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
                           ))}
                         </div>
@@ -301,7 +297,29 @@ export default function FractionalHeadOfMarketingPage() {
                   </div>
                 </Reveal>
 
-                {/* Embedded Partnership */}
+                {/* 4. Measurement & Optimization */}
+                <Reveal>
+                  <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
+                    <div className="flex flex-col md:flex-row md:items-start gap-6">
+                      <div className="w-12 h-12 rounded-xl bg-[#021da8] flex items-center justify-center shrink-0">
+                        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl md:text-2xl mb-3">Measurement & Optimization</h3>
+                        <p className="text-white/60 text-lg mb-4">Performance tracking tied to pipeline and revenue outcomes.</p>
+                        <div className="flex flex-wrap gap-2">
+                          {['Email dashboards', 'Lifecycle reporting', 'Sequence analysis', 'Deliverability optimization', 'List health monitoring', 'Pipeline insights'].map((tag) => (
+                            <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Reveal>
+
+                {/* 5. Embedded Partnership */}
                 <Reveal>
                   <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
                     <div className="flex flex-col md:flex-row md:items-start gap-6">
@@ -312,9 +330,9 @@ export default function FractionalHeadOfMarketingPage() {
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl md:text-2xl mb-3">Embedded Partnership</h3>
-                        <p className="text-white/60 text-lg mb-4">We join your Slack, attend standups, and work like an in-house leader.</p>
+                        <p className="text-white/60 text-lg mb-4">Senior email marketers working directly with your team.</p>
                         <div className="flex flex-wrap gap-2">
-                          {['Slack access', 'GTM standups', 'Cross-functional', 'Senior operators', 'No handoffs'].map((tag) => (
+                          {['Integrated Slack', 'Growth team collaboration', 'RevOps + sales alignment', 'Weekly insights', 'Senior marketers', 'Multiple years experience'].map((tag) => (
                             <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
                           ))}
                         </div>
@@ -328,16 +346,13 @@ export default function FractionalHeadOfMarketingPage() {
           <div className="energy-line energy-line--delayed" />
         </section>
 
-        {/* Section 3 - DemandOS System */}
+        {/* Section 3 - Process */}
         <section className="bg-black text-white relative overflow-hidden bg-noise">
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28">
             <div className="text-center mb-16">
-              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
-                Our DemandOS System
-              </Reveal>
-              <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
-                A proven operating system that builds, runs, and scales your marketing function.
+              <Reveal as="h2" className="text-4xl md:text-5xl tracking-tight mb-6">
+                Our Lifecycle Process
               </Reveal>
             </div>
             <ProcessSteps steps={processSteps} headline="" />
@@ -350,9 +365,9 @@ export default function FractionalHeadOfMarketingPage() {
           <div className="container mx-auto px-4 py-24 md:py-28">
             <div className="max-w-5xl mx-auto">
               <Reveal className="mb-12">
-                <p className="text-white/50 text-sm uppercase tracking-widest mb-4">What we do</p>
+                <p className="text-white/50 text-sm uppercase tracking-widest mb-4">Sample plays</p>
                 <h2 className="text-4xl md:text-5xl tracking-tight">
-                  Sample plays we run
+                  Sample Plays We Run
                 </h2>
               </Reveal>
               
@@ -385,16 +400,16 @@ export default function FractionalHeadOfMarketingPage() {
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28 text-center">
             <div className="mb-10">
-              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
-                Ready to Add Instant GTM Leadership?
+              <Reveal as="h2" className="text-4xl md:text-5xl tracking-tight mb-6">
+                Ready to Build Lifecycle Campaigns That Move Pipeline?
               </Reveal>
               <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
-                Let's map your GTM plan, assess your funnel, and get your marketing system running the right way.
+                Let's design and run the lifecycle system that increases conversions, accelerates deals, and grows expansion revenue.
               </Reveal>
             </div>
             <Tilt>
               <LetsTalkButton className="btn btn-primary btn-md md:btn-lg btn-shine">
-                Book a Strategy Session
+                Book a Lifecycle Strategy Session
               </LetsTalkButton>
             </Tilt>
           </div>

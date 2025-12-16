@@ -6,11 +6,15 @@ import Reveal from '@/components/Reveal';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Meet the team behind Fractional Demand',
+  description: 'Meet the team behind Fractional Demand. Senior B2B marketing operators with decades of combined experience building pipeline for tech companies through paid media, demand gen, and RevOps.',
+  keywords: ['about Fractional Demand', 'B2B marketing team', 'demand generation experts', 'marketing operations team', 'fractional marketing operators'],
   openGraph: {
     title: 'About Us | Fractional Demand',
-    description: 'Meet the team behind Fractional Demand',
+    description: 'Meet the team behind Fractional Demand. Senior B2B marketing operators with decades of combined experience building pipeline for tech companies.',
   },
+  alternates: {
+    canonical: 'https://www.fractionaldemand.com/about'
+  }
 };
 
 export default function AboutPage() {

@@ -8,14 +8,23 @@ import HomeSection5 from '@/components/HomeSection5';
 import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
+import { getServiceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Paid Media | Fractional Demand',
   description: 'Get a GTM Team That Builds Pipeline Fast. Fractional Demand embeds senior operators across strategy, paid media, RevOps, and lifecycle to build and run a demand system that accelerates pipeline.',
+  keywords: ['paid media audit', 'LinkedIn ads', 'Google ads', 'B2B paid media', 'paid advertising', 'performance marketing', 'media buying'],
   openGraph: {
     title: 'Paid Media | Fractional Demand',
     description: 'Get a GTM Team That Builds Pipeline Fast. Fractional Demand embeds senior operators across strategy, paid media, RevOps, and lifecycle to build and run a demand system that accelerates pipeline.',
   },
+  alternates: {
+    canonical: 'https://www.fractionaldemand.com/lp/paid-media'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 };
 
 const testimonials = [
@@ -40,8 +49,19 @@ const testimonials = [
 ];
 
 export default function PaidMediaPage() {
+  const serviceSchema = getServiceSchema({
+    name: 'Free Paid Media Audit',
+    description: 'Get a comprehensive paid media audit including quick wins, platform fixes, conversion tracking improvements, and hidden wasted spend analysis. Expert B2B paid advertising audit.',
+    url: 'https://www.fractionaldemand.com/lp/paid-media',
+    serviceType: 'Paid Media Audit, Performance Marketing Analysis, Advertising Optimization'
+  });
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Nav minimal showCTA />
       <main id="main">
         <PaidMediaHero />

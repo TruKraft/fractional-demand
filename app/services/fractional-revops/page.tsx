@@ -6,21 +6,19 @@ import Tilt from '@/components/Tilt';
 import ProcessSteps from '@/components/ProcessSteps';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
-import EyebrowHeading from '@/components/EyebrowHeading';
-import EnergyCard from '@/components/EnergyCard';
 import { LetsTalkButton } from '@/components/CalendlyPopup';
 import { getServiceSchema, getBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Fractional Head of Marketing',
-  description: 'A senior marketing leader embedded directly into your team—someone who owns strategy, leads execution, and builds the systems that turn ideas into pipeline.',
-  keywords: ['fractional CMO', 'fractional chief marketing officer', 'marketing leadership', 'fractional marketing director', 'B2B marketing strategy', 'GTM strategy', 'marketing executive', 'part-time CMO'],
+  title: 'Fractional RevOps',
+  description: 'We embed senior RevOps/GTM engineers into your team to architect HubSpot, automate workflows with Clay and Zapier, enrich and score leads, build best-practice dashboards, and keep your pipeline predictable and clean.',
+  keywords: ['fractional RevOps', 'revenue operations', 'HubSpot consulting', 'GTM operations', 'Clay automation', 'Zapier workflows', 'CRM optimization', 'marketing operations', 'sales operations'],
   openGraph: {
-    title: 'Fractional Head of Marketing | Fractional Demand',
-    description: 'A senior marketing leader embedded directly into your team—someone who owns strategy, leads execution, and builds the systems that turn ideas into pipeline.',
+    title: 'Fractional RevOps | Fractional Demand',
+    description: 'We embed senior RevOps/GTM engineers into your team to architect HubSpot, automate workflows with Clay and Zapier, enrich and score leads, build best-practice dashboards, and keep your pipeline predictable and clean.',
   },
   alternates: {
-    canonical: 'https://www.fractionaldemand.com/services/fractional-head-of-marketing'
+    canonical: 'https://www.fractionaldemand.com/services/fractional-revops'
   }
 };
 
@@ -47,28 +45,20 @@ const testimonials = [
 
 const faqItems = [
   {
-    question: 'How senior is the Fractional Head of Marketing?',
-    answer: 'Your fractional leader has 10+ years of full-funnel B2B experience, including in-house roles',
+    question: 'Do you build dashboards for us?',
+    answer: 'Yes — full-funnel dashboards inside HubSpot for pipeline, revenue, and attribution.',
   },
   {
-    question: 'How many hours do I get?',
-    answer: 'Most engagements provide the equivalent of 1–2 days per week of senior leadership + execution.',
+    question: 'What if our reporting is a mess today?',
+    answer: 'We rebuild tracking, attribution, and dashboards from scratch.',
   },
   {
-    question: 'Do you actually execute or just direct?',
-    answer: 'We are hands-on. We write, build, launch, and operate marketing programs.',
+    question: 'Can you build Clay workflows?',
+    answer: 'Absolutely — Clay is a core part of the GTM Engineering offering.',
   },
   {
-    question: 'Do you work with my existing team?',
-    answer: 'Yes — we lead your internal team, partners, and vendors as your acting marketing leader.',
-  },
-  {
-    question: 'How fast can you start?',
-    answer: 'Typically within 1–2 weeks.',
-  },
-  {
-    question: 'Is there a long-term commitment?',
-    answer: 'No — all services are month-to-month with a 30-day notice.',
+    question: 'Do you require long-term contracts?',
+    answer: 'No — everything is month-to-month with 30-day notice.',
   },
 ];
 
@@ -76,55 +66,59 @@ const processSteps = [
   {
     number: '1',
     title: 'Diagnose',
-    description: 'We assess your GTM strategy, funnel health, positioning, campaigns, ICP, and metrics.',
-    deliverables: ['GTM Audit', 'Funnel Analysis', 'Quick Wins', '60-Day Marketing Plan'],
+    description: 'Audit of your entire GTM systems: HubSpot, workflows, routing, tracking, attribution, and reporting.',
+    deliverables: ['RevOps Systems Audit', 'Funnel Mapping', 'Routing Audit', 'Dashboard Review', 'Quick Wins + 60-Day Plan'],
   },
   {
     number: '2',
     title: 'Build',
-    description: 'We build the marketing foundation: positioning, offers, messaging, tracking, funnel structure, and first wave of campaigns.',
+    description: 'Foundational buildout of your RevOps + GTM infrastructure.',
+    deliverables: ['Lifecycle automation', 'Lead scoring', 'Routing engine', 'Full-funnel dashboards', 'Attribution framework', 'Data hygiene systems', 'Clay + Zapier workflows', 'Reporting templates'],
   },
   {
     number: '3',
     title: 'Run & Optimize',
-    description: 'We lead your marketing function — weekly rhythms, campaign launches, content strategy, experiments, and cross-functional alignment.',
+    description: 'Weekly operation and optimization of your RevOps system.',
+    deliverables: ['Workflow updates', 'Data cleanup', 'Funnel optimization', 'New Clay/Zapier automation', 'Dashboard iteration', 'Weekly insights for GTM'],
   },
   {
     number: '4',
     title: 'Scale',
-    description: 'Once the system is running smoothly, we expand channels, multiply what works, refine offers, and set your team up for sustainable growth.',
+    description: 'Multiply efficiency and GTM visibility.',
+    deliverables: ['Advanced Clay workflows', 'ABM automation', 'Outbound signal mapping', 'Lifecycle expansion', 'Exec-level dashboards', 'Forecasting support', 'Sales alignment refinement'],
   },
 ];
 
 const samplePlays = [
-  'Positioning + Messaging workshops',
-  'Customer interviews',
-  'Revamp ICP + messaging for fast alignment',
-  'Design and launch multi-channel GTM campaigns',
-  'Create webinar and event strategy',
-  'Build nurture sequence and lifecycle strategy',
-  'Launch content engines (testimonial)',
-  'Partner with sales to improve conversion rates',
-  'Define SQL/SQO load and improve funnel hygiene',
-  'Build reporting infrastructure tied to revenue',
+  'HubSpot rebuild (routing + lifecycle + full-funnel dashboards)',
+  'Clay workflow: job-change → SDR → enrichment',
+  'Automated ICP scoring updates',
+  'Data hygiene + dedupe automations',
+  'Attribution setup (simple + accurate)',
+  'Outbound (Apollo) automation',
+  'Clay → HubSpot → Slack alerting loops',
+  'Executive dashboard builds',
+  'Weekly reporting + GTM insights',
+  'MQA alerting',
+  'Lifecycle rebuild (lead → customer → expansion)',
 ];
 
-export default function FractionalHeadOfMarketingPage() {
+export default function FractionalRevOpsPage() {
   const serviceSchema = getServiceSchema({
-    name: 'Fractional Head of Marketing (Fractional CMO)',
-    description: 'Senior marketing leadership embedded into your team. Hands-on strategy, execution, and GTM systems that turn ideas into pipeline. 10+ years B2B experience building demand systems.',
-    url: 'https://www.fractionaldemand.com/services/fractional-head-of-marketing',
-    serviceType: 'Marketing Leadership, Fractional CMO, GTM Strategy, Marketing Management',
+    name: 'Fractional RevOps & GTM Engineering',
+    description: 'Senior RevOps engineers who architect HubSpot, automate with Clay & Zapier, build dashboards, and keep your GTM systems running smoothly. Embedded RevOps for predictable pipeline.',
+    url: 'https://www.fractionaldemand.com/services/fractional-revops',
+    serviceType: 'Revenue Operations, GTM Engineering, HubSpot Architecture, Marketing Automation',
     offers: {
-      name: 'Fractional CMO Service',
-      description: 'Includes GTM strategy, positioning, messaging, campaign execution, funnel optimization, team leadership, and revenue reporting'
+      name: 'Fractional RevOps Service',
+      description: 'Includes HubSpot architecture, Clay workflows, dashboards, attribution, lead scoring, automation, and GTM system optimization'
     }
   });
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: 'Home', url: 'https://www.fractionaldemand.com' },
-    { name: 'Services', url: 'https://www.fractionaldemand.com/services/fractional-head-of-marketing' },
-    { name: 'Fractional Head of Marketing', url: 'https://www.fractionaldemand.com/services/fractional-head-of-marketing' }
+    { name: 'Services', url: 'https://www.fractionaldemand.com/services/fractional-revops' },
+    { name: 'Fractional RevOps', url: 'https://www.fractionaldemand.com/services/fractional-revops' }
   ]);
 
   return (
@@ -146,15 +140,15 @@ export default function FractionalHeadOfMarketingPage() {
               {/* Left: Content */}
               <div>
                 <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">
-                  Fractional Head of Marketing That Builds GTM Momentum Fast.
+                  Fractional RevOps That Makes Your Entire GTM System Work.
                 </Reveal>
                 <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed mb-8">
-                  A senior marketing leader embedded directly into your team—someone who owns strategy, leads execution, and builds the systems that turn ideas into pipeline. Hands-on keyboard doer, not a slide-making strategist who hands you more homework.
+                  We embed senior RevOps/GTM engineers into your team to architect HubSpot, automate workflows with Clay and Zapier, enrich and score leads, build best-practice dashboards, and keep your pipeline predictable and clean.
                 </Reveal>
                 <Reveal>
                   <Tilt>
                     <LetsTalkButton className="btn btn-primary btn-md md:btn-lg btn-shine">
-                      Book a Strategy Session
+                      Book a RevOps Audit
                     </LetsTalkButton>
                   </Tilt>
                 </Reveal>
@@ -163,11 +157,12 @@ export default function FractionalHeadOfMarketingPage() {
               {/* Right: Visual */}
               <Reveal className="hidden lg:block">
                 <div className="energy-card rounded-3xl border border-white/10 bg-white/5 p-8 aspect-square flex items-center justify-center">
-                  <img 
-                    src="/assets/images/gtm-momentum-hero.svg" 
-                    alt="GTM Leadership and Momentum" 
-                    className="w-full h-full object-contain"
-                  />
+                  <div className="text-center">
+                    <svg className="w-24 h-24 mx-auto mb-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                    <p className="text-white/60 text-lg">RevOps + GTM Engineering</p>
+                  </div>
                 </div>
               </Reveal>
             </div>
@@ -182,29 +177,28 @@ export default function FractionalHeadOfMarketingPage() {
               {/* Left: Problem */}
               <div className="lg:sticky lg:top-32">
                 <Reveal as="h2" className="text-4xl md:text-5xl tracking-tight mb-6">
-                  You're not missing effort. You're missing leadership.
+                  GTM breaks when RevOps breaks.
                 </Reveal>
                 <Reveal as="p" className="text-white/80 text-xl leading-relaxed mb-6">
-                  You have channels, tools, and maybe even a marketer or two. But you're missing the person who can pull it all together.
+                  Most teams don't have a strategy problem. They have a systems problem.
                 </Reveal>
                 <Reveal as="p" className="text-white/60 text-lg leading-relaxed">
-                  A <strong className="text-white">Fractional Head of Marketing</strong> gives you senior leadership now—with hands-on execution built into the model.
+                  You can have great marketing, paid media, and sales… But if you don't have accurate data, clean automation, and full-funnel reporting, everything breaks down.
                 </Reveal>
               </div>
               
               {/* Right: Capabilities */}
               <div>
-                <Reveal as="p" className="text-white/50 text-sm uppercase tracking-widest mb-6">What you get</Reveal>
+                <Reveal as="p" className="text-white/50 text-sm uppercase tracking-widest mb-6">You need a RevOps partner who</Reveal>
                 <ul className="space-y-4">
                   {[
-                    'Build out positioning & messaging',
-                    'Develop the correct offer(s)',
-                    'Set the GTM strategy',
-                    'Prioritize the right campaigns',
-                    'Build the offer → messaging → funnel',
-                    'Work cross-functionally with sales',
-                    'Lead execution, not just direct it',
-                    'Create momentum instead of chaos',
+                    'Understands HubSpot deeply',
+                    'Integrates Clay, Zapier, Apollo, AI',
+                    'Builds GTM systems that scale',
+                    'Creates dashboards that give your team full visibility',
+                    'Aligns sales + marketing around definitions and handoffs',
+                    'Doesn\'t just fix issues. Builds systems.',
+                    'Operates inside your GTM team, not outside it',
                   ].map((item, idx) => (
                     <Reveal key={idx}>
                       <li className="flex items-center gap-4 text-white/90 text-lg py-3 border-b border-white/10">
@@ -230,12 +224,34 @@ export default function FractionalHeadOfMarketingPage() {
               <Reveal className="mb-16">
                 <p className="text-white/50 text-sm uppercase tracking-widest mb-4">What's included</p>
                 <h2 className="text-4xl md:text-5xl tracking-tight">
-                  Everything you need to run marketing like a system.
+                  Full-stack RevOps + modern GTM engineering: Built for efficiency, clarity, and predictable revenue.
                 </h2>
               </Reveal>
               
               <div className="space-y-6">
-                {/* GTM Strategy */}
+                {/* 1. HubSpot Architecture */}
+                <Reveal>
+                  <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
+                    <div className="flex flex-col md:flex-row md:items-start gap-6">
+                      <div className="w-12 h-12 rounded-xl bg-[#021da8] flex items-center justify-center shrink-0">
+                        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl md:text-2xl mb-3">HubSpot Architecture & System Design</h3>
+                        <p className="text-white/60 text-lg mb-4">Complete HubSpot setup, re-architecture, and optimization.</p>
+                        <div className="flex flex-wrap gap-2">
+                          {['HubSpot setup', 'Object design', 'Lifecycle automation', 'Lead qualification', 'Routing', 'Deal stages', 'Attribution'].map((tag) => (
+                            <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Reveal>
+
+                {/* 2. Dashboards & Reporting */}
                 <Reveal>
                   <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
                     <div className="flex flex-col md:flex-row md:items-start gap-6">
@@ -245,32 +261,35 @@ export default function FractionalHeadOfMarketingPage() {
                         </svg>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl md:text-2xl mb-3">GTM Strategy & Leadership</h3>
-                        <p className="text-white/60 text-lg mb-4">Quarterly plans, OKRs, and cross-functional alignment tied to revenue.</p>
+                        <h3 className="text-xl md:text-2xl mb-3">Dashboards & Reporting</h3>
+                        <p className="text-white/60 text-lg mb-4">Full-funnel visibility from lead to revenue with executive-level dashboards.</p>
                         <div className="flex flex-wrap gap-2">
-                          {['GTM planning', 'Positioning', 'Messaging', 'OKRs', 'Sales alignment'].map((tag) => (
+                          {['Full-funnel dashboards', 'Channel performance', 'Pipeline health', 'Attribution viz', 'SDR/AE dashboards', 'Revenue forecasting', 'Executive packages'].map((tag) => (
                             <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
                           ))}
                         </div>
+                        <p className="text-white/50 text-sm mt-4 italic">
+                          Outcome: Total visibility into what's driving pipeline, and what's blocking it.
+                        </p>
                       </div>
                     </div>
                   </div>
                 </Reveal>
 
-                {/* Campaigns & Execution */}
+                {/* 3. GTM Workflows + Automation */}
                 <Reveal>
                   <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
                     <div className="flex flex-col md:flex-row md:items-start gap-6">
                       <div className="w-12 h-12 rounded-xl bg-[#021da8] flex items-center justify-center shrink-0">
                         <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl md:text-2xl mb-3">Campaigns & Execution</h3>
-                        <p className="text-white/60 text-lg mb-4">Hands-on keyboard work—we plan, build, launch, and optimize.</p>
+                        <h3 className="text-xl md:text-2xl mb-3">GTM Workflows + Automation</h3>
+                        <p className="text-white/60 text-lg mb-4">Automated lead progression, routing, and task management across your GTM stack.</p>
                         <div className="flex flex-wrap gap-2">
-                          {['Campaign builds', 'Email programs', 'Webinars', 'Vendor management', 'Test plans'].map((tag) => (
+                          {['Lead automation', 'Routing logic', 'SLAs', 'Workflows', 'Data hygiene', 'Task sequences', 'Intent alerts'].map((tag) => (
                             <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
                           ))}
                         </div>
@@ -279,20 +298,20 @@ export default function FractionalHeadOfMarketingPage() {
                   </div>
                 </Reveal>
 
-                {/* Analytics & Measurement */}
+                {/* 4. GTM Engineering */}
                 <Reveal>
                   <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
                     <div className="flex flex-col md:flex-row md:items-start gap-6">
                       <div className="w-12 h-12 rounded-xl bg-[#021da8] flex items-center justify-center shrink-0">
                         <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl md:text-2xl mb-3">Funnel & Measurement</h3>
-                        <p className="text-white/60 text-lg mb-4">Pipeline modeling, attribution, and reporting that drives decisions.</p>
+                        <h3 className="text-xl md:text-2xl mb-3">GTM Engineering</h3>
+                        <p className="text-white/60 text-lg mb-4">Advanced automation with Clay, Zapier, and AI-powered enrichment workflows.</p>
                         <div className="flex flex-wrap gap-2">
-                          {['Pipeline modeling', 'Attribution', 'Dashboards', 'Lead scoring', 'Funnel analysis'].map((tag) => (
+                          {['Clay workflows', 'AI enrichment', 'Zapier automations', 'Outbound sequences', 'Multi-source enrichment', 'Signal automation', 'ICP scoring', 'Slack alerts', 'AI/LLM triggers'].map((tag) => (
                             <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
                           ))}
                         </div>
@@ -301,7 +320,29 @@ export default function FractionalHeadOfMarketingPage() {
                   </div>
                 </Reveal>
 
-                {/* Embedded Partnership */}
+                {/* 5. Lead Scoring & Enrichment */}
+                <Reveal>
+                  <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
+                    <div className="flex flex-col md:flex-row md:items-start gap-6">
+                      <div className="w-12 h-12 rounded-xl bg-[#021da8] flex items-center justify-center shrink-0">
+                        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl md:text-2xl mb-3">Lead Scoring, Enrichment & ICP Modeling</h3>
+                        <p className="text-white/60 text-lg mb-4">Intelligent scoring and enrichment to surface your best-fit prospects.</p>
+                        <div className="flex flex-wrap gap-2">
+                          {['Behavioral scoring', 'Firmographic scoring', 'Intent signals', 'Multi-source enrichment', 'MQL/MQA frameworks', 'Scoring optimization'].map((tag) => (
+                            <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Reveal>
+
+                {/* 6. Embedded Partnership */}
                 <Reveal>
                   <div className="group border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors">
                     <div className="flex flex-col md:flex-row md:items-start gap-6">
@@ -312,9 +353,9 @@ export default function FractionalHeadOfMarketingPage() {
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl md:text-2xl mb-3">Embedded Partnership</h3>
-                        <p className="text-white/60 text-lg mb-4">We join your Slack, attend standups, and work like an in-house leader.</p>
+                        <p className="text-white/60 text-lg mb-4">We operate like an extension of your GTM team—senior operators only.</p>
                         <div className="flex flex-wrap gap-2">
-                          {['Slack access', 'GTM standups', 'Cross-functional', 'Senior operators', 'No handoffs'].map((tag) => (
+                          {['Integrated Slack', 'Weekly meetings', 'Cross-functional work', 'Senior operators only', 'GTM team extension'].map((tag) => (
                             <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
                           ))}
                         </div>
@@ -328,16 +369,13 @@ export default function FractionalHeadOfMarketingPage() {
           <div className="energy-line energy-line--delayed" />
         </section>
 
-        {/* Section 3 - DemandOS System */}
+        {/* Section 3 - Process */}
         <section className="bg-black text-white relative overflow-hidden bg-noise">
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28">
             <div className="text-center mb-16">
-              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
-                Our DemandOS System
-              </Reveal>
-              <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
-                A proven operating system that builds, runs, and scales your marketing function.
+              <Reveal as="h2" className="text-4xl md:text-5xl tracking-tight mb-6">
+                Our RevOps + GTM Engineering Process
               </Reveal>
             </div>
             <ProcessSteps steps={processSteps} headline="" />
@@ -350,9 +388,9 @@ export default function FractionalHeadOfMarketingPage() {
           <div className="container mx-auto px-4 py-24 md:py-28">
             <div className="max-w-5xl mx-auto">
               <Reveal className="mb-12">
-                <p className="text-white/50 text-sm uppercase tracking-widest mb-4">What we do</p>
+                <p className="text-white/50 text-sm uppercase tracking-widest mb-4">Sample plays</p>
                 <h2 className="text-4xl md:text-5xl tracking-tight">
-                  Sample plays we run
+                  Sample Plays We Run
                 </h2>
               </Reveal>
               
@@ -385,16 +423,16 @@ export default function FractionalHeadOfMarketingPage() {
           <div className="energy-line" />
           <div className="container mx-auto px-4 py-24 md:py-28 text-center">
             <div className="mb-10">
-              <Reveal as="h2" className="text-4xl md:text-5xl  tracking-tight mb-6">
-                Ready to Add Instant GTM Leadership?
+              <Reveal as="h2" className="text-4xl md:text-5xl tracking-tight mb-6">
+                Ready to Fix Your Funnel and Unlock Complete Visibility?
               </Reveal>
               <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
-                Let's map your GTM plan, assess your funnel, and get your marketing system running the right way.
+                Let's audit your systems, clean up your data, build your dashboards, and automate your GTM engine.
               </Reveal>
             </div>
             <Tilt>
               <LetsTalkButton className="btn btn-primary btn-md md:btn-lg btn-shine">
-                Book a Strategy Session
+                Book a RevOps Audit
               </LetsTalkButton>
             </Tilt>
           </div>

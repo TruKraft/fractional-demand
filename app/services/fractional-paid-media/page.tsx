@@ -10,14 +10,19 @@ import CTA from '@/components/CTA';
 import EyebrowHeading from '@/components/EyebrowHeading';
 import EnergyCard from '@/components/EnergyCard';
 import { LetsTalkButton } from '@/components/CalendlyPopup';
+import { getServiceSchema, getBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Fractional Paid Media',
   description: 'Senior performance marketers embedded directly into your team to run LinkedIn, Meta, Google, X, and Reddit with a demand system built to generate qualified pipeline.',
+  keywords: ['fractional paid media', 'B2B paid advertising', 'LinkedIn ads management', 'Google ads B2B', 'Meta advertising', 'performance marketing', 'paid media agency', 'B2B advertising'],
   openGraph: {
     title: 'Fractional Paid Media | Fractional Demand',
     description: 'Senior performance marketers embedded directly into your team to run LinkedIn, Meta, Google, X, and Reddit with a demand system built to generate qualified pipeline.',
   },
+  alternates: {
+    canonical: 'https://www.fractionaldemand.com/services/fractional-paid-media'
+  }
 };
 
 const testimonials = [
@@ -93,8 +98,33 @@ const processSteps = [
 ];
 
 export default function FractionalPaidMediaPage() {
+  const serviceSchema = getServiceSchema({
+    name: 'Fractional Paid Media Management',
+    description: 'Senior performance marketers embedded directly into your team to run LinkedIn, Meta, Google, X, and Reddit with a demand system built to generate qualified pipeline. Expert B2B paid advertising management for pipeline growth.',
+    url: 'https://www.fractionaldemand.com/services/fractional-paid-media',
+    serviceType: 'Paid Media Management, B2B Advertising, Performance Marketing',
+    offers: {
+      name: 'Fractional Paid Media Service',
+      description: 'Includes strategy, campaign management, optimization, creative, and attribution for LinkedIn, Google, Meta, Reddit, X, and YouTube ads'
+    }
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.fractionaldemand.com' },
+    { name: 'Services', url: 'https://www.fractionaldemand.com/services/fractional-paid-media' },
+    { name: 'Fractional Paid Media', url: 'https://www.fractionaldemand.com/services/fractional-paid-media' }
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Nav />
       <main id="main">
         {/* Hero */}

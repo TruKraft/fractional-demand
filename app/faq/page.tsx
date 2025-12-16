@@ -1,9 +1,23 @@
+import type { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import LPFAQ from '@/components/LPFAQ';
 import CalendlyInline from '@/components/CalendlyInline';
 import HubspotForm from '@/components/HubspotForm';
 import EnergyCard from '@/components/EnergyCard';
+
+export const metadata: Metadata = {
+  title: 'FAQ | Fractional Demand',
+  description: 'Frequently asked questions about B2B paid media, demand generation, and working with Fractional Demand. Get answers about budgets, strategy, attribution, and results.',
+  keywords: ['B2B marketing FAQ', 'paid media questions', 'demand generation FAQ', 'LinkedIn ads help', 'Google ads B2B', 'marketing strategy questions'],
+  openGraph: {
+    title: 'FAQ | Fractional Demand',
+    description: 'Frequently asked questions about B2B paid media, demand generation, and working with Fractional Demand.',
+  },
+  alternates: {
+    canonical: 'https://www.fractionaldemand.com/faq'
+  }
+};
 
 const faqs = [
   {

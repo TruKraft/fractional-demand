@@ -178,6 +178,34 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                     </div>
                   </a>
                 </li>
+                <li className="border-b border-white/10 last:border-b-0">
+                  <a
+                    href="/services/fractional-revops"
+                    className="block px-5 py-3 text-white hover:bg-white/5 transition-colors group"
+                    onClick={() => setServicesOpen(false)}
+                  >
+                    <div className="font-medium text-white group-hover:text-white transition-colors">
+                      Fractional RevOps
+                    </div>
+                    <div className="text-sm text-white/60 group-hover:text-white/70 transition-colors">
+                      RevOps + GTM engineering for predictable revenue
+                    </div>
+                  </a>
+                </li>
+                <li className="border-b border-white/10 last:border-b-0">
+                  <a
+                    href="/services/email-lifecycle-marketing"
+                    className="block px-5 py-3 text-white hover:bg-white/5 transition-colors group"
+                    onClick={() => setServicesOpen(false)}
+                  >
+                    <div className="font-medium text-white group-hover:text-white transition-colors">
+                      Email & Lifecycle Marketing
+                    </div>
+                    <div className="text-sm text-white/60 group-hover:text-white/70 transition-colors">
+                      Lifecycle campaigns that move pipeline
+                    </div>
+                  </a>
+                </li>
               </ul>
             </li>
 
@@ -363,7 +391,7 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                       <path d="M6 9l6 6 6-6" />
                     </svg>
                   </button>
-                  <div className={`overflow-hidden transition-all duration-200 ${servicesOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  <div className={`overflow-hidden transition-all duration-200 ${servicesOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'}`}>
                     <ul id="mobile-services-menu" className="pl-4 mt-2 space-y-1 border-l-2 border-white/20 ml-3" role="menu">
                       <li role="none">
                         <a 
@@ -389,6 +417,32 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                           }}
                         >
                           Fractional Paid Media
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a 
+                          href="/services/fractional-revops" 
+                          className="block py-2.5 px-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                          role="menuitem"
+                          onClick={() => { 
+                            setOpen(false); 
+                            setServicesOpen(false); 
+                          }}
+                        >
+                          Fractional RevOps
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a 
+                          href="/services/email-lifecycle-marketing" 
+                          className="block py-2.5 px-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                          role="menuitem"
+                          onClick={() => { 
+                            setOpen(false); 
+                            setServicesOpen(false); 
+                          }}
+                        >
+                          Email & Lifecycle Marketing
                         </a>
                       </li>
                     </ul>

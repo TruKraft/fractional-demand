@@ -18,27 +18,47 @@ export default function CareersForm() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    // Create form data
-    const formDataToSend = new FormData();
-    formDataToSend.append('name', formData.name);
-    formDataToSend.append('email', formData.email);
-    formDataToSend.append('message', formData.message);
-    if (formData.resume) {
-      formDataToSend.append('resume', formData.resume);
-    }
-
     try {
-      // In a real implementation, this would send to an API endpoint
-      // For now, we'll use a mailto link as fallback
-      const subject = encodeURIComponent(`Career Application from ${formData.name}`);
-      const body = encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-      );
-      window.location.href = `mailto:jordan@fractionaldemand.com,gavin@fractionaldemand.com?subject=${subject}&body=${body}`;
+      // Prepare data for API submission
+      const submissionData: Record<string, any> = {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      };
+
+      // If resume is provided, convert to base64 for JSON submission
+      if (formData.resume) {
+        const reader = new FileReader();
+        const base64Promise = new Promise<string>((resolve, reject) => {
+          reader.onload = () => resolve(reader.result as string);
+          reader.onerror = reject;
+          reader.readAsDataURL(formData.resume!);
+        });
+        
+        try {
+          const base64Data = await base64Promise;
+          submissionData.resume = base64Data;
+          submissionData.resumeName = formData.resume.name;
+        } catch (err) {
+          console.error('Error reading file:', err);
+        }
+      }
+
+      const response = await fetch('https://forms.getaltira.com/api/f/fractional-demand-careers-d60c9a2d', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(submissionData)
+      });
       
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', message: '', resume: null });
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '', resume: null });
+      } else {
+        console.error('Form submission failed:', response.statusText);
+        setSubmitStatus('error');
+      }
     } catch (error) {
+      console.error('Form submission error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

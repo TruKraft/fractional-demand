@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import Reveal from '@/components/Reveal';
 import CTA from '@/components/CTA';
 import { fetchBlogBySlug, fetchBlogs } from '@/lib/strapi';
+import { getArticleSchema, getBreadcrumbSchema } from '@/lib/schema';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -52,9 +53,33 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   const tags = post.tags || [];
+  
+  const articleSchema = getArticleSchema({
+    title: post.title,
+    description: post.excerpt,
+    url: `https://www.fractionaldemand.com/resources/blog/${slug}`,
+    imageUrl: post.coverImage?.url,
+    author: post.author,
+    publishedAt: post.publishedAt,
+    tags: tags
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.fractionaldemand.com' },
+    { name: 'Blog', url: 'https://www.fractionaldemand.com/resources/blog' },
+    { name: post.title, url: `https://www.fractionaldemand.com/resources/blog/${slug}` }
+  ]);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Nav />
       <main id="main">
         {/* Hero */}

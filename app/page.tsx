@@ -8,14 +8,19 @@ import HomeSection5 from '@/components/HomeSection5';
 import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
+import { getWebSiteSchema, getAggregateRatingSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Home',
   description: 'Get a GTM Team That Builds Pipeline Fast. Fractional Demand embeds senior operators across strategy, paid media, RevOps, and lifecycle to build and run a demand system that accelerates pipeline.',
+  keywords: ['B2B demand generation', 'fractional CMO', 'paid media management', 'LinkedIn ads', 'Google ads', 'RevOps', 'marketing strategy', 'pipeline generation', 'B2B marketing agency'],
   openGraph: {
     title: 'Fractional Demand | B2B Demand Gen Agency',
     description: 'Get a GTM Team That Builds Pipeline Fast. Fractional Demand embeds senior operators across strategy, paid media, RevOps, and lifecycle to build and run a demand system that accelerates pipeline.',
   },
+  alternates: {
+    canonical: 'https://www.fractionaldemand.com'
+  }
 };
 
 const testimonials = [
@@ -40,8 +45,19 @@ const testimonials = [
 ];
 
 export default function Page() {
+  const websiteSchema = getWebSiteSchema();
+  const ratingSchema = getAggregateRatingSchema({
+    ratingValue: 5,
+    reviewCount: testimonials.length,
+    bestRating: 5
+  });
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
       <Nav />
       <main id="main">
         <Hero />

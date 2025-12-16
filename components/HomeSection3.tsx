@@ -1,6 +1,5 @@
 import Reveal from './Reveal';
-import Image from 'next/image';
-import EnergyCard from './EnergyCard';
+import ComparisonChart from './ComparisonChart';
 
 export default function HomeSection3() {
   return (
@@ -15,19 +14,7 @@ export default function HomeSection3() {
             Your real decision:<br />hire a full-time head of marketing and team, or plug in a fractional GTM team that&apos;s already built.
           </Reveal>
         </div>
-        <Reveal className="max-w-5xl mx-auto">
-          <div className="energy-card rounded-3xl border border-white/10 bg-gradient-to-br from-gray-800 to-gray-900 p-8 md:p-12">
-            <div className="relative w-full flex items-center justify-center">
-              <Image
-                src="/assets/images/undraw_collaborative-writing.svg"
-                alt="Collaborative team working together"
-                width={799}
-                height={618}
-                className="w-full max-w-3xl h-auto"
-              />
-            </div>
-          </div>
-        </Reveal>
+        <ComparisonChart />
       </div>
       <div className="energy-line energy-line--delayed" />
     </section>
