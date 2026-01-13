@@ -1,0 +1,156 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient circles -->
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Ambient background elements -->
+  <circle cx="120" cy="480" r="90" fill="url(#blueGradient)" opacity="0.08"/>
+  <circle cx="480" cy="120" r="110" fill="url(#purpleGradient)" opacity="0.08"/>
+  
+  <!-- Central automation hub (main focal point) -->
+  <g transform="translate(300, 300)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="85" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.3"/>
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.5"/>
+    <circle cx="0" cy="0" r="55" fill="url(#blueGradient)" opacity="0.15"/>
+    
+    <!-- Central gear system -->
+    <circle cx="0" cy="0" r="35" fill="#1e293b" stroke="url(#blueGradient)" stroke-width="3"/>
+    <circle cx="0" cy="0" r="20" fill="url(#blueGradient)" opacity="0.4"/>
+    
+    <!-- Gear teeth -->
+    <g opacity="0.8">
+      <rect x="-5" y="-40" width="10" height="10" fill="#3b82f6" rx="2"/>
+      <rect x="-5" y="30" width="10" height="10" fill="#3b82f6" rx="2"/>
+      <rect x="-40" y="-5" width="10" height="10" fill="#3b82f6" rx="2"/>
+      <rect x="30" y="-5" width="10" height="10" fill="#3b82f6" rx="2"/>
+    </g>
+    
+    <!-- Rotating indicators -->
+    <circle cx="0" cy="-60" r="4" fill="#22c55e" filter="url(#glow)"/>
+    <circle cx="60" cy="0" r="4" fill="#22c55e" filter="url(#glow)"/>
+    <circle cx="0" cy="60" r="4" fill="#22c55e" filter="url(#glow)"/>
+    <circle cx="-60" cy="0" r="4" fill="#22c55e" filter="url(#glow)"/>
+  </g>
+  
+  <!-- Data input sources (left side) -->
+  <g transform="translate(80, 180)">
+    <!-- HubSpot node -->
+    <circle cx="0" cy="0" r="32" fill="#1e293b" stroke="url(#blueGradient)" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="18" fill="url(#blueGradient)" opacity="0.3"/>
+    <text x="0" y="5" text-anchor="middle" fill="#fff" font-size="11" font-weight="600">HUB</text>
+    
+    <!-- Connection line to center -->
+    <path d="M35 0 L180 100" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4 3" opacity="0.6"/>
+    <circle cx="35" cy="0" r="3" fill="#3b82f6"/>
+  </g>
+  
+  <g transform="translate(60, 300)">
+    <!-- Clay node -->
+    <circle cx="0" cy="0" r="28" fill="#1e293b" stroke="url(#blueGradient)" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="16" fill="url(#blueGradient)" opacity="0.3"/>
+    <text x="0" y="4" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">CLAY</text>
+    
+    <!-- Connection line to center -->
+    <path d="M30 0 L215 0" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4 3" opacity="0.6"/>
+    <circle cx="30" cy="0" r="3" fill="#3b82f6"/>
+  </g>
+  
+  <g transform="translate(90, 420)">
+    <!-- Zapier node -->
+    <circle cx="0" cy="0" r="28" fill="#1e293b" stroke="url(#blueGradient)" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="16" fill="url(#blueGradient)" opacity="0.3"/>
+    <text x="0" y="4" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">ZAP</text>
+    
+    <!-- Connection line to center -->
+    <path d="M30 -10 L180 -100" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4 3" opacity="0.6"/>
+    <circle cx="30" cy="-10" r="3" fill="#3b82f6"/>
+  </g>
+  
+  <!-- Data output/dashboard (right side) -->
+  <g transform="translate(460, 260)">
+    <!-- Dashboard container -->
+    <rect x="0" y="0" width="110" height="140" rx="12" fill="#1e293b" stroke="url(#blueGradient)" stroke-width="2.5" opacity="0.9"/>
+    
+    <!-- Dashboard header -->
+    <rect x="10" y="10" width="90" height="8" rx="3" fill="url(#blueGradient)"/>
+    
+    <!-- Metric cards -->
+    <g opacity="0.8">
+      <rect x="10" y="28" width="42" height="32" rx="6" fill="#2563eb" opacity="0.3"/>
+      <rect x="58" y="28" width="42" height="32" rx="6" fill="#3b82f6" opacity="0.4"/>
+      <rect x="10" y="68" width="42" height="32" rx="6" fill="#3b82f6" opacity="0.4"/>
+      <rect x="58" y="68" width="42" height="32" rx="6" fill="#2563eb" opacity="0.3"/>
+    </g>
+    
+    <!-- Progress bars -->
+    <rect x="10" y="110" width="90" height="4" rx="2" fill="#ffffff" opacity="0.2"/>
+    <rect x="10" y="110" width="68" height="4" rx="2" fill="url(#blueGradient)"/>
+    
+    <rect x="10" y="122" width="90" height="4" rx="2" fill="#ffffff" opacity="0.2"/>
+    <rect x="10" y="122" width="75" height="4" rx="2" fill="url(#blueGradient)"/>
+    
+    <!-- Connection from center -->
+    <path d="M-75 40 L-8 20" stroke="#3b82f6" stroke-width="2.5" opacity="0.7"/>
+    <circle cx="-8" cy="20" r="3" fill="#22c55e" filter="url(#glow)"/>
+  </g>
+  
+  <!-- Workflow automation indicators -->
+  <g transform="translate(150, 500)">
+    <!-- Workflow boxes -->
+    <rect x="0" y="0" width="60" height="35" rx="8" fill="#1e293b" stroke="#2563eb" stroke-width="2" opacity="0.7"/>
+    <circle cx="15" cy="17.5" r="3" fill="#22c55e"/>
+    <rect x="25" y="12" width="28" height="3" rx="1.5" fill="#ffffff" opacity="0.4"/>
+    <rect x="25" y="18" width="22" height="3" rx="1.5" fill="#ffffff" opacity="0.3"/>
+    <text x="8" y="31" fill="#fff" font-size="8" opacity="0.6">AUTO</text>
+    
+    <rect x="80" y="0" width="60" height="35" rx="8" fill="#1e293b" stroke="#2563eb" stroke-width="2" opacity="0.7"/>
+    <circle cx="95" cy="17.5" r="3" fill="#22c55e"/>
+    <rect x="105" y="12" width="28" height="3" rx="1.5" fill="#ffffff" opacity="0.4"/>
+    <rect x="105" y="18" width="22" height="3" rx="1.5" fill="#ffffff" opacity="0.3"/>
+    <text x="88" y="31" fill="#fff" font-size="8" opacity="0.6">TRIGGER</text>
+    
+    <!-- Connection arrow -->
+    <path d="M62 17.5 L78 17.5" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="78,17.5 73,14.5 73,20.5" fill="#3b82f6"/>
+  </g>
+  
+  <!-- Data flow particles -->
+  <g opacity="0.4">
+    <circle cx="250" cy="200" r="3" fill="#60a5fa"/>
+    <circle cx="350" cy="250" r="2.5" fill="#60a5fa"/>
+    <circle cx="280" cy="380" r="3" fill="#60a5fa"/>
+    <circle cx="380" cy="320" r="2" fill="#60a5fa"/>
+    <circle cx="220" cy="320" r="2.5" fill="#60a5fa"/>
+  </g>
+  
+  <!-- Bottom label -->
+  <g transform="translate(300, 560)">
+    <text x="0" y="0" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="500" opacity="0.5">
+      RevOps + GTM Engineering
+    </text>
+  </g>
+  
+  <!-- Lightning bolt automation icon -->
+  <g transform="translate(420, 450)">
+    <path d="M10 0 L0 12 L6 12 L4 24 L14 10 L8 10 Z" 
+          fill="url(#blueGradient)" 
+          opacity="0.6"
+          filter="url(#glow)"/>
+  </g>
+</svg>

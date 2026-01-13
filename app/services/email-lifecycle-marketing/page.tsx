@@ -173,12 +173,11 @@ export default function EmailLifecycleMarketingPage() {
               {/* Right: Visual */}
               <Reveal className="hidden lg:block">
                 <div className="energy-card rounded-3xl border border-white/10 bg-white/5 p-8 aspect-square flex items-center justify-center">
-                  <div className="text-center">
-                    <svg className="w-24 h-24 mx-auto mb-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <p className="text-white/60 text-lg">Email & Lifecycle</p>
-                  </div>
+                  <img 
+                    src="/assets/images/lifecycle-hero.svg" 
+                    alt="Email & Lifecycle Marketing Journey" 
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </Reveal>
             </div>
