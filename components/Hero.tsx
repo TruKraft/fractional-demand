@@ -72,7 +72,7 @@ export default function Hero() {
         <div className="flex justify-center">
           <Tilt>
             <LetsTalkButton className="btn btn-primary btn-md md:btn-lg btn-shine">
-              Get Started
+              Let&apos;s Talk
             </LetsTalkButton>
           </Tilt>
         </div>
