@@ -27,19 +27,37 @@ const testimonials = [
     quote: "The team at Fractional Demand have been fantastic partners to our team here at Merge — helping us to optimize our paid media budget and increase contribution to pipeline. (They're also extremely kind humans, which is just an added bonus)",
     author: 'Zena',
     company: 'Merge',
-    image: '/assets/images/placeholder-avatar.jpg',
+    image: '/assets/images/Zena Merge Pic.jpeg',
   },
   {
     quote: "It's amazing what can happen when you had a demand generation partner who really works with you to lift up the rest of your GTM function rather than fight for attribution. So THANK YOU — y'all have been an invaluable part of the Digioh marketing team and I am stoked to continue working with you.",
     author: 'Blake',
     company: 'Digioh',
-    image: '/assets/images/placeholder-avatar.jpg',
+    image: '/assets/images/blake digioh pic.jpeg',
   },
   {
     quote: "Fractional Demand is amazing to work with both on a professional and personal level. It's evident that they truly care about the work they are doing, and consistently go above and beyond what we ask for. They've been crucial for us in navigating paid ads and are incredibly knowledgeable about what they do. Can't say enough good things!",
     author: 'Kate',
     company: 'Incident.io',
-    image: '/assets/images/placeholder-avatar.jpg',
+    image: '/assets/images/kate incident io pic.jpeg',
+  },
+  {
+    quote: "The Fractional Demand team made an immediate impact. They didn't just advise—they rolled up their sleeves, built a full marketing engine for a new product launch, and helped us operationalize ABM in a way that finally clicked. Their leadership leveled up our strategy, our systems, and our results. Couldn't recommend them more.",
+    author: 'Jeff G',
+    company: 'Clicklease',
+    image: '/assets/images/jeff gagon clicklease pic.jpeg',
+  },
+  {
+    quote: "Fractional Demand was a game-changer for us. They sharpened our messaging, elevated our digital media performance, and helped us understand our ICPs on a whole new level. Thanks to their work, we walked away with a clear, confident ad strategy for the year ahead. These guys are absolute studs.",
+    author: 'Ryan',
+    company: 'Boostly',
+    image: '/assets/images/ryan roberts boostly pic.jpeg',
+  },
+  {
+    quote: "Fractional Demand was instrumental during our transition to hiring a full-time revenue marketer. Their expertise in building email nurture programs, content syndication strategies, influencer collaboration, and developing A/B web testing plans gave us the foundation we needed to scale our demand generation efforts. Beyond the tactical execution, they were always available as a strategic gut check, helping me think through decisions and ensure we were building the right marketing infrastructure. Their fractional support bridged a critical gap and set us up for long-term success!",
+    author: 'Jessica',
+    company: 'Merge',
+    image: '/assets/images/Jessica Merge Pic.jpeg',
   },
 ];
 
@@ -143,7 +161,7 @@ export default function FractionalRevOpsPage() {
                   Fractional RevOps That Makes Your Entire GTM System Work.
                 </Reveal>
                 <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed mb-8">
-                  We embed senior RevOps/GTM engineers into your team to architect HubSpot, automate workflows with Clay and Zapier, enrich and score leads, build best-practice dashboards, and keep your pipeline predictable and clean.
+                  We embed senior GTM engineers into your team to architect HubSpot, automate workflows with Clay and Zapier, enrich and score leads, build best-practice dashboards, and keep your pipeline predictable and clean.
                 </Reveal>
                 <Reveal>
                   <Tilt>
@@ -223,9 +241,12 @@ export default function FractionalRevOpsPage() {
             <div className="max-w-6xl mx-auto">
               <Reveal className="mb-16">
                 <p className="text-white/50 text-sm uppercase tracking-widest mb-4">What's included</p>
-                <h2 className="text-4xl md:text-5xl tracking-tight">
-                  Full-stack RevOps + modern GTM engineering: Built for efficiency, clarity, and predictable revenue.
+                <h2 className="text-4xl md:text-5xl tracking-tight mb-2">
+                  Full-stack RevOps + modern GTM engineering
                 </h2>
+                <p className="text-2xl md:text-3xl text-white/80">
+                  Built for efficiency, clarity, and predictable revenue.
+                </p>
               </Reveal>
               
               <div className="space-y-6">
@@ -264,13 +285,10 @@ export default function FractionalRevOpsPage() {
                         <h3 className="text-xl md:text-2xl mb-3">Dashboards & Reporting</h3>
                         <p className="text-white/60 text-lg mb-4">Full-funnel visibility from lead to revenue with executive-level dashboards.</p>
                         <div className="flex flex-wrap gap-2">
-                          {['Full-funnel dashboards', 'Channel performance', 'Pipeline health', 'Attribution viz', 'SDR/AE dashboards', 'Revenue forecasting', 'Executive packages'].map((tag) => (
+                          {['Full-funnel dashboards', 'Channel performance', 'Pipeline health', 'Attribution viz', 'SDR/AE dashboards', 'Revenue forecasting', 'Executive dashboards'].map((tag) => (
                             <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
                           ))}
                         </div>
-                        <p className="text-white/50 text-sm mt-4 italic">
-                          Outcome: Total visibility into what's driving pipeline, and what's blocking it.
-                        </p>
                       </div>
                     </div>
                   </div>
@@ -353,7 +371,7 @@ export default function FractionalRevOpsPage() {
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl md:text-2xl mb-3">Embedded Partnership</h3>
-                        <p className="text-white/60 text-lg mb-4">We operate like an extension of your GTM team—senior operators only.</p>
+                        <p className="text-white/60 text-lg mb-4">We operate like an extension of your GTM team.</p>
                         <div className="flex flex-wrap gap-2">
                           {['Integrated Slack', 'Weekly meetings', 'Cross-functional work', 'Senior operators only', 'GTM team extension'].map((tag) => (
                             <span key={tag} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm">{tag}</span>
@@ -375,7 +393,7 @@ export default function FractionalRevOpsPage() {
           <div className="container mx-auto px-4 py-24 md:py-28">
             <div className="text-center mb-16">
               <Reveal as="h2" className="text-4xl md:text-5xl tracking-tight mb-6">
-                Our RevOps + GTM Engineering Process
+                The Fractional DemandOS
               </Reveal>
             </div>
             <ProcessSteps steps={processSteps} headline="" />
@@ -388,7 +406,7 @@ export default function FractionalRevOpsPage() {
           <div className="container mx-auto px-4 py-24 md:py-28">
             <div className="max-w-5xl mx-auto">
               <Reveal className="mb-12">
-                <p className="text-white/50 text-sm uppercase tracking-widest mb-4">Sample plays</p>
+                <p className="text-white/50 text-sm uppercase tracking-widest mb-4">What we do</p>
                 <h2 className="text-4xl md:text-5xl tracking-tight">
                   Sample Plays We Run
                 </h2>

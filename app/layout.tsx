@@ -1,13 +1,13 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import Preconnects from './next-head';
-import { Libre_Franklin, Source_Serif_4, DM_Sans } from 'next/font/google';
+import { Inter, Source_Serif_4, DM_Sans } from 'next/font/google';
 import { CalendlyPopupProvider } from '@/components/CalendlyPopup';
 
-const libreFranklin = Libre_Franklin({
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-libre-franklin',
+  variable: '--font-inter',
   weight: ['400', '500', '600', '700', '800', '900'],
 });
 
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`bg-black ${libreFranklin.variable} ${sourceSerif.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`bg-black ${inter.variable} ${sourceSerif.variable} ${dmSans.variable}`}>
       <head>
         <Preconnects />
         <script

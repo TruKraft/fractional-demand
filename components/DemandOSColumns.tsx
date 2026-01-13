@@ -50,18 +50,18 @@ export default function DemandOSColumns({ columns, className = '' }: DemandOSCol
                 </div>
                 <h3 className="text-2xl md:text-3xl ">{column.header}</h3>
               </div>
-              <ul className="space-y-3 text-white/80 text-lg leading-relaxed mb-6">
+              <ul className="space-y-3 text-white/80 text-xl leading-relaxed mb-6">
                 {column.items.map((item, itemIdx) => (
                   <li key={itemIdx} className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-5 h-5 text-blue-400 mt-1 shrink-0" />
+                    <CheckCircleIcon className="w-6 h-6 text-blue-400 mt-1 shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
               {column.outcome && (
                 <div className="mt-6 pt-6 border-t border-white/10">
-                  <p className="text-white/90 font-semibold text-lg mb-2">Outcome:</p>
-                  <p className="text-white/80 text-base leading-relaxed">{column.outcome}</p>
+                  <p className="text-white/90 font-semibold text-xl mb-2">Outcome:</p>
+                  <p className="text-white/80 text-lg leading-relaxed">{column.outcome}</p>
                 </div>
               )}
             </div>

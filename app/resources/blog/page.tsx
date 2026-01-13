@@ -89,14 +89,8 @@ export default async function BlogPage() {
           
           <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <Reveal>
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm text-white/80 mb-6 font-heading font-medium">
-                  <span className="w-2 h-2 rounded-full bg-[#021da8]" />
-                  Demand Decoded
-                </div>
-              </Reveal>
               <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">
-                Fractional Demand Blog
+                Demand Decoded
               </Reveal>
               <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
                 Real insights from the trenches. No fluff, no theory. Just practical, proven strategies and tactics we use with clients and what we're learning along the way.

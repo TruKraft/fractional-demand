@@ -47,7 +47,7 @@ const services = [
   },
   {
     id: 'lifecycle',
-    label: 'Lifecycle Marketing',
+    label: 'Fractional Lifecycle Marketing',
     header: 'Email / Lifecycle Marketing',
     description: 'Nurture sequences and lifecycle journeys that actually move pipeline and drive expansion revenue.',
     items: [
@@ -74,7 +74,7 @@ export default function HomeSection5() {
             Plug in the senior help you actually need
           </Reveal>
           <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
-            One partner, four offerings—all run by experienced operators.
+            One partner. Four offerings. All run by experienced operators.
           </Reveal>
         </div>
 
@@ -122,7 +122,7 @@ export default function HomeSection5() {
                   {activeService.items.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <CheckCircleIcon className="w-6 h-6 text-blue-500 mt-0.5 shrink-0" />
-                      <span className="text-white/80">{item}</span>
+                      <span className="text-white/80 text-lg">{item}</span>
                     </li>
                   ))}
                 </ul>

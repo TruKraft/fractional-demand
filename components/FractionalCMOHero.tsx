@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Reveal from './Reveal';
 import Portal from './Portal';
@@ -18,6 +18,8 @@ export default function FractionalCMOHero() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
+  const [showStickyButton, setShowStickyButton] = useState(false);
+  const formRef = useRef<HTMLDivElement>(null);
 
   // Close modal on escape key
   useEffect(() => {
@@ -33,6 +35,40 @@ export default function FractionalCMOHero() {
       document.body.style.overflow = '';
     };
   }, [videoOpen]);
+
+  // Sticky button scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      if (formRef.current) {
+        const formBottom = formRef.current.offsetTop + formRef.current.offsetHeight;
+        setShowStickyButton(window.scrollY > formBottom);
+      }
+    };
+    
+    // Check on mount and scroll
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
+  const scrollToForm = () => {
+    if (formRef.current) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      // Focus on first input after scroll
+      setTimeout(() => {
+        const firstInput = formRef.current?.querySelector('input');
+        firstInput?.focus();
+      }, 500);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -159,7 +195,7 @@ export default function FractionalCMOHero() {
           </div>
 
           {/* Right Form Column - Sticky */}
-          <div className="order-2 lg:order-2 lg:sticky lg:top-28 self-start">
+          <div ref={formRef} className="order-2 lg:order-2 lg:sticky lg:top-28 self-start">
             <div className="bg-[#072ef0]/10 border border-[#072ef0]/20 rounded-2xl p-6 md:px-8 md:py-16 backdrop-blur-sm">
               <h3 className="text-xl md:text-3xl font-semibold mb-6 text-center">Get Started Today</h3>
               
@@ -327,6 +363,17 @@ export default function FractionalCMOHero() {
             </div>
           </div>
         </Portal>
+      )}
+
+      {/* Sticky "Let's Talk" Button */}
+      {showStickyButton && (
+        <button
+          onClick={scrollToForm}
+          className="fixed bottom-8 right-8 z-50 btn btn-primary btn-lg btn-shine shadow-2xl shadow-[#072ef0]/30 animate-in fade-in slide-in-from-bottom-4 duration-300"
+          aria-label="Scroll to form"
+        >
+          Let&apos;s Talk
+        </button>
       )}
     </section>
   );

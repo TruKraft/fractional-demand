@@ -199,7 +199,7 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                     onClick={() => setServicesOpen(false)}
                   >
                     <div className="font-medium text-white group-hover:text-white transition-colors">
-                      Email & Lifecycle Marketing
+                      Fractional Lifecycle Marketing
                     </div>
                     <div className="text-sm text-white/60 group-hover:text-white/70 transition-colors">
                       Lifecycle campaigns that move pipeline
@@ -337,8 +337,8 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
             className={`lg:hidden fixed right-0 top-0 bottom-0 z-[10000] w-[85vw] max-w-[320px] bg-black text-white border-l border-white/10 shadow-2xl transform transition-transform duration-300 ease-out ${open ? 'translate-x-0' : 'translate-x-full'}`}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between px-4 py-4 border-b border-white/10 bg-black">
-              <span className="text-lg font-semibold">Menu</span>
+            <div className="flex items-center justify-between px-4 py-4 border-b border-white/10 bg-black" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+              <span className="text-base font-semibold">Menu</span>
               <button
                 type="button"
                 className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 transition-colors"
@@ -361,7 +361,7 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                 <li>
                   <a 
                     href="/" 
-                    className="block py-3 px-3 rounded-lg text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                    className="block py-3 px-3 rounded-lg text-base text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
                     onClick={() => setOpen(false)}
                   >
                     Home
@@ -372,7 +372,7 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                   <button
                     type="button"
                     onClick={handleServicesToggle}
-                    className="w-full text-left py-3 px-3 rounded-lg text-white hover:bg-white/10 transition-colors flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                    className="w-full text-base text-left py-3 px-3 rounded-lg text-white hover:bg-white/10 transition-colors flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
                     aria-expanded={servicesOpen}
                     aria-controls="mobile-services-menu"
                   >
@@ -396,7 +396,7 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                       <li role="none">
                         <a 
                           href="/services/fractional-head-of-marketing" 
-                          className="block py-2.5 px-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                          className="block py-2.5 px-3 text-base text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
                           role="menuitem"
                           onClick={() => { 
                             setOpen(false); 
@@ -409,7 +409,7 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                       <li role="none">
                         <a 
                           href="/services/fractional-paid-media" 
-                          className="block py-2.5 px-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                          className="block py-2.5 px-3 text-base text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
                           role="menuitem"
                           onClick={() => { 
                             setOpen(false); 
@@ -422,7 +422,7 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                       <li role="none">
                         <a 
                           href="/services/fractional-revops" 
-                          className="block py-2.5 px-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                          className="block py-2.5 px-3 text-base text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
                           role="menuitem"
                           onClick={() => { 
                             setOpen(false); 
@@ -435,14 +435,14 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                       <li role="none">
                         <a 
                           href="/services/email-lifecycle-marketing" 
-                          className="block py-2.5 px-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                          className="block py-2.5 px-3 text-base text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
                           role="menuitem"
                           onClick={() => { 
                             setOpen(false); 
                             setServicesOpen(false); 
                           }}
                         >
-                          Email & Lifecycle Marketing
+                          Fractional Lifecycle Marketing
                         </a>
                       </li>
                     </ul>
@@ -452,7 +452,7 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                 <li>
                   <a 
                     href="/how-we-work" 
-                    className="block py-3 px-3 rounded-lg text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                    className="block py-3 px-3 rounded-lg text-base text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
                     onClick={() => setOpen(false)}
                   >
                     How We Work
@@ -463,7 +463,7 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                   <button
                     type="button"
                     onClick={handleResourcesToggle}
-                    className="w-full text-left py-3 px-3 rounded-lg text-white hover:bg-white/10 transition-colors flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                    className="w-full text-base text-left py-3 px-3 rounded-lg text-white hover:bg-white/10 transition-colors flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
                     aria-expanded={resourcesOpen}
                     aria-controls="mobile-resources-menu"
                   >
@@ -487,7 +487,7 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                       <li role="none">
                         <a 
                           href="/resources/blog" 
-                          className="block py-2.5 px-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                          className="block py-2.5 px-3 text-base text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
                           role="menuitem"
                           onClick={() => { 
                             setOpen(false); 
@@ -504,7 +504,7 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                 <li>
                   <a 
                     href="/about" 
-                    className="block py-3 px-3 rounded-lg text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
+                    className="block py-3 px-3 rounded-lg text-base text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" 
                     onClick={() => setOpen(false)}
                   >
                     About

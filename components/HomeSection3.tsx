@@ -11,7 +11,9 @@ export default function HomeSection3() {
             You&apos;re not shopping for an agency.<br />You&apos;re choosing your GTM team.
           </Reveal>
           <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
-            Your real decision:<br />hire a full-time head of marketing and team, or plug in a fractional GTM team that&apos;s already built.
+            <strong>3 Ways to Build Your GTM:</strong>
+            <br /><br />
+            Agencies add activity, but rarely ownership. Hiring in-house adds control, but takes time and cost. Fractional Demand plugs in a proven GTM team: experienced, specialized in B2B, and ready to execute from day one.
           </Reveal>
         </div>
         <ComparisonChart />

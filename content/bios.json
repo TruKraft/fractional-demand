@@ -1,25 +1,29 @@
 [
   {
+    "name": "Jacob Cullum",
+    "title": "Director of Performance Marketing",
+    "blurb": "Jacob has been scaling marketing programs for over 7 years on both the agency side and in-house. As a Senior Demand Gen Manager, he acts like a member of his clients' marketing teams and will go above and beyond to get the results that they are looking for. Jacob has spent millions of dollars of ad spend across Google, LinkedIn, and Meta on paid ad programs that have led to 50%+ increases in ARR and over $100M raised in private equity. When he's not writing creative briefs for a new split test or running strategy sessions with his clients, Jacob enjoys spending time in the sun in Tampa, Florida where he lives with his wife Caitlin and their dog, a mini schnauzer named Reggie."
+  },
+  {
     "name": "Cindy Westra",
-    "title": "Sr. Demand Gen Manager",
+    "title": "Sr. Performance Marketer",
     "blurb": [
       "Cindy has 12 years of experience driving leads for B2B companies, both in-house and at agencies. She has managed paid media for brands like AT&T Cybersecurity, Insights Learning & Development, and Wiley, optimizing campaigns across Google, Bing, LinkedIn, Meta, and Reddit.",
       "Outside of work, Cindy is a mom to three little ones and has two lazy labs. She runs on ice-cold energy drinks, a good heated blanket, and a passion for sloths."
     ]
   },
   {
-    "name": "Jacob Cullum",
-    "title": "Sr. Demand Gen Manager",
-    "blurb": "Jacob has been scaling marketing programs for over 7 years on both the agency side and in-house. As a Senior Demand Gen Manager, he acts like a member of his clients' marketing teams and will go above and beyond to get the results that they are looking for. Jacob has spent millions of dollars of ad spend across Google, LinkedIn, and Meta on paid ad programs that have led to 50%+ increases in ARR and over $100M raised in private equity. When he's not writing creative briefs for a new split test or running strategy sessions with his clients, Jacob enjoys spending time in the sun in Tampa, Florida where he lives with his wife Caitlin and their dog, a mini schnauzer named Reggie."
+    "name": "Dennis Vinogradov",
+    "title": "Sr. Performance Marketer",
+    "blurb": "Dennis brings over a decade of digital marketing experience, running full-funnel coverage for both D2C and B2B clients. After starting out at ad agencies, he moved to in-house work for B2B tech clients, most recently with Software AG & ProcessMaker. He's a huge data nerd and loves to present actionable insights that helps companies move their business forward. When he's not lost in Excel, Dennis is spending time with his amazing wife, his giggly son, and his attention-seeking labrador. Dennis is also a huge movie buff and a proud Michigander."
   },
   {
-    "name": "Walter Silveira",
-    "title": "Sr. Demand Gen Manager",
+    "name": "Mike Kochis",
+    "title": "Sr. Performance Marketer",
     "blurb": [
-      "Walter Silveira is a Sr. Demand Gen Manager with 3 successful exits and over 13 years of experience launching & scaling B2B SaaS and Technology companies from their Go-To-Market stage to their Series C and beyond!",
-      "Walter specializes in Inbound channels that connect directly with a bespoke, technical ICP - meeting key decision makers exactly when their buying triggers are strongest, by connecting with them just as they're looking to solve their core business problems.",
-      "Walter's work drove over $8M in attributable recurring revenue for his startup & SMB clients in 2024.",
-      "When not geeking out about maximizing market share or investing in early stage companies, you can find him running the forest trails of Colorado, lifting at the gym, and volunteering with the Leeds School of Business @ UC Boulder!"
+      "Mike has spent the last decade driving revenue for B2B SaaS companies through full-funnel demand generation, paid media, and marketing ops. He's led growth efforts both in-house and as a consultant, running Google Ads, LinkedIn Ads, and integrated campaigns for startups ranging from Seed to Series B, as well as PE-backed organizations.",
+      "Whether it's scaling up a new growth motion from scratch, optimizing an existing strategy, or entirely shifting an entire organization from product-led to sales-led, Mike brings technical & marketing acumen to help both founders and marketing teams operate with clarity, focus, and measurable ROI.",
+      "Outside of work, Mike is an avid golfer (currently a 19 handicap), gardener and home cook."
     ]
   }
 ]

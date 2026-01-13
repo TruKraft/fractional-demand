@@ -40,8 +40,8 @@ const criteria: CriteriaRow[] = [
   },
   {
     label: 'AI-powered insights and automation',
-    traditional: 'no',
-    inHouse: 'no',
+    traditional: 'maybe',
+    inHouse: 'maybe',
     fractional: 'yes',
   },
 ];
@@ -65,7 +65,7 @@ export default function ComparisonChart() {
           <table className="w-full">
             <thead>
               <tr className="border-b border-white/10">
-                <th className="text-left p-6 text-lg font-semibold text-white/90">
+                <th className="text-left p-6 text-xl font-semibold text-white/90">
                   Criteria
                 </th>
                 <th className="text-center p-6 text-lg font-semibold text-white/90">

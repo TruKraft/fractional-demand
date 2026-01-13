@@ -156,12 +156,6 @@ export default function HowWeWorkPage() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Left: Content */}
               <div>
-                <Reveal>
-                  <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm text-white/80 mb-6">
-                    <span className="w-2 h-2 rounded-full bg-[#021da8]" />
-                    Our Operating System
-                  </div>
-                </Reveal>
                 <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">
                   The DemandOS System
                 </Reveal>
@@ -185,13 +179,13 @@ export default function HowWeWorkPage() {
                     { phase: 'Run', desc: 'Weekly execution, experiments, optimization, reporting' },
                     { phase: 'Scale', desc: 'Expand channels, multiply wins, deepen lifecycle' },
                   ].map((item, idx) => (
-                    <div key={item.phase} className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-5 hover:border-white/20 transition-colors">
-                      <div className="w-12 h-12 rounded-xl bg-[#021da8] flex items-center justify-center text-white text-xl shrink-0">
+                    <div key={item.phase} className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 hover:border-white/20 transition-colors">
+                      <div className="w-14 h-14 rounded-xl bg-[#021da8] flex items-center justify-center text-white text-2xl shrink-0">
                         {idx + 1}
                       </div>
                       <div>
-                        <h3 className="text-lg text-white mb-1">{item.phase}</h3>
-                        <p className="text-white/60 text-sm">{item.desc}</p>
+                        <h3 className="text-xl text-white mb-2">{item.phase}</h3>
+                        <p className="text-white/70 text-base">{item.desc}</p>
                       </div>
                     </div>
                   ))}

@@ -21,31 +21,38 @@ const fallbackBios: Bio[] = [
       "Jordan brings 16+ years of data-driven marketing expertise running marketing  teams at B2B tech companies like Pluralsight, Drip, and most recently Clicklease. He’s passionate about all things marketing, and delivering measurable results that generate revenue and sustainable ROI.\n\nJordan is a husband to an amazing wife, father to two small humans, and one very fluffy dog.  He also loves being outdoors, but he's been told he is more 'outsidesy' than outdoorsy (think hikes, as opposed to survivalist training).",
   },
   {
-    name: 'Cindy Westra',
-    title: 'Sr. Demand Gen Manager',
-    blurb:
-      "Cindy has 12 years of experience driving leads for B2B companies, both in-house and at agencies. She has managed paid media for brands like AT&T Cybersecurity, Insights Learning & Development, and Wiley, optimizing campaigns across Google, Bing, LinkedIn, Meta, and Reddit. Outside of work, Cindy is a mom to three little ones and has two lazy labs. She runs on ice-cold energy drinks, a good heated blanket, and a passion for sloths.",
-  },
-  {
     name: 'Jacob Cullum',
-    title: 'Sr. Demand Gen Manager',
+    title: 'Director of Performance Marketing',
     blurb:
       "Jacob has been scaling marketing programs for over 7 years on both the agency side and in-house. As a Senior Demand Gen Manager, he acts like a member of his clients' marketing teams and will go above and beyond to get the results that they are looking for. Jacob has spent millions of dollars of ad spend across Google, LinkedIn, and Meta on paid ad programs that have led to 50%+ increases in ARR and over $100M raised in private equity. When he's not writing creative briefs for a new split test or running strategy sessions with his clients, Jacob enjoys spending time in the sun in Tampa, Florida where he lives with his wife Caitlin and their dog, a mini schnauzer named Reggie.",
   },
   {
-    name: 'Walter Silveira',
-    title: 'Sr. Demand Gen Manager',
+    name: 'Cindy Westra',
+    title: 'Sr. Performance Marketer',
     blurb:
-      "Walter Silveira is a Sr. Demand Gen Manager with 3 successful exits and over 13 years of experience launching & scaling B2B SaaS and Technology companies from their Go-To-Market stage to their Series C and beyond! Walter specializes in inbound channels that connect directly with a bespoke, technical ICP—meeting key decision makers exactly when their buying triggers are strongest. Walter's work drove over $8M in attributable recurring revenue for his startup & SMB clients in 2024.",
+      "Cindy has 12 years of experience driving leads for B2B companies, both in-house and at agencies. She has managed paid media for brands like AT&T Cybersecurity, Insights Learning & Development, and Wiley, optimizing campaigns across Google, Bing, LinkedIn, Meta, and Reddit. Outside of work, Cindy is a mom to three little ones and has two lazy labs. She runs on ice-cold energy drinks, a good heated blanket, and a passion for sloths.",
+  },
+  {
+    name: 'Dennis Vinogradov',
+    title: 'Sr. Performance Marketer',
+    blurb:
+      "Dennis brings over a decade of digital marketing experience, running full-funnel coverage for both D2C and B2B clients. After starting out at ad agencies, he moved to in-house work for B2B tech clients, most recently with Software AG & ProcessMaker. He's a huge data nerd and loves to present actionable insights that helps companies move their business forward. When he's not lost in Excel, Dennis is spending time with his amazing wife, his giggly son, and his attention-seeking labrador. Dennis is also a huge movie buff and a proud Michigander.",
+  },
+  {
+    name: 'Mike Kochis',
+    title: 'Sr. Performance Marketer',
+    blurb:
+      "Mike has spent the last decade driving revenue for B2B SaaS companies through full-funnel demand generation, paid media, and marketing ops. He's led growth efforts both in-house and as a consultant, running Google Ads, LinkedIn Ads, and integrated campaigns for startups ranging from Seed to Series B, as well as PE-backed organizations. Whether it's scaling up a new growth motion from scratch, optimizing an existing strategy, or entirely shifting an entire organization from product-led to sales-led, Mike brings technical & marketing acumen to help both founders and marketing teams operate with clarity, focus, and measurable ROI. Outside of work, Mike is an avid golfer (currently a 19 handicap), gardener and home cook.",
   },
 ];
 const bioImages = ((map as any).bioImages || {}) as Record<string, string>;
 const linkedinUrlsByName: Record<string, string> = {
   'Gavin Tanner': 'https://www.linkedin.com/in/gavin-tanner/',
   'Jordan Barker': 'https://www.linkedin.com/in/jordanpbarker/',
-  'Cindy Westra': 'https://www.linkedin.com/in/cindywestra/',
   'Jacob Cullum': 'https://www.linkedin.com/in/jacob-cullum/',
-  'Walter Silveira': 'https://www.linkedin.com/in/walterandrewsilveira/',
+  'Cindy Westra': 'https://www.linkedin.com/in/cindywestra/',
+  'Dennis Vinogradov': 'https://www.linkedin.com/in/dennis-vinogradov-967bb969/',
+  'Mike Kochis': 'https://www.linkedin.com/in/mikekochis/',
 };
 // Merge content bios with fallback bios by name, preserving fallback order and allowing overrides from content
 const fallbackMap = new Map<string, any>(fallbackBios.map((b) => [b.name, b]));
@@ -72,7 +79,7 @@ export default function Bios() {
           <Reveal className="mb-12">
             <p className="text-white/50 text-sm uppercase tracking-widest mb-4">Our team</p>
             <h2 className="text-4xl md:text-5xl tracking-tight">
-              Senior operators, not junior account managers
+              Built and run by experienced operators.
             </h2>
           </Reveal>
           

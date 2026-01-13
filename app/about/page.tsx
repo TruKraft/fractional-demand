@@ -35,7 +35,7 @@ export default function AboutPage() {
                 </div>
               </Reveal>
               <Reveal as="h1" className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">
-                Meet the Team Behind Fractional Demand
+                Built and run by experienced operators.
               </Reveal>
               <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-2xl">
                 Senior operators with decades of combined experience building pipeline for B2B tech companies.

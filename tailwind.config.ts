@@ -11,8 +11,8 @@ const config: Config = {
         screens: { sm: '640px', md: '768px', lg: '1024px', xl: '1200px', '2xl': '1320px' },
       },
       fontFamily: {
-        sans: ['var(--font-libre-franklin)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-libre-franklin)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         body: ['var(--font-source-serif)', 'Georgia', 'ui-serif', 'serif'],
       },
       keyframes: {

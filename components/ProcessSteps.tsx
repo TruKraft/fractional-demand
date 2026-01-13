@@ -33,7 +33,7 @@ export default function ProcessSteps({ steps, headline = "Our Process", classNam
                     {step.number}
                   </div>
                   {idx < steps.length - 1 && (
-                    <div className="absolute left-1/2 top-16 w-0.5 h-full bg-white/10 -translate-x-1/2" style={{ height: 'calc(100% + 1.5rem)' }} />
+                    <div className="absolute left-1/2 top-full w-0.5 bg-white/10 -translate-x-1/2" style={{ height: '1.5rem' }} />
                   )}
                 </div>
                 <div className="flex-1 pb-8">
@@ -42,7 +42,7 @@ export default function ProcessSteps({ steps, headline = "Our Process", classNam
                     <p className="text-white/80 text-lg leading-relaxed mb-6">{step.description}</p>
                     {step.deliverables && step.deliverables.length > 0 && (
                       <div className="mt-6 pt-6 border-t border-white/10">
-                        <p className="text-white/90 font-semibold mb-3">Deliverables:</p>
+                        <p className="text-white/90 font-semibold text-lg mb-3">Deliverables:</p>
                         <ul className="space-y-2 text-white/80 text-base">
                           {step.deliverables.map((deliverable, dIdx) => (
                             <li key={dIdx} className="flex items-start gap-2">

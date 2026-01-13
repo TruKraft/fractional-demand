@@ -17,7 +17,7 @@ export default function HomeSection4() {
     {
       header: 'Run',
       items: [
-        'Operate the system',
+        'Own & Operate GTM System',
         'Launch campaigns',
         'Refine offers and messaging',
         'Run weekly experiments',
@@ -29,10 +29,10 @@ export default function HomeSection4() {
       header: 'Scale',
       items: [
         'Expand channels',
-        'Increase budgets',
+        'Increase efficiencies',
         'Multiply winning plays',
-        'Deepen lifecycle & RevOps automation',
-        'Turn the GTM engine into a predictable revenue machine',
+        'Systematize what works',
+        'Turn GTM engine into predictable revenue engine',
       ],
     },
   ];
@@ -53,7 +53,7 @@ export default function HomeSection4() {
             Fractional DemandOS: <br />The Operating System Behind Your Pipeline
           </Reveal>
           <Reveal as="p" className="text-white/80 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
-            Our proven Fractional Demand Operating System connects positioning, messaging, paid media, and RevOps into one repeatable GTM system
+            Our proven Fractional Demand Operating System connects positioning, messaging, paid media, lifecycle marketing, and RevOps into one repeatable GTM system
           </Reveal>
         </div>
         <DemandOSColumns columns={columns} />
