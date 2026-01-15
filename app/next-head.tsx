@@ -1,6 +1,8 @@
 export default function Preconnects() {
   return (
     <>
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="https://assets.calendly.com" />
       <link rel="preconnect" href="https://assets.calendly.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="https://js.hsforms.net" />

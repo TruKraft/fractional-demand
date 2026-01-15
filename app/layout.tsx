@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Preconnects from './next-head';
 import { Inter, Source_Serif_4, DM_Sans } from 'next/font/google';
 import { CalendlyPopupProvider } from '@/components/CalendlyPopup';
+import { GoogleTagManager, GoogleTagManagerNoScript } from '@/components/GoogleTagManager';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -78,10 +79,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || '';
+  
   return (
     <html lang="en" className={`bg-black ${inter.variable} ${sourceSerif.variable} ${dmSans.variable}`}>
       <head>
         <Preconnects />
+        {gtmId && <GoogleTagManager gtmId={gtmId} />}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -175,6 +179,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen bg-black text-white antialiased font-body">
+        {gtmId && <GoogleTagManagerNoScript gtmId={gtmId} />}
         <CalendlyPopupProvider>
           <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[3000] focus:bg-black focus:text-white focus:px-3 focus:py-2 focus:rounded">Skip to content</a>
           {children}

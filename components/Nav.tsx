@@ -11,6 +11,7 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
+  const [servicesPulse, setServicesPulse] = useState(false);
   const servicesRef = useRef<HTMLLIElement>(null);
   const resourcesRef = useRef<HTMLLIElement>(null);
   const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -87,6 +88,49 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
     };
   }, []);
 
+  // Listen for custom event from footer to open services dropdown
+  useEffect(() => {
+    const handleOpenServices = () => {
+      // Check if we're on mobile (below lg breakpoint)
+      const isMobile = window.innerWidth < 1024;
+      
+      if (isMobile) {
+        // On mobile: open hamburger menu first, then services submenu with slight delay
+        setOpen(true);
+        setServicesPulse(true);
+        
+        // Open services submenu after hamburger menu animation starts
+        setTimeout(() => {
+          setServicesOpen(true);
+        }, 100);
+      } else {
+        // On desktop: just open services dropdown
+        setServicesOpen(true);
+        setServicesPulse(true);
+      }
+      
+      // Remove pulse animation after 2 seconds
+      setTimeout(() => {
+        setServicesPulse(false);
+      }, 2000);
+      
+      // Auto-close dropdown after 5 seconds
+      setTimeout(() => {
+        setServicesOpen(false);
+      }, 5000);
+      
+      // Auto-close hamburger menu after 6 seconds on mobile
+      if (isMobile) {
+        setTimeout(() => {
+          setOpen(false);
+        }, 6000);
+      }
+    };
+    
+    window.addEventListener('openServicesDropdown', handleOpenServices);
+    return () => window.removeEventListener('openServicesDropdown', handleOpenServices);
+  }, []);
+
   return (
     <>
     <header className="fixed inset-x-0 top-0 z-[2000] bg-black/60 supports-[backdrop-filter]:bg-black/40 backdrop-blur border-b border-white/10 text-white">
@@ -132,16 +176,16 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                     setServicesOpen(false);
                   }
                 }}
-                className="text-sm md:text-base text-white/80 hover:text-white hover:underline hover:underline-offset-8 hover:decoration-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-md"
+                className={`text-sm md:text-base text-white/80 hover:text-white hover:underline hover:underline-offset-8 hover:decoration-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-md ${servicesPulse ? 'animate-pulse' : ''}`}
                 aria-expanded={servicesOpen}
               >
                 Services
               </a>
               <ul
-                className={`absolute top-full left-0 mt-0 w-80 bg-black border-t-2 border-white rounded-b-lg py-2 z-50 transition-all duration-200 ${servicesOpen ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none -translate-y-2'}`}
+                className={`absolute top-full left-0 mt-0 w-80 bg-black border-t-2 rounded-b-lg py-2 z-50 transition-all duration-200 ${servicesOpen ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none -translate-y-2'} ${servicesPulse ? 'border-blue-500 shadow-[0_0_20px_rgba(2,29,168,0.6)]' : 'border-white'}`}
                 style={{ 
                   marginTop: 'calc(0.5rem + 2px)',
-                  boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2)',
+                  boxShadow: servicesPulse ? '0 10px 15px -3px rgba(2, 29, 168, 0.5), 0 4px 6px -2px rgba(2, 29, 168, 0.3), 0 0 30px rgba(2, 29, 168, 0.4)' : '0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2)',
                 }}
                 onMouseEnter={() => {
                   if (servicesTimeoutRef.current) {
@@ -372,7 +416,7 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                   <button
                     type="button"
                     onClick={handleServicesToggle}
-                    className="w-full text-base text-left py-3 px-3 rounded-lg text-white hover:bg-white/10 transition-colors flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                    className={`w-full text-base text-left py-3 px-3 rounded-lg text-white hover:bg-white/10 transition-colors flex items-center justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 ${servicesPulse ? 'animate-pulse' : ''}`}
                     aria-expanded={servicesOpen}
                     aria-controls="mobile-services-menu"
                   >
@@ -392,7 +436,7 @@ export default function Nav({ minimal = false, showCTA = false }: NavProps) {
                     </svg>
                   </button>
                   <div className={`overflow-hidden transition-all duration-200 ${servicesOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'}`}>
-                    <ul id="mobile-services-menu" className="pl-4 mt-2 space-y-1 border-l-2 border-white/20 ml-3" role="menu">
+                    <ul id="mobile-services-menu" className={`pl-4 mt-2 space-y-1 border-l-2 ml-3 ${servicesPulse ? 'border-blue-500' : 'border-white/20'}`} role="menu">
                       <li role="none">
                         <a 
                           href="/services/fractional-head-of-marketing" 

@@ -37,14 +37,25 @@ export default function Footer({ minimal = false }: FooterProps) {
   return (
     <footer className="bg-black text-white" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
       <div className="container mx-auto px-4 py-20 md:py-28 grid gap-5 md:gap-6 place-items-center">
-        <div className="relative h-[36px] w-[300px] md:h-[44px] md:w-[380px] shrink-0 mx-auto">
+        <a href="/" className="relative h-[36px] w-[300px] md:h-[44px] md:w-[380px] shrink-0 mx-auto block">
           <Image src="/Fractional Demand full logo_white text (1).svg" alt="Fractional Demand" fill className="object-contain" />
-        </div>
+        </a>
         {!minimal && (
           <ul className="flex flex-row flex-wrap items-center justify-center gap-3 md:gap-4 lg:gap-6 text-sm md:text-sm lg:text-base text-white/90 font-medium">
             <li><a href="/#why-us" className="block py-1 hover:text-white hover:underline underline-offset-8 transition-colors whitespace-nowrap">Why us?</a></li>
-            <li><a href="/#services" className="block py-1 hover:text-white hover:underline underline-offset-8 transition-colors whitespace-nowrap">Our services</a></li>
-            <li><a href="/#about-us" className="block py-1 hover:text-white hover:underline underline-offset-8 transition-colors whitespace-nowrap">About us</a></li>
+            <li>
+              <button 
+                onClick={() => {
+                  // Dispatch custom event to trigger nav services dropdown
+                  window.dispatchEvent(new CustomEvent('openServicesDropdown'));
+                }}
+                className="block py-1 hover:text-white hover:underline underline-offset-8 transition-colors whitespace-nowrap cursor-pointer text-white/90 font-medium text-sm md:text-sm lg:text-base bg-transparent border-0 p-0"
+                style={{ font: 'inherit' }}
+              >
+                Our services
+              </button>
+            </li>
+            <li><a href="/about" className="block py-1 hover:text-white hover:underline underline-offset-8 transition-colors whitespace-nowrap">About us</a></li>
             <li>
               <a
                 href="https://www.linkedin.com/company/fractional-demand/"
