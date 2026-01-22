@@ -172,11 +172,60 @@ export default function EmailLifecycleMarketingPage() {
               
               {/* Right: Visual */}
               <Reveal className="hidden lg:block">
-                <div className="energy-card rounded-3xl border border-white/10 bg-white/5 p-8 aspect-square flex items-center justify-center">
+                <div className="relative aspect-square flex items-center justify-center">
+                  <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 676 676">
+                    <defs>
+                      {/* Gradient for data flow - bright head fading to tail */}
+                      <linearGradient id="dataFlowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="transparent" stopOpacity="0" />
+                        <stop offset="40%" stopColor="rgba(255,255,255,0.3)" stopOpacity="0.3" />
+                        <stop offset="70%" stopColor="rgba(255,255,255,0.8)" stopOpacity="0.8" />
+                        <stop offset="100%" stopColor="#ffffff" stopOpacity="1" />
+                      </linearGradient>
+                      <linearGradient id="dataFlowGradientBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="transparent" stopOpacity="0" />
+                        <stop offset="40%" stopColor="rgba(2,29,168,0.3)" stopOpacity="0.3" />
+                        <stop offset="70%" stopColor="rgba(2,29,168,0.8)" stopOpacity="0.8" />
+                        <stop offset="100%" stopColor="#021da8" stopOpacity="1" />
+                      </linearGradient>
+                    </defs>
+                    
+                    {/* Left lines - data flowing IN toward center (top to bottom) */}
+                    <path 
+                      stroke="url(#dataFlowGradient)" 
+                      strokeWidth="3" 
+                      strokeLinecap="round"
+                      d="m79.982 260.573 163.335 370.844" 
+                      className="energy-line-left-1"
+                    />
+                    <path 
+                      stroke="url(#dataFlowGradientBlue)" 
+                      strokeWidth="3" 
+                      strokeLinecap="round"
+                      d="m24.002 44.072 163.334 370.844" 
+                      className="energy-line-left-2"
+                    />
+                    
+                    {/* Right lines - data flowing OUT from center (top to bottom) */}
+                    <path 
+                      stroke="url(#dataFlowGradient)" 
+                      strokeWidth="3" 
+                      strokeLinecap="round"
+                      d="M595.507 260.573 432.172 631.417" 
+                      className="energy-line-right-1"
+                    />
+                    <path 
+                      stroke="url(#dataFlowGradientBlue)" 
+                      strokeWidth="3" 
+                      strokeLinecap="round"
+                      d="M651.488 44.072 488.153 414.916" 
+                      className="energy-line-right-2"
+                    />
+                  </svg>
                   <img 
-                    src="/assets/images/lifecycle-hero.svg" 
+                    src="/assets/images/email-and-lifecycle-marketing.svg" 
                     alt="Email & Lifecycle Marketing Journey" 
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain relative z-10"
                   />
                 </div>
               </Reveal>

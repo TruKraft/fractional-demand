@@ -164,6 +164,155 @@ main { padding-top: var(--header-h); }
   100% { stroke-dashoffset: -100; }
 }
 
+/* Animated energy circle borders */
+@keyframes energyCircleClockwise {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -1562; }
+}
+
+@keyframes energyCircleCounterClockwise {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 997; }
+}
+
+.energy-circle-outer {
+  stroke-dasharray: 80 1482;
+  animation: energyCircleClockwise 20s linear infinite;
+}
+
+.energy-circle-inner {
+  stroke-dasharray: 60 937;
+  animation: energyCircleCounterClockwise 20s linear infinite;
+}
+
+/* CMO page - white circle energy blip animation (like energy-line) */
+@keyframes energyCircleBlipSweep {
+  0% { 
+    stroke-dashoffset: 0; 
+  }
+  100% { 
+    stroke-dashoffset: -1562; 
+  }
+}
+
+.energy-circle-cmo-blip {
+  stroke-dasharray: 100 1462;
+  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.25));
+  animation: energyCircleBlipSweep 18s linear infinite;
+}
+
+/* Animated energy ellipse for paid media */
+@keyframes energyEllipse {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -1895; }
+}
+
+.energy-ellipse {
+  stroke-dasharray: 100 1795;
+  animation: energyEllipse 15s linear infinite;
+}
+
+/* RevOps page - dual ring animations */
+@keyframes energyCircleRevOpsClockwise {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -534; }
+}
+
+@keyframes energyCircleRevOpsCounterClockwise {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 440; }
+}
+
+.energy-circle-revops-outer {
+  stroke-dasharray: 70 464;
+  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(37,99,235,0.4));
+  animation: energyCircleRevOpsClockwise 20s linear infinite;
+}
+
+.energy-circle-revops-inner {
+  stroke-dasharray: 60 380;
+  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(59,130,246,0.4));
+  animation: energyCircleRevOpsCounterClockwise 16s linear infinite;
+}
+
+/* Email & Lifecycle Marketing - diagonal line animations */
+/* Data flowing IN toward center (left lines) */
+@keyframes dataFlowInToCenter {
+  0% { 
+    stroke-dashoffset: 405;
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  48% { 
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  50% { 
+    opacity: 0;
+  }
+  100% { 
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+/* Data flowing OUT from center (right lines) */
+@keyframes dataFlowOutFromCenter {
+  0% { 
+    stroke-dashoffset: 405;
+    opacity: 0;
+  }
+  50% { 
+    stroke-dashoffset: 405;
+    opacity: 0;
+  }
+  52% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  98% { 
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% { 
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+.energy-line-left-1,
+.energy-line-left-2 {
+  stroke-dasharray: 120 285;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.5));
+  animation: dataFlowInToCenter 6s ease-in-out infinite;
+  opacity: 0;
+}
+
+.energy-line-left-2 {
+  animation-delay: 0.15s;
+  filter: drop-shadow(0 0 6px rgba(2,29,168,0.6));
+}
+
+.energy-line-right-1,
+.energy-line-right-2 {
+  stroke-dasharray: 120 285;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.5));
+  animation: dataFlowOutFromCenter 6s ease-in-out infinite;
+  opacity: 0;
+}
+
+.energy-line-right-2 {
+  animation-delay: 0.15s;
+  filter: drop-shadow(0 0 6px rgba(2,29,168,0.6));
+}
+
 /* CTA-style energy blip around rounded rectangles */
 @property --a { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
 @keyframes energyRing { to { --a: 360deg; } }
