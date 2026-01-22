@@ -22,7 +22,7 @@ main { padding-top: var(--header-h); }
     @apply relative inline-flex items-center justify-center font-semibold transition shadow-sm overflow-hidden focus-visible:outline-none focus-visible:ring-2;
     border-radius: 14px;
   }
-  .btn-primary {
+  .btn-primary { 
     @apply text-white;
     background-color: #021da8;
   }
