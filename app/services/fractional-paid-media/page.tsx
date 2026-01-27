@@ -172,34 +172,10 @@ export default function FractionalPaidMediaPage() {
               {/* Right: Visual */}
               <Reveal className="hidden lg:block">
                 <div className="relative aspect-square flex items-center justify-center">
-                  <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 676 676" style={{ transform: 'scale(1.15)' }}>
-                    {/* Central ellipse - clockwise animation */}
-                    <ellipse 
-                      cx="337.745" 
-                      cy="337.744" 
-                      rx="266.756" 
-                      ry="34.849"
-                      fill="none" 
-                      stroke="rgba(255,255,255,0.1)" 
-                      strokeWidth="1"
-                    />
-                    <ellipse 
-                      cx="337.745" 
-                      cy="337.744" 
-                      rx="266.756" 
-                      ry="34.849"
-                      fill="none" 
-                      stroke="rgba(255,255,255,0.8)" 
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      className="energy-ellipse"
-                      style={{ filter: 'drop-shadow(0 0 6px rgba(255,255,255,0.3))' }}
-                    />
-                  </svg>
                   <img 
-                    src="/assets/images/fractional-paid-media.svg" 
+                    src="/assets/images/fractional-paid-media.png" 
                     alt="Fractional Paid Media Channels" 
-                    className="w-full h-full object-contain relative z-10"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </Reveal>

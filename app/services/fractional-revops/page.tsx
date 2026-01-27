@@ -175,55 +175,10 @@ export default function FractionalRevOpsPage() {
               {/* Right: Visual */}
               <Reveal className="hidden lg:block">
                 <div className="relative aspect-square flex items-center justify-center">
-                  <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 600 600">
-                    <g transform="translate(300, 300)">
-                      {/* Outer ring animation - r=85 */}
-                      <circle 
-                        cx="0" 
-                        cy="0" 
-                        r="85" 
-                        fill="none" 
-                        stroke="#2563eb" 
-                        strokeWidth="2" 
-                        opacity="0.3"
-                      />
-                      <circle 
-                        cx="0" 
-                        cy="0" 
-                        r="85" 
-                        fill="none" 
-                        stroke="rgba(37,99,235,0.9)" 
-                        strokeWidth="2" 
-                        strokeLinecap="round"
-                        className="energy-circle-revops-outer"
-                      />
-                      
-                      {/* Inner ring animation - r=70 */}
-                      <circle 
-                        cx="0" 
-                        cy="0" 
-                        r="70" 
-                        fill="none" 
-                        stroke="#3b82f6" 
-                        strokeWidth="2" 
-                        opacity="0.5"
-                      />
-                      <circle 
-                        cx="0" 
-                        cy="0" 
-                        r="70" 
-                        fill="none" 
-                        stroke="rgba(59,130,246,0.9)" 
-                        strokeWidth="2" 
-                        strokeLinecap="round"
-                        className="energy-circle-revops-inner"
-                      />
-                    </g>
-                  </svg>
                   <img 
-                    src="/assets/images/revops-hero.svg" 
+                    src="/assets/images/fractional-revops.png" 
                     alt="RevOps & GTM Engineering System" 
-                    className="w-full h-full object-contain relative z-10"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </Reveal>

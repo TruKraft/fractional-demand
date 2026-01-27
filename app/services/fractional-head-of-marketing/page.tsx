@@ -181,32 +181,10 @@ export default function FractionalHeadOfMarketingPage() {
               {/* Right: Visual */}
               <Reveal className="hidden lg:block">
                 <div className="relative aspect-square flex items-center justify-center">
-                  <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 676 676" style={{ zIndex: 5 }}>
-                    {/* Base white circle - subtle hairline */}
-                    <circle 
-                      cx="313.183" 
-                      cy="372.832" 
-                      r="248.674" 
-                      fill="none" 
-                      stroke="rgba(255,255,255,0.53)" 
-                      strokeWidth="2"
-                    />
-                    {/* Animated energy blip - clockwise */}
-                    <circle 
-                      cx="313.183" 
-                      cy="372.832" 
-                      r="248.674" 
-                      fill="none" 
-                      stroke="rgba(255,255,255,0.9)" 
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      className="energy-circle-cmo-blip"
-                    />
-                  </svg>
                   <img 
-                    src="/assets/images/fractional-head-of-marketing.svg" 
+                    src="/assets/images/fractional-head-of-marketing.png" 
                     alt="GTM Leadership and Momentum" 
-                    className="w-full h-full object-contain relative z-10"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </Reveal>
