@@ -104,7 +104,7 @@ const HUBSPOT_REGION: string = 'na1';
 export default function FAQPage() {
   return (
     <>
-      <Nav minimal={!SHOW_FULL_HEADER} />
+      <Nav minimal={!SHOW_FULL_HEADER}/> 
       <main id="main" className="bg-black text-white">
         <section className="container mx-auto px-4 py-24 md:py-28">
           <div className="grid gap-10 lg:gap-12 lg:grid-cols-2 items-start">
