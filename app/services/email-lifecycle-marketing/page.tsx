@@ -174,7 +174,7 @@ export default function EmailLifecycleMarketingPage() {
               <Reveal className="hidden lg:block">
                 <div className="relative aspect-square flex items-center justify-center">
                   <img 
-                    src="/assets/images/email-and-lifecycle-marketing.png" 
+                    src="/assets/images/email-lifecycle-marketing.png" 
                     alt="Email & Lifecycle Marketing Journey" 
                     className="w-full h-full object-contain"
                   />
