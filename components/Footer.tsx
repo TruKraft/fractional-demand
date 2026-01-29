@@ -42,7 +42,7 @@ export default function Footer({ minimal = false }: FooterProps) {
         </a>
         {!minimal && (
           <ul className="flex flex-row flex-wrap items-center justify-center gap-3 md:gap-4 lg:gap-6 text-sm md:text-sm lg:text-base text-white/90 font-medium">
-            <li><a href="/#why-us" className="block py-1 hover:text-white hover:underline underline-offset-8 transition-colors whitespace-nowrap">Why us?</a></li>
+            <li><a href="/how-we-work" className="block py-1 hover:text-white hover:underline underline-offset-8 transition-colors whitespace-nowrap">Why us?</a></li>
             <li>
               <button 
                 onClick={() => {
