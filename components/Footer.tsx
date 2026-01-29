@@ -55,7 +55,7 @@ export default function Footer({ minimal = false }: FooterProps) {
                 Our services
               </button>
             </li>
-            <li><a href="/resources" className="block py-1 hover:text-white hover:underline underline-offset-8 transition-colors whitespace-nowrap">Resources</a></li>
+            <li><a href="/blog" className="block py-1 hover:text-white hover:underline underline-offset-8 transition-colors whitespace-nowrap">Blog</a></li>
             <li><a href="/faq" className="block py-1 hover:text-white hover:underline underline-offset-8 transition-colors whitespace-nowrap">FAQ</a></li>
             <li><a href="/about" className="block py-1 hover:text-white hover:underline underline-offset-8 transition-colors whitespace-nowrap">About us</a></li>
             <li>
