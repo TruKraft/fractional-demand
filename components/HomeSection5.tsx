@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Reveal from './Reveal';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 
@@ -18,6 +19,7 @@ const services = [
       'Embedded collaboration to ensure clean attribution and real revenue impact',
     ],
     image: '/assets/images/fractional-paid-media.png',
+    url: '/services/fractional-paid-media',
   },
   {
     id: 'head-of-marketing',
@@ -31,6 +33,7 @@ const services = [
       'Align marketing with sales and revenue goals',
     ],
     image: '/assets/images/fractional-head-of-marketing.png',
+    url: '/services/fractional-head-of-marketing',
   },
   {
     id: 'revops',
@@ -44,6 +47,7 @@ const services = [
       'Clean data and automated handoffs between teams',
     ],
     image: '/assets/images/fractional-revops.png',
+    url: '/services/fractional-revops',
   },
   {
     id: 'lifecycle',
@@ -57,6 +61,7 @@ const services = [
       'Automated triggers based on intent and behavior',
     ],
     image: '/assets/images/email-and-lifecycle-marketing.png',
+    url: '/services/email-lifecycle-marketing',
   },
 ];
 
@@ -102,22 +107,13 @@ export default function HomeSection5() {
               {/* Image/Preview Side */}
               <div className="bg-gradient-to-br from-white/10 to-white/5 p-8 md:p-12 flex items-center justify-center min-h-[300px] md:min-h-[400px]">
                 <div className="w-full h-full rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center p-6">
-                  <div className="grid grid-cols-2 gap-4 w-full h-full">
-                    {services.map((service) => (
-                      <div 
-                        key={service.id}
-                        className="flex items-center justify-center"
-                      >
-                        <Image 
-                          src={service.image} 
-                          alt={service.header}
-                          width={200}
-                          height={150}
-                          className="w-full h-auto object-contain"
-                        />
-                      </div>
-                    ))}
-                  </div>
+                  <Image 
+                    src={activeService.image} 
+                    alt={activeService.header}
+                    width={400}
+                    height={300}
+                    className="w-full h-auto max-h-[280px] object-contain"
+                  />
                 </div>
               </div>
 
@@ -140,16 +136,12 @@ export default function HomeSection5() {
                 
                 {/* View All Services Button */}
                 <div className="flex justify-center mt-8">
-                  <button 
-                    onClick={() => {
-                      window.dispatchEvent(new Event('openServicesDropdown'));
-                      // Scroll to top to ensure the dropdown is visible
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
+                  <Link 
+                    href={activeService.url}
                     className="btn btn-primary btn-md md:btn-lg btn-shine will-change-transform"
                   >
-                    View All Services
-                  </button>
+                    Learn More
+                  </Link>
                 </div>
               </div>
             </div>
