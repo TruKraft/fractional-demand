@@ -17,7 +17,7 @@ const services = [
       'Creative + messaging testing that constantly improves CTR → CPL → SQL',
       'Embedded collaboration to ensure clean attribution and real revenue impact',
     ],
-    image: '/assets/images/paid-media.svg',
+    image: '/assets/images/fractional-paid-media.png',
   },
   {
     id: 'head-of-marketing',
@@ -30,7 +30,7 @@ const services = [
       'Execute hands-on to remove work from your plate',
       'Align marketing with sales and revenue goals',
     ],
-    image: '/assets/images/service-head-of-marketing.svg',
+    image: '/assets/images/fractional-head-of-marketing.png',
   },
   {
     id: 'revops',
@@ -43,7 +43,7 @@ const services = [
       'Lead scoring, enrichment, and intent → sales-ready leads',
       'Clean data and automated handoffs between teams',
     ],
-    image: '/assets/images/service-revops.svg',
+    image: '/assets/images/fractional-revops.png',
   },
   {
     id: 'lifecycle',
@@ -56,7 +56,7 @@ const services = [
       'Campaign strategy, copy, and build out',
       'Automated triggers based on intent and behavior',
     ],
-    image: '/assets/images/service-lifecycle.svg',
+    image: '/assets/images/email-and-lifecycle-marketing.png',
   },
 ];
 
@@ -102,30 +102,55 @@ export default function HomeSection5() {
               {/* Image/Preview Side */}
               <div className="bg-gradient-to-br from-white/10 to-white/5 p-8 md:p-12 flex items-center justify-center min-h-[300px] md:min-h-[400px]">
                 <div className="w-full h-full rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center p-6">
-                  <Image 
-                    src={activeService.image} 
-                    alt={activeService.header}
-                    width={400}
-                    height={300}
-                    className="w-full h-auto max-h-[280px] object-contain"
-                  />
+                  <div className="grid grid-cols-2 gap-4 w-full h-full">
+                    {services.map((service) => (
+                      <div 
+                        key={service.id}
+                        className="flex items-center justify-center"
+                      >
+                        <Image 
+                          src={service.image} 
+                          alt={service.header}
+                          width={200}
+                          height={150}
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
               {/* Content Side */}
-              <div className="p-8 md:p-12 flex flex-col justify-center">
-                <h3 className="text-2xl md:text-3xl  mb-4">{activeService.header}</h3>
-                <p className="text-white/70 text-lg leading-relaxed mb-8">
-                  {activeService.description}
-                </p>
-                <ul className="space-y-4">
-                  {activeService.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <CheckCircleIcon className="w-6 h-6 text-blue-500 mt-0.5 shrink-0" />
-                      <span className="text-white/80 text-lg">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="p-8 md:p-12 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-2xl md:text-3xl  mb-4">{activeService.header}</h3>
+                  <p className="text-white/70 text-lg leading-relaxed mb-8">
+                    {activeService.description}
+                  </p>
+                  <ul className="space-y-4">
+                    {activeService.items.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <CheckCircleIcon className="w-6 h-6 text-blue-500 mt-0.5 shrink-0" />
+                        <span className="text-white/80 text-lg">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                {/* View All Services Button */}
+                <div className="flex justify-center mt-8">
+                  <button 
+                    onClick={() => {
+                      window.dispatchEvent(new Event('openServicesDropdown'));
+                      // Scroll to top to ensure the dropdown is visible
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="btn btn-primary btn-md md:btn-lg btn-shine will-change-transform"
+                  >
+                    View All Services
+                  </button>
+                </div>
               </div>
             </div>
           </div>
